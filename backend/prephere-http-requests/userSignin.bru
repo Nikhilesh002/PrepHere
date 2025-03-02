@@ -1,0 +1,19 @@
+meta {
+  name: userSignin
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{local}}/user/signin
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "identifier": "john_doe",
+    "password": "securePassword123"
+  }
+  
+}
