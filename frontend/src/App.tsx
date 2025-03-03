@@ -6,6 +6,7 @@ import Providers from "./lib/providers";
 import NavBar from "./components/custom/NavBar";
 import Home from "./pages/Home";
 import NotFound from "./pages/Not-Found";
+import Questinaire from "./pages/Questinaire";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
+
+          <Route path="/questionaire" element={<Questinaire />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
