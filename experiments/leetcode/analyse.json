@@ -1,0 +1,10 @@
+{
+  "difficulties": [
+    "Easy",
+    "Hard",
+    "Medium"
+  ],
+  "easy": 52,
+  "medium": 25,
+  "hard": 5
+}

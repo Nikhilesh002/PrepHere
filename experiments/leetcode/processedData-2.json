@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Combine Two Tables",
+    "slug": "combine-two-tables",
+    "acRate": 77.5626084084912,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Second Highest Salary",
+    "slug": "second-highest-salary",
+    "acRate": 42.94201722282975,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  }
+]

@@ -1,0 +1,1232 @@
+[
+  {
+    "title": "Combine Two Tables",
+    "slug": "combine-two-tables",
+    "acRate": 77.5626084084912,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Second Highest Salary",
+    "slug": "second-highest-salary",
+    "acRate": 42.94201722282975,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Nth Highest Salary",
+    "slug": "nth-highest-salary",
+    "acRate": 37.91447187389441,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Rank Scores",
+    "slug": "rank-scores",
+    "acRate": 64.52042690466332,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Consecutive Numbers",
+    "slug": "consecutive-numbers",
+    "acRate": 45.342911634275254,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Employees Earning More Than Their Managers",
+    "slug": "employees-earning-more-than-their-managers",
+    "acRate": 71.02314135717876,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Duplicate Emails",
+    "slug": "duplicate-emails",
+    "acRate": 72.08688826145702,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Customers Who Never Order",
+    "slug": "customers-who-never-order",
+    "acRate": 70.30008450897917,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Department Highest Salary",
+    "slug": "department-highest-salary",
+    "acRate": 53.88093285140769,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Department Top Three Salaries",
+    "slug": "department-top-three-salaries",
+    "acRate": 56.75491320211099,
+    "difficulty": "Hard",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Delete Duplicate Emails",
+    "slug": "delete-duplicate-emails",
+    "acRate": 63.79549291276311,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Rising Temperature",
+    "slug": "rising-temperature",
+    "acRate": 49.79949803248537,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Trips and Users",
+    "slug": "trips-and-users",
+    "acRate": 37.014242081293716,
+    "difficulty": "Hard",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Game Play Analysis I",
+    "slug": "game-play-analysis-i",
+    "acRate": 75.4519631469511,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Game Play Analysis IV",
+    "slug": "game-play-analysis-iv",
+    "acRate": 38.905292982041914,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Managers with at Least 5 Direct Reports",
+    "slug": "managers-with-at-least-5-direct-reports",
+    "acRate": 49.14808357287997,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Employee Bonus",
+    "slug": "employee-bonus",
+    "acRate": 77.01076465781651,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Find Customer Referee",
+    "slug": "find-customer-referee",
+    "acRate": 71.58662252745819,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Investments in 2016",
+    "slug": "investments-in-2016",
+    "acRate": 49.67745415318231,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Customer Placing the Largest Number of Orders",
+    "slug": "customer-placing-the-largest-number-of-orders",
+    "acRate": 64.54530909381813,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Big Countries",
+    "slug": "big-countries",
+    "acRate": 68.19682289703853,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Classes More Than 5 Students",
+    "slug": "classes-more-than-5-students",
+    "acRate": 59.53812110818838,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Human Traffic of Stadium",
+    "slug": "human-traffic-of-stadium",
+    "acRate": 49.4711452996978,
+    "difficulty": "Hard",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Friend Requests II: Who Has the Most Friends",
+    "slug": "friend-requests-ii-who-has-the-most-friends",
+    "acRate": 59.972326937467344,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Sales Person",
+    "slug": "sales-person",
+    "acRate": 65.84576069453196,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Tree Node",
+    "slug": "tree-node",
+    "acRate": 73.51908740641574,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Triangle Judgement",
+    "slug": "triangle-judgement",
+    "acRate": 73.26461628135796,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Biggest Single Number",
+    "slug": "biggest-single-number",
+    "acRate": 68.47633464527198,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Not Boring Movies",
+    "slug": "not-boring-movies",
+    "acRate": 74.77177881442294,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Exchange Seats",
+    "slug": "exchange-seats",
+    "acRate": 72.05595285453923,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Swap Salary",
+    "slug": "swap-salary",
+    "acRate": 83.80593708462561,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Customers Who Bought All Products",
+    "slug": "customers-who-bought-all-products",
+    "acRate": 62.83246690764797,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Actors and Directors Who Cooperated At Least Three Times",
+    "slug": "actors-and-directors-who-cooperated-at-least-three-times",
+    "acRate": 70.45692960092569,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Product Sales Analysis I",
+    "slug": "product-sales-analysis-i",
+    "acRate": 84.34578908764965,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Product Sales Analysis III",
+    "slug": "product-sales-analysis-iii",
+    "acRate": 44.08800347037495,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Project Employees I",
+    "slug": "project-employees-i",
+    "acRate": 64.97971828199009,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Sales Analysis III",
+    "slug": "sales-analysis-iii",
+    "acRate": 46.70916495186566,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "User Activity for the Past 30 Days I",
+    "slug": "user-activity-for-the-past-30-days-i",
+    "acRate": 49.272016242139074,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Article Views I",
+    "slug": "article-views-i",
+    "acRate": 77.11785897358797,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Market Analysis I",
+    "slug": "market-analysis-i",
+    "acRate": 57.17818242211467,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Product Price at a Given Date",
+    "slug": "product-price-at-a-given-date",
+    "acRate": 57.09224151150497,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Immediate Food Delivery II",
+    "slug": "immediate-food-delivery-ii",
+    "acRate": 53.72729515856718,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Reformat Department Table",
+    "slug": "reformat-department-table",
+    "acRate": 76.78202697304384,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Monthly Transactions I",
+    "slug": "monthly-transactions-i",
+    "acRate": 58.34914145989032,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Last Person to Fit in the Bus",
+    "slug": "last-person-to-fit-in-the-bus",
+    "acRate": 68.1540963280568,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Queries Quality and Percentage",
+    "slug": "queries-quality-and-percentage",
+    "acRate": 45.94170351877584,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Average Selling Price",
+    "slug": "average-selling-price",
+    "acRate": 36.968757956780124,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Students and Examinations",
+    "slug": "students-and-examinations",
+    "acRate": 60.215210274623345,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Restaurant Growth",
+    "slug": "restaurant-growth",
+    "acRate": 55.57806815887443,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "List the Products Ordered in a Period",
+    "slug": "list-the-products-ordered-in-a-period",
+    "acRate": 71.81113120055244,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Movie Rating",
+    "slug": "movie-rating",
+    "acRate": 41.166444664059924,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Replace Employee ID With The Unique Identifier",
+    "slug": "replace-employee-id-with-the-unique-identifier",
+    "acRate": 83.62033174705755,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Capital Gain/Loss",
+    "slug": "capital-gainloss",
+    "acRate": 85.14067177019822,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Top Travellers",
+    "slug": "top-travellers",
+    "acRate": 57.19387300077293,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Group Sold Products By The Date",
+    "slug": "group-sold-products-by-the-date",
+    "acRate": 77.64171678380794,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Find Users With Valid E-Mails",
+    "slug": "find-users-with-valid-e-mails",
+    "acRate": 44.11955081356786,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Patients With a Condition",
+    "slug": "patients-with-a-condition",
+    "acRate": 39.55327180136787,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Customer Who Visited but Did Not Make Any Transactions",
+    "slug": "customer-who-visited-but-did-not-make-any-transactions",
+    "acRate": 67.54718238572298,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Bank Account Summary II",
+    "slug": "bank-account-summary-ii",
+    "acRate": 83.40905289217491,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Percentage of Users Attended a Contest",
+    "slug": "percentage-of-users-attended-a-contest",
+    "acRate": 58.41539846741269,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Average Time of Process per Machine",
+    "slug": "average-time-of-process-per-machine",
+    "acRate": 68.86298171205733,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Fix Names in a Table",
+    "slug": "fix-names-in-a-table",
+    "acRate": 61.13642275676337,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Invalid Tweets",
+    "slug": "invalid-tweets",
+    "acRate": 85.66730227594773,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Daily Leads and Partners",
+    "slug": "daily-leads-and-partners",
+    "acRate": 86.61766612367752,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Find Followers Count",
+    "slug": "find-followers-count",
+    "acRate": 69.43739024719709,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "The Number of Employees Which Report to Each Employee",
+    "slug": "the-number-of-employees-which-report-to-each-employee",
+    "acRate": 51.47654981792655,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Find Total Time Spent by Each Employee",
+    "slug": "find-total-time-spent-by-each-employee",
+    "acRate": 86.90696516108737,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Recyclable and Low Fat Products",
+    "slug": "recyclable-and-low-fat-products",
+    "acRate": 89.38538699381131,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Primary Department for Each Employee",
+    "slug": "primary-department-for-each-employee",
+    "acRate": 69.99950905788208,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Rearrange Products Table",
+    "slug": "rearrange-products-table",
+    "acRate": 85.53719692163408,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Calculate Special Bonus",
+    "slug": "calculate-special-bonus",
+    "acRate": 57.461589485219044,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "The Latest Login in 2020",
+    "slug": "the-latest-login-in-2020",
+    "acRate": 77.38218981922324,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Count Salary Categories",
+    "slug": "count-salary-categories",
+    "acRate": 61.68605971361137,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Confirmation Rate",
+    "slug": "confirmation-rate",
+    "acRate": 60.557559608762254,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Employees With Missing Information",
+    "slug": "employees-with-missing-information",
+    "acRate": 72.75194536999366,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Employees Whose Manager Left the Company",
+    "slug": "employees-whose-manager-left-the-company",
+    "acRate": 48.87826761034994,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Number of Unique Subjects Taught by Each Teacher",
+    "slug": "number-of-unique-subjects-taught-by-each-teacher",
+    "acRate": 89.27960715049106,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Odd and Even Transactions",
+    "slug": "odd-and-even-transactions",
+    "acRate": 70.07919746568109,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "First Letter Capitalization II",
+    "slug": "first-letter-capitalization-ii",
+    "acRate": 77.69074557586308,
+    "difficulty": "Hard",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Find Students Who Improved",
+    "slug": "find-students-who-improved",
+    "acRate": 48.612187936114125,
+    "difficulty": "Medium",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Find Valid Emails",
+    "slug": "find-valid-emails",
+    "acRate": 64.49538258575198,
+    "difficulty": "Easy",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  },
+  {
+    "title": "Find Invalid IP Addresses",
+    "slug": "find-invalid-ip-addresses",
+    "acRate": 64.93843162670123,
+    "difficulty": "Hard",
+    "topicTags": [
+      {
+        "name": "Database",
+        "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+        "slug": "database"
+      }
+    ],
+    "descriptionHtml": "",
+    "descriptionText": ""
+  }
+]

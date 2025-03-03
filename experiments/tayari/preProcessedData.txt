@@ -1,0 +1,649 @@
+Categories:-
+scenario based
+theoretical
+problem solving
+project based
+others
+
+
+
+
+Difficulties:-
+Medium
+Easy
+Hard
+
+
+
+
+SubStatuses:-
+approved
+
+
+
+
+AdminContents:-
+Looks good!
+Approved!
+Approved!!
+approved!
+We are delighted to inform you that your recent interview submission has been thoroughly reviewed and approved!
+Approving for now! Please ensure to provide sample data for the problem solving questions.
+Please ensure to always add sample data and schema for problem solving questions. Approving it for now!
+Approved
+Approved.
+approved.
+approved
+
+
+
+
+Countries:-
+India
+United States
+Czech Republic
+United Kingdom
+Canada
+
+
+
+
+Ctcs:-
+40L-50L
+50L-60L
+30L-40L
+5L-10L
+10L-20L
+20L-30L
+70L-80L
+60L-70L
+>1cr
+
+
+
+
+Yoes:-
+5-8
+12-15
+2-5
+<2
+8-12
+
+
+
+
+Roles:-
+Senior Data Engineer
+Data Architect
+Data Engineer-2
+Data Engineer-1
+Lead Data Engineer
+
+
+
+
+CompanyNames:-
+Oportun
+EPAM Systems
+Persistent Systems
+The Math Co
+Databricks
+HCLTech
+Tiger Analytics
+PepsiCo
+Wipro
+Accenture
+Kantar
+Aays Analytics
+Techmango Technology Services Private Limited
+AST Space Mobile
+Infosys
+Bluepi
+LTIMindtree
+Affine Analytics
+Indium Software
+Intraedge
+CTS
+Bitwise
+Deloitte
+KPMG
+EPAM
+MSD
+Ernst & Young
+Astrosoft Technologies
+Apexon
+EXL Services
+Delloite
+Aidetic
+Coforge
+Affine
+synchrony
+Zeta
+American Airlines
+CAPGEMINI
+Kirana Capital
+delloite
+Quantium Analytics
+BLOOMBERG
+Natwest
+Mcafee
+Axa XL
+McKinsey
+KOTAK BANK
+Bloomberg UK PLC
+Publicis Sapient
+Tekion
+Recro
+aptlytech
+Neudesic
+EY
+CGI
+JoulestoWatts
+dbs
+KPI Partners
+Creditsafe Technology
+Door Dash
+QRT
+Avanade
+CitiusTech
+TCS
+Clairvoyant
+Oracle
+Concentrix
+LandMark Group
+Cognizant
+Koantek
+PWC
+Random trees pvt ltd
+Sigmoid
+Tech Mahindra
+EMIDS
+ProArch
+capgemini
+Accordion
+Persistent
+HCL Technologies
+Walmart
+Quantiphi
+Seven Eleven
+Goldman Sachs Group
+Paytm
+Value Labs
+Bain & Company
+ShopSe
+NeoStats Analytics Solutions.
+EPAM System
+UBS
+California Govt
+Exl
+Ecom Express
+GlobalLogic
+Elanco
+GIST Impact
+Amazon
+Broadridge
+scientist technologies
+Games24x7
+JPMorgan Chase
+Expedia
+Fractal
+Neenopal
+Impetus
+
+
+
+
+Summaries:-
+Spark partitions
+CDC events
+Device Stats
+Highest average sales
+Languages spoken
+Spark files
+Filename category
+Notebook execution
+Pyspark dataframe
+Match Fix
+Spark Theory
+Sales stats
+Sort array
+json parsing
+SQL Joins
+Max substring length
+Money spent less
+Product Sales
+User Names
+Missing number
+GroupBy function
+Window function
+Count() function
+Revenue Generated
+Average employee salary
+Customers order amount
+Manager for each employee
+Alerting mechanism
+Optimzation techniques
+SCD-2 records
+Lambda function
+Delete duplicate records
+Second highest salary
+SCD Implementation
+Pipeline failure scenario
+Customers spent
+Spark cache
+Lowest salary
+CDC implementation
+Missing Data
+Column changes
+Customer Orders
+Contribution from each item
+Data ordering
+Duplicates in department
+Column addition
+Basic SQL questions
+Numbers repition
+Department details
+Python dict
+Error handling
+Lambda Function
+ETL Questions
+Onprem database
+corelated subquery
+Top employee salary
+Exclude orders in june
+Highest average salary
+OOM spark
+Spark streaming
+Salesman total count
+Shuffling in spark
+Countries in continents
+Create a dictionary
+DE theory questions
+Data skewness
+Latest designation
+Incremental data load
+word count
+Print last name
+Persist in spark
+UDF for unique values
+Project Questions
+Find duplicates
+Display the states based on filename
+Python pattern print
+Data is not visible
+Arithmetic operations on lists
+Dimensional modelling
+Data conversion
+Remove the characters before first digit
+Surrogate key
+Lamba function for numbers
+Amount earned by driver
+Average stock value
+Failed job in production
+Most purchased product
+Slowly running spark job
+Sum of non-duplicates
+Spark transformations
+Employee who was vacinated
+Spark theory questions
+Airflow questions
+Highest paid employees
+Count the vowels
+Find the right node
+Incremental data update
+Array as a dataframe
+New column in spark
+RDD differance
+Compression techniques
+Rank functions
+Display the alphabets
+Produce the data in given pattern
+Highest expenditure
+Reverse order of words
+Spark resources allocation
+Highest score in each dept
+Loyal customers
+character count in string
+Late arriving records
+character count
+Split the delimiter
+secure s3 bucket
+Duplicates in a list
+Order data transformations
+Prime numbers in list
+Delete duplicates
+Fetch data into redshift
+Catalyst Optimizer
+Broadcast in data skewness
+Palindrome string
+Airflow task rerun
+Sort & merge
+Latest ID data
+Consecutive appearance
+DE theory
+Dimensional Modelling
+SCD
+Customer spend transactions
+Optimization techniques
+Customers orders
+Highest sales in product
+Average score of students
+Surrogate Keys
+Employee experience in dept
+E-Commerce Data Model
+Spark shuffling
+Frequency of word
+Lineage & DAG
+Project Architecture
+Special characters in data
+Count of items ordered
+Repartition & Coalesce
+Reverse the sentance
+Missing partitions
+Spark configuration properties
+Explode function
+Mutual friend list
+Spark UI
+Hive managed table
+Sum of 2 numbers in scala
+Rearranged array
+Hive metastore
+Candies to children
+File in Lambda
+Matches between countries
+Top marks in each subject
+Spark theory
+Lazy evaluation
+Count non-null values
+Aadhaar Transaction
+Fetch details from tables
+Python set
+Increase in sales revenue
+Users login activity
+Repeated words
+Rolling average of revenue
+Processing dimensional modelling tables
+Spark dataframes join
+Implementation of SCD-2
+Types of SCD
+Spark dataframe role display
+
+Spark dataframe dept display
+List & Tuple
+Ingress in K8
+User due loan amount
+clustering key in snowflake
+Reduce snowflake cost
+Data storage in redshift
+Word count in txt file
+Spark dataframes sequencing
+Handling multiple delimiters
+Distinct orders from customers
+Python file handler
+Data testing in UAT
+Design architecture handling batch&real data
+Data design questions
+Top customers in london
+Page visitors in pyspark
+CSV data processing
+Employees reporting to manager
+File formats in project
+Days taken for next order
+Databricks migration
+combine subscriptions
+Execution tasks
+Employee second highest salary
+Actors data transformation
+No purchase made
+Count script execution
+Pyspark transformations
+Delta data detection
+Totals cups of coffee
+Delete logical duplicates
+Fruits combination
+Rotate an array
+Load nested JSON
+Index of sorted array
+Flatten nested list
+Data from 5 sources
+Schema in spark
+Frequency of numbers
+List values formatting
+User clicks in platform
+Asia cup matches
+Employee attendance tracker
+Online sales performance
+Mobile number format
+AWS Glue workers
+Lambda runtime
+Common prefix
+Decorator in python
+Repartition in spark
+Fruit farm harvesting
+Trigger pipeline in ADF
+Countries combination
+communication codes
+Max salary from dept
+Schema change in ADF
+Current project
+Data pipelines monitoring
+Severity-2 issue
+Dataframe output
+Project challanges
+Autoloader in databricks
+Memory allocation in spark
+Forward filling values
+Customer info dataframe
+catalyst optimizer
+Repeat order customers
+Consecutive winter
+DE scenarios
+No sales made
+Top salaries in dept
+DE scenario questions
+Python list pattern
+Snowflake schema
+Highest orders placed
+Python input lists
+CSV files operations
+Employee name
+SQL table structure
+Customers orders in CSV
+Python lists
+2 parallel spark jobs
+Hdfs jar script
+Pyspark json schema
+Highest temperature
+Data encryption
+Special characters removal
+Left insertion point
+Running total
+Pyspark file operations
+File loading process
+Fill null values
+Sum of integers in array
+Fetch name of the products
+Average delivery time per restaurant
+Nth highest salary
+All items purchase
+Products grouping
+Relative order of elements
+Top 3 salaries
+Coloured objects
+Employee table functions
+Data migration scenario
+CSV file loading
+Cumulative sum
+Pysarpk CSV operations
+SQL functions difference
+LTS usage
+Employees in floors
+Generate sequence pattern
+Highest salary in dept
+SCD Types
+Dept with less employees
+Cricket matches
+Datastage duplicates
+Load files with different metadata
+Records population in table
+Peformance tuning in datastage
+String reverse
+Pyspark languages list
+Employees salary bandwidth
+Spark questions
+Pincode with highest population
+Match fixers
+Subarray largest sum
+Project questions
+Manager levels of employees
+Salary hike percent
+Sales variance
+Python print list
+Vehicle stops near signal
+Speed lag difference
+Maximum call duration
+Second highest revenue
+Spark optimization techniques
+Broadcast join
+Salary differences
+Filtering Interview
+User hobbies
+Sales increase every year
+Bubble sort
+Design file system
+Recursive CTE
+DAG Schedule
+Apache beam pipeline
+Capacitor in bigquery
+Map Vs Flatmap
+Bigquery architecture
+Anagram python
+connect the ropes
+3rd highest salary
+Train platforms
+Highest salary departments
+Read 1TB file
+Remove adjacent duplicates
+Next greater element
+Index of the key
+Traverse a tree
+Cluster configuration 100GB file
+Match Fixers
+Frequent activity types
+Pyspark pattern print
+Most visited building floor
+Top chocoloates sub-category
+Employee tenture
+Duplicate deletion
+Pyspark match fixes
+Design stock-out detection
+Sum of 2 numbers
+Medallion architecture
+Deployment roll back
+Patients admissions
+Provinces of patients
+Republic day pysarpk
+Customer traveled locations
+String manpuilation
+Calendar days calculation
+Employee direct reportees
+occurrences of words
+pyspark dataframe
+ADF Properties
+Employees salary average
+ADL operations
+employee highest experience
+Employee office engage
+Spark error solution
+Dictionary words segmentation
+List re-arrangement
+Memory management mysql
+Count function scenario
+Rollback function
+Uppercase letters
+Frequency of character
+Finding Unique substrings
+Total matches query
+Split wise Design
+Special Characters
+Project DE
+Streaming data pipeline design
+Join optimizations
+Design Fintect pipeline
+Numbers with addition
+Table difference list
+Consecutive characters removal
+leetcode Frequent elements
+Electronics sales
+Numbers, seats in Leetcode
+New column JSON
+NULL values scenario
+Job optimization
+Find repeating characters
+Random numbers generation
+Spark data optimization
+Fibonacci number
+Find common Prefix
+Data skew
+Factorial of number
+Top 5 ranks of students
+findMinMaxSum python
+findMinMaxChar python
+Top 5 employees sales
+Possible matches python
+Spark optimization
+Duplicates in list
+Sort Array
+Scala
+Employee working hours
+Design patterns scala
+Permutation of a String
+SQL Write & Read
+Design OLTP system
+Design ETL sales pipeline
+Database performance degrade
+Anagrams grouping
+Swap student names
+Cluster configuration
+Matches Played
+Bluetooth paired devices
+Growth on year basis
+Spark DE
+Average product rating
+Distribute available cards
+Total product price
+Last known salary
+cumulative sum of product
+Azure DE
+Palindrome character addition
+Driver package delivery
+Spark configuration
+Largest prefix
+Occurance of numbers
+Data load in ascending order
+Stock price analysis
+Total games played
+Highest win ratio
+Players leaderboard
+Arithmetic operation
+Olympic players with gold medals
+Spark optimizations
+Common prefix in strings
+Min subarray with unique values
+Adaptive query execution
+spark and databricks Theory
+DE scenario
+Employees earn more than manager
+Largest number in array
+Cloud services
+Employees drawing more salary
+Student subject scores
+Character board string
+Valid anagram
+Decorators in python
+Sales Product Data
+side inputs in apache beam
+Hive
+wildcards in bigquery
+Population Statistics
+Parition by string

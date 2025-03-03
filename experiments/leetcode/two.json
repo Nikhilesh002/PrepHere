@@ -1,0 +1,2009 @@
+{
+  "data": {
+    "problemsetQuestionList": {
+      "total": 301,
+      "questions": [
+        {
+          "acRate": 83.62033174705755,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1378",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Replace Employee ID With The Unique Identifier",
+          "titleSlug": "replace-employee-id-with-the-unique-identifier",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 61.360196427970806,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "1384",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Total Sales Amount by Year",
+          "titleSlug": "total-sales-amount-by-year",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 85.14067177019822,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1393",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Capital Gain/Loss",
+          "titleSlug": "capital-gainloss",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 72.09344158102388,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1398",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Customers Who Bought Products A and B but Not C",
+          "titleSlug": "customers-who-bought-products-a-and-b-but-not-c",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 57.19387300077293,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1407",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Top Travellers",
+          "titleSlug": "top-travellers",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 58.65125608940682,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "1412",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Find the Quiet Students in All Exams",
+          "titleSlug": "find-the-quiet-students-in-all-exams",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 82.9583190198099,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1421",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "NPV Queries",
+          "titleSlug": "npv-queries",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 74.96610935381834,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1435",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Create a Session Bar Chart",
+          "titleSlug": "create-a-session-bar-chart",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 72.27231740306583,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1440",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Evaluate Boolean Expression",
+          "titleSlug": "evaluate-boolean-expression",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 86.013203047752,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1445",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Apples & Oranges",
+          "titleSlug": "apples-oranges",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 36.60923536531973,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1454",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Active Users",
+          "titleSlug": "active-users",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 68.64757123874206,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1459",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Rectangles Area",
+          "titleSlug": "rectangles-area",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 78.14759521091304,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1468",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Calculate Salaries",
+          "titleSlug": "calculate-salaries",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 77.29104328745262,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "1479",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Sales by Day of the Week",
+          "titleSlug": "sales-by-day-of-the-week",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 77.64171678380794,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1484",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Group Sold Products By The Date",
+          "titleSlug": "group-sold-products-by-the-date",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 49.013706875324885,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1495",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Friendly Movies Streamed Last Month",
+          "titleSlug": "friendly-movies-streamed-last-month",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 50.40294384006053,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1501",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Countries You Can Safely Invest In",
+          "titleSlug": "countries-you-can-safely-invest-in",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 67.08772923599801,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1511",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Customer Order Frequency",
+          "titleSlug": "customer-order-frequency",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 44.11955081356786,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1517",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Find Users With Valid E-Mails",
+          "titleSlug": "find-users-with-valid-e-mails",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 39.55327180136787,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1527",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Patients With a Condition",
+          "titleSlug": "patients-with-a-condition",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 68.76406316514971,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1532",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Most Recent Three Orders",
+          "titleSlug": "the-most-recent-three-orders",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 59.00233200203715,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1543",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Fix Product Name Format",
+          "titleSlug": "fix-product-name-format",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 64.85055442581438,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1549",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Most Recent Orders for Each Product",
+          "titleSlug": "the-most-recent-orders-for-each-product",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 51.693910173774036,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1555",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Bank Account Summary",
+          "titleSlug": "bank-account-summary",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 82.21536969025016,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1565",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Unique Orders and Customers Per Month",
+          "titleSlug": "unique-orders-and-customers-per-month",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 87.50210418030487,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1571",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Warehouse Manager",
+          "titleSlug": "warehouse-manager",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 67.54718238572298,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1581",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Customer Who Visited but Did Not Make Any Transactions",
+          "titleSlug": "customer-who-visited-but-did-not-make-any-transactions",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 83.40905289217491,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1587",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Bank Account Summary II",
+          "titleSlug": "bank-account-summary-ii",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 78.12776215347529,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1596",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Most Frequently Ordered Products for Each Customer",
+          "titleSlug": "the-most-frequently-ordered-products-for-each-customer",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 54.43897023107348,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1607",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Sellers With No Sales",
+          "titleSlug": "sellers-with-no-sales",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 73.01910649058725,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1613",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Find the Missing IDs",
+          "titleSlug": "find-the-missing-ids",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 81.13990031579348,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1623",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "All Valid Triplets That Can Represent a Country",
+          "titleSlug": "all-valid-triplets-that-can-represent-a-country",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 58.41539846741269,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1633",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Percentage of Users Attended a Contest",
+          "titleSlug": "percentage-of-users-attended-a-contest",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 48.16819525885832,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "1635",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Hopper Company Queries I",
+          "titleSlug": "hopper-company-queries-i",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 39.42537909018356,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "1645",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Hopper Company Queries II",
+          "titleSlug": "hopper-company-queries-ii",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 65.73667441660209,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "1651",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Hopper Company Queries III",
+          "titleSlug": "hopper-company-queries-iii",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 68.86298171205733,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1661",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Average Time of Process per Machine",
+          "titleSlug": "average-time-of-process-per-machine",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 61.13642275676337,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1667",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Fix Names in a Table",
+          "titleSlug": "fix-names-in-a-table",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 38.39270953876674,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1677",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Product's Worth Over Invoices",
+          "titleSlug": "products-worth-over-invoices",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 85.66730227594773,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1683",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Invalid Tweets",
+          "titleSlug": "invalid-tweets",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 86.61766612367752,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1693",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Daily Leads and Partners",
+          "titleSlug": "daily-leads-and-partners",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 80.94637653994923,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1699",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Number of Calls Between Two Persons",
+          "titleSlug": "number-of-calls-between-two-persons",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 70.34022918568097,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1709",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Biggest Window Between Visits",
+          "titleSlug": "biggest-window-between-visits",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 75.81352105193253,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1715",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Count Apples and Oranges",
+          "titleSlug": "count-apples-and-oranges",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 69.43739024719709,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1729",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Find Followers Count",
+          "titleSlug": "find-followers-count",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 51.47654981792655,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1731",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "The Number of Employees Which Report to Each Employee",
+          "titleSlug": "the-number-of-employees-which-report-to-each-employee",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 86.90696516108737,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1741",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Find Total Time Spent by Each Employee",
+          "titleSlug": "find-total-time-spent-by-each-employee",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 62.47981684540306,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1747",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Leetflex Banned Accounts",
+          "titleSlug": "leetflex-banned-accounts",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 89.38538699381131,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1757",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Recyclable and Low Fat Products",
+          "titleSlug": "recyclable-and-low-fat-products",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 77.98951648459315,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "1767",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Find the Subtasks That Did Not Execute",
+          "titleSlug": "find-the-subtasks-that-did-not-execute",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 82.43371905668668,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1777",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Product's Price for Each Store",
+          "titleSlug": "products-price-for-each-store",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 83.16412859560067,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1783",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Grand Slam Titles",
+          "titleSlug": "grand-slam-titles",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 69.99950905788208,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1789",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Primary Department for Each Employee",
+          "titleSlug": "primary-department-for-each-employee",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 85.53719692163408,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1795",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Rearrange Products Table",
+          "titleSlug": "rearrange-products-table",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 58.56268601812528,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1809",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Ad-Free Sessions",
+          "titleSlug": "ad-free-sessions",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 60.77763587342131,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1811",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Find Interview Candidates",
+          "titleSlug": "find-interview-candidates",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 87.6370139610015,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1821",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Find Customers With Positive Revenue this Year",
+          "titleSlug": "find-customers-with-positive-revenue-this-year",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 82.15440866263536,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1831",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Maximum Transaction Each Day",
+          "titleSlug": "maximum-transaction-each-day",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 53.34555124335202,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1841",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "League Statistics",
+          "titleSlug": "league-statistics",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 44.90886998784933,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1843",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Suspicious Bank Accounts",
+          "titleSlug": "suspicious-bank-accounts",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 85.51182040135771,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1853",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Convert Date Format",
+          "titleSlug": "convert-date-format",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 70.75988327937003,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1867",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Orders With Maximum Quantity Above Average",
+          "titleSlug": "orders-with-maximum-quantity-above-average",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 57.461589485219044,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1873",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Calculate Special Bonus",
+          "titleSlug": "calculate-special-bonus",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 66.69637993364037,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1875",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Group Employees of the Same Salary",
+          "titleSlug": "group-employees-of-the-same-salary",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 77.38218981922324,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1890",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "The Latest Login in 2020",
+          "titleSlug": "the-latest-login-in-2020",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 44.357472396454305,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "1892",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Page Recommendations II",
+          "titleSlug": "page-recommendations-ii",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 61.68605971361137,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1907",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Count Salary Categories",
+          "titleSlug": "count-salary-categories",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 27.694852941176475,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "1917",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Leetcodify Friends Recommendations",
+          "titleSlug": "leetcodify-friends-recommendations",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 42.52327322439945,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "1919",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Leetcodify Similar Friends",
+          "titleSlug": "leetcodify-similar-friends",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 60.557559608762254,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1934",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Confirmation Rate",
+          "titleSlug": "confirmation-rate",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 56.543586522499886,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1939",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Users That Actively Request Confirmation Messages",
+          "titleSlug": "users-that-actively-request-confirmation-messages",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 54.562551424205616,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1949",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Strong Friendship",
+          "titleSlug": "strong-friendship",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 69.12787875519119,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1951",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "All the Pairs With the Maximum Number of Common Followers",
+          "titleSlug": "all-the-pairs-with-the-maximum-number-of-common-followers",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 72.75194536999366,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1965",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Employees With Missing Information",
+          "titleSlug": "employees-with-missing-information",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 51.09876956958874,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "1972",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "First and Last Call On the Same Day",
+          "titleSlug": "first-and-last-call-on-the-same-day",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 48.87826761034994,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "1978",
+          "isFavor": false,
+          "paidOnly": false,
+          "status": null,
+          "title": "Employees Whose Manager Left the Company",
+          "titleSlug": "employees-whose-manager-left-the-company",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 66.88691915122213,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1988",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Find Cutoff Score for Each School",
+          "titleSlug": "find-cutoff-score-for-each-school",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 49.17426816908126,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "1990",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Count the Number of Experiments",
+          "titleSlug": "count-the-number-of-experiments",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 44.68601287673789,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "2004",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Number of Seniors and Juniors to Join the Company",
+          "titleSlug": "the-number-of-seniors-and-juniors-to-join-the-company",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 64.04393409885172,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "2010",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Number of Seniors and Juniors to Join the Company II",
+          "titleSlug": "the-number-of-seniors-and-juniors-to-join-the-company-ii",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 72.28015188957869,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "2020",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Number of Accounts That Did Not Stream",
+          "titleSlug": "number-of-accounts-that-did-not-stream",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 84.5166069885171,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "2026",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Low-Quality Problems",
+          "titleSlug": "low-quality-problems",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 78.66276945560833,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "2041",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Accepted Candidates From the Interviews",
+          "titleSlug": "accepted-candidates-from-the-interviews",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 70.48188155979467,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "2051",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Category of Each Member in the Store",
+          "titleSlug": "the-category-of-each-member-in-the-store",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 82.24285072615662,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "2066",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Account Balance",
+          "titleSlug": "account-balance",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 75.18431831480397,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "2072",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Winner University",
+          "titleSlug": "the-winner-university",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 77.51472285519813,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "2082",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Number of Rich Customers",
+          "titleSlug": "the-number-of-rich-customers",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 87.1189024390244,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "2084",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Drop Type 1 Orders for Customers With Type 0 Orders",
+          "titleSlug": "drop-type-1-orders-for-customers-with-type-0-orders",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 71.1257049039903,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "2112",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Airport With the Most Traffic",
+          "titleSlug": "the-airport-with-the-most-traffic",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 56.13783201722901,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "2118",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Build the Equation",
+          "titleSlug": "build-the-equation",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 48.92208774583964,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "2142",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Number of Passengers in Each Bus I",
+          "titleSlug": "the-number-of-passengers-in-each-bus-i",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 39.79088345864661,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "2153",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Number of Passengers in Each Bus II",
+          "titleSlug": "the-number-of-passengers-in-each-bus-ii",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 60.791196921622905,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "2159",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Order Two Columns Independently",
+          "titleSlug": "order-two-columns-independently",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 53.469424299400124,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "2173",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Longest Winning Streak",
+          "titleSlug": "longest-winning-streak",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": true,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 60.677993659052106,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "2175",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Change in Global Rankings",
+          "titleSlug": "the-change-in-global-rankings",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 49.67195514732196,
+          "difficulty": "Hard",
+          "freqBar": null,
+          "frontendQuestionId": "2199",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Finding the Topic of Each Post",
+          "titleSlug": "finding-the-topic-of-each-post",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 50.6238105307676,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "2205",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Number of Users That Are Eligible for Discount",
+          "titleSlug": "the-number-of-users-that-are-eligible-for-discount",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 45.656415497537864,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "2228",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Users With Two Purchases Within Seven Days",
+          "titleSlug": "users-with-two-purchases-within-seven-days",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 50.62243996466147,
+          "difficulty": "Easy",
+          "freqBar": null,
+          "frontendQuestionId": "2230",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "The Users That Are Eligible for Discount",
+          "titleSlug": "the-users-that-are-eligible-for-discount",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        },
+        {
+          "acRate": 71.88557366964011,
+          "difficulty": "Medium",
+          "freqBar": null,
+          "frontendQuestionId": "2238",
+          "isFavor": false,
+          "paidOnly": true,
+          "status": null,
+          "title": "Number of Times a Driver Was a Passenger",
+          "titleSlug": "number-of-times-a-driver-was-a-passenger",
+          "topicTags": [
+            {
+              "name": "Database",
+              "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+              "slug": "database"
+            }
+          ],
+          "hasSolution": false,
+          "hasVideoSolution": false
+        }
+      ]
+    }
+  }
+}
