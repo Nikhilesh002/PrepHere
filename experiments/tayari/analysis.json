@@ -1,0 +1,632 @@
+{
+  "difficulties": [
+    "Medium",
+    "Easy",
+    "Hard"
+  ],
+  "categories": [
+    "scenario based",
+    "problem solving",
+    "theoretical",
+    "project based"
+  ],
+  "countries": [
+    "India",
+    "United States",
+    "Czech Republic",
+    "United Kingdom",
+    "Canada"
+  ],
+  "ctcs": [
+    "40L-50L",
+    "50L-60L",
+    "30L-40L",
+    "5L-10L",
+    "10L-20L",
+    "20L-30L",
+    "70L-80L",
+    "60L-70L"
+  ],
+  "yoes": [
+    "5-8",
+    "12-15",
+    "2-5",
+    "<2",
+    "8-12"
+  ],
+  "roles": [
+    "Senior Data Engineer",
+    "Data Architect",
+    "Data Engineer-2",
+    "Data Engineer-1",
+    "Lead Data Engineer"
+  ],
+  "frequency": {
+    "Oportun": 3,
+    "EPAM Systems": 1,
+    "Persistent Systems": 1,
+    "The Math Co": 1,
+    "Databricks": 2,
+    "HCLTech": 2,
+    "Tiger Analytics": 8,
+    "PepsiCo": 2,
+    "Wipro": 6,
+    "Accenture": 7,
+    "Kantar": 4,
+    "Aays Analytics": 3,
+    "Techmango Technology Services Private Limited": 4,
+    "AST Space Mobile": 2,
+    "Bluepi": 3,
+    "LTIMindtree": 8,
+    "Affine Analytics": 2,
+    "Indium Software": 2,
+    "Infosys": 4,
+    "Intraedge": 3,
+    "CTS": 2,
+    "Bitwise": 1,
+    "Deloitte": 9,
+    "KPMG": 2,
+    "EPAM": 6,
+    "MSD": 2,
+    "Ernst & Young": 1,
+    "Astrosoft Technologies": 1,
+    "Apexon": 2,
+    "EXL Services": 6,
+    "Delloite": 3,
+    "Aidetic": 3,
+    "Affine": 5,
+    "synchrony": 3,
+    "Zeta": 3,
+    "American Airlines": 2,
+    "CAPGEMINI": 3,
+    "Kirana Capital": 2,
+    "delloite": 3,
+    "Quantium Analytics": 1,
+    "BLOOMBERG": 2,
+    "Natwest": 2,
+    "Mcafee": 3,
+    "Axa XL": 4,
+    "McKinsey": 3,
+    "KOTAK BANK": 1,
+    "Bloomberg UK PLC": 1,
+    "Publicis Sapient": 5,
+    "Tekion": 1,
+    "Recro": 1,
+    "aptlytech": 2,
+    "Neudesic": 2,
+    "EY": 3,
+    "CGI": 2,
+    "JoulestoWatts": 1,
+    "dbs": 1,
+    "Creditsafe Technology": 5,
+    "Door Dash": 2,
+    "Avanade": 2,
+    "CitiusTech": 1,
+    "KPI Partners": 2,
+    "TCS": 1,
+    "Clairvoyant": 3,
+    "Oracle": 2,
+    "Concentrix": 2,
+    "LandMark Group": 2,
+    "Cognizant": 5,
+    "Koantek": 2,
+    "PWC": 1,
+    "Random trees pvt ltd": 4,
+    "Sigmoid": 3,
+    "EMIDS": 2,
+    "ProArch": 2,
+    "capgemini": 3,
+    "Persistent": 3,
+    "HCL Technologies": 3,
+    "Walmart": 1,
+    "Seven Eleven": 1,
+    "Goldman Sachs Group": 2,
+    "Paytm": 3,
+    "Value Labs": 1,
+    "Tech Mahindra": 2,
+    "NeoStats Analytics Solutions.": 1,
+    "UBS": 2,
+    "California Govt": 3,
+    "Ecom Express": 2,
+    "GlobalLogic": 3,
+    "Elanco": 2,
+    "GIST Impact": 2,
+    "Amazon": 2,
+    "scientist technologies": 1,
+    "Games24x7": 3,
+    "JPMorgan Chase": 1,
+    "Expedia": 1,
+    "Fractal": 4,
+    "Neenopal": 1,
+    "Impetus": 3
+  },
+  "sortedFreq": [
+    [
+      "Deloitte",
+      9
+    ],
+    [
+      "Tiger Analytics",
+      8
+    ],
+    [
+      "LTIMindtree",
+      8
+    ],
+    [
+      "Accenture",
+      7
+    ],
+    [
+      "Wipro",
+      6
+    ],
+    [
+      "EPAM",
+      6
+    ],
+    [
+      "EXL Services",
+      6
+    ],
+    [
+      "Affine",
+      5
+    ],
+    [
+      "Publicis Sapient",
+      5
+    ],
+    [
+      "Creditsafe Technology",
+      5
+    ],
+    [
+      "Cognizant",
+      5
+    ],
+    [
+      "Kantar",
+      4
+    ],
+    [
+      "Techmango Technology Services Private Limited",
+      4
+    ],
+    [
+      "Infosys",
+      4
+    ],
+    [
+      "Axa XL",
+      4
+    ],
+    [
+      "Random trees pvt ltd",
+      4
+    ],
+    [
+      "Fractal",
+      4
+    ],
+    [
+      "Oportun",
+      3
+    ],
+    [
+      "Aays Analytics",
+      3
+    ],
+    [
+      "Bluepi",
+      3
+    ],
+    [
+      "Intraedge",
+      3
+    ],
+    [
+      "Delloite",
+      3
+    ],
+    [
+      "Aidetic",
+      3
+    ],
+    [
+      "synchrony",
+      3
+    ],
+    [
+      "Zeta",
+      3
+    ],
+    [
+      "CAPGEMINI",
+      3
+    ],
+    [
+      "delloite",
+      3
+    ],
+    [
+      "Mcafee",
+      3
+    ],
+    [
+      "McKinsey",
+      3
+    ],
+    [
+      "EY",
+      3
+    ],
+    [
+      "Clairvoyant",
+      3
+    ],
+    [
+      "Sigmoid",
+      3
+    ],
+    [
+      "capgemini",
+      3
+    ],
+    [
+      "Persistent",
+      3
+    ],
+    [
+      "HCL Technologies",
+      3
+    ],
+    [
+      "Paytm",
+      3
+    ],
+    [
+      "California Govt",
+      3
+    ],
+    [
+      "GlobalLogic",
+      3
+    ],
+    [
+      "Games24x7",
+      3
+    ],
+    [
+      "Impetus",
+      3
+    ],
+    [
+      "Databricks",
+      2
+    ],
+    [
+      "HCLTech",
+      2
+    ],
+    [
+      "PepsiCo",
+      2
+    ],
+    [
+      "AST Space Mobile",
+      2
+    ],
+    [
+      "Affine Analytics",
+      2
+    ],
+    [
+      "Indium Software",
+      2
+    ],
+    [
+      "CTS",
+      2
+    ],
+    [
+      "KPMG",
+      2
+    ],
+    [
+      "MSD",
+      2
+    ],
+    [
+      "Apexon",
+      2
+    ],
+    [
+      "American Airlines",
+      2
+    ],
+    [
+      "Kirana Capital",
+      2
+    ],
+    [
+      "BLOOMBERG",
+      2
+    ],
+    [
+      "Natwest",
+      2
+    ],
+    [
+      "aptlytech",
+      2
+    ],
+    [
+      "Neudesic",
+      2
+    ],
+    [
+      "CGI",
+      2
+    ],
+    [
+      "Door Dash",
+      2
+    ],
+    [
+      "Avanade",
+      2
+    ],
+    [
+      "KPI Partners",
+      2
+    ],
+    [
+      "Oracle",
+      2
+    ],
+    [
+      "Concentrix",
+      2
+    ],
+    [
+      "LandMark Group",
+      2
+    ],
+    [
+      "Koantek",
+      2
+    ],
+    [
+      "EMIDS",
+      2
+    ],
+    [
+      "ProArch",
+      2
+    ],
+    [
+      "Goldman Sachs Group",
+      2
+    ],
+    [
+      "Tech Mahindra",
+      2
+    ],
+    [
+      "UBS",
+      2
+    ],
+    [
+      "Ecom Express",
+      2
+    ],
+    [
+      "Elanco",
+      2
+    ],
+    [
+      "GIST Impact",
+      2
+    ],
+    [
+      "Amazon",
+      2
+    ],
+    [
+      "EPAM Systems",
+      1
+    ],
+    [
+      "Persistent Systems",
+      1
+    ],
+    [
+      "The Math Co",
+      1
+    ],
+    [
+      "Bitwise",
+      1
+    ],
+    [
+      "Ernst & Young",
+      1
+    ],
+    [
+      "Astrosoft Technologies",
+      1
+    ],
+    [
+      "Quantium Analytics",
+      1
+    ],
+    [
+      "KOTAK BANK",
+      1
+    ],
+    [
+      "Bloomberg UK PLC",
+      1
+    ],
+    [
+      "Tekion",
+      1
+    ],
+    [
+      "Recro",
+      1
+    ],
+    [
+      "JoulestoWatts",
+      1
+    ],
+    [
+      "dbs",
+      1
+    ],
+    [
+      "CitiusTech",
+      1
+    ],
+    [
+      "TCS",
+      1
+    ],
+    [
+      "PWC",
+      1
+    ],
+    [
+      "Walmart",
+      1
+    ],
+    [
+      "Seven Eleven",
+      1
+    ],
+    [
+      "Value Labs",
+      1
+    ],
+    [
+      "NeoStats Analytics Solutions.",
+      1
+    ],
+    [
+      "scientist technologies",
+      1
+    ],
+    [
+      "JPMorgan Chase",
+      1
+    ],
+    [
+      "Expedia",
+      1
+    ],
+    [
+      "Neenopal",
+      1
+    ]
+  ],
+  "companyNames": [
+    "Oportun",
+    "EPAM Systems",
+    "Persistent Systems",
+    "The Math Co",
+    "Databricks",
+    "HCLTech",
+    "Tiger Analytics",
+    "PepsiCo",
+    "Wipro",
+    "Accenture",
+    "Kantar",
+    "Aays Analytics",
+    "Techmango Technology Services Private Limited",
+    "AST Space Mobile",
+    "Bluepi",
+    "LTIMindtree",
+    "Affine Analytics",
+    "Indium Software",
+    "Infosys",
+    "Intraedge",
+    "CTS",
+    "Bitwise",
+    "Deloitte",
+    "KPMG",
+    "EPAM",
+    "MSD",
+    "Ernst & Young",
+    "Astrosoft Technologies",
+    "Apexon",
+    "EXL Services",
+    "Delloite",
+    "Aidetic",
+    "Affine",
+    "synchrony",
+    "Zeta",
+    "American Airlines",
+    "CAPGEMINI",
+    "Kirana Capital",
+    "delloite",
+    "Quantium Analytics",
+    "BLOOMBERG",
+    "Natwest",
+    "Mcafee",
+    "Axa XL",
+    "McKinsey",
+    "KOTAK BANK",
+    "Bloomberg UK PLC",
+    "Publicis Sapient",
+    "Tekion",
+    "Recro",
+    "aptlytech",
+    "Neudesic",
+    "EY",
+    "CGI",
+    "JoulestoWatts",
+    "dbs",
+    "Creditsafe Technology",
+    "Door Dash",
+    "Avanade",
+    "CitiusTech",
+    "KPI Partners",
+    "TCS",
+    "Clairvoyant",
+    "Oracle",
+    "Concentrix",
+    "LandMark Group",
+    "Cognizant",
+    "Koantek",
+    "PWC",
+    "Random trees pvt ltd",
+    "Sigmoid",
+    "EMIDS",
+    "ProArch",
+    "capgemini",
+    "Persistent",
+    "HCL Technologies",
+    "Walmart",
+    "Seven Eleven",
+    "Goldman Sachs Group",
+    "Paytm",
+    "Value Labs",
+    "Tech Mahindra",
+    "NeoStats Analytics Solutions.",
+    "UBS",
+    "California Govt",
+    "Ecom Express",
+    "GlobalLogic",
+    "Elanco",
+    "GIST Impact",
+    "Amazon",
+    "scientist technologies",
+    "Games24x7",
+    "JPMorgan Chase",
+    "Expedia",
+    "Fractal",
+    "Neenopal",
+    "Impetus"
+  ]
+}

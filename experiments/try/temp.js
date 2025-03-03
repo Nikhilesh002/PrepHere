@@ -22,3 +22,6 @@ const x = {
 };
 
 fs.writeFileSync("temp.json", JSON.stringify(x, null, 2));
+
+// https://github.com/xoraus/CrackingTheSQLInterview
+// https://github.com/kansiris/SQL-interview-questions/tree/master?tab=readme-ov-file#what-is-rdbms
