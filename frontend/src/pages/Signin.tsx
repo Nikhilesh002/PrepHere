@@ -45,7 +45,7 @@ function Signin() {
         );
         navigate("/");
       } else {
-        toast.error("Signin failed");
+        toast.error(res.data.msg);
       }
     } catch (error) {
       console.error(error);

@@ -1,4 +1,4 @@
-import { userModel } from "../models/user";
+import { IUser, userModel } from "../models/user";
 import { compareHash, createHash } from "../utils/bcryptjs";
 import { logger } from "../utils/logger";
 import { makeToken } from "../utils/jwt";
@@ -20,10 +20,11 @@ export const userSignUp = async (req: Request, res: Response): Promise<any> => {
       username,
       email,
       password: hashedPassword,
+      plans: [],
     });
 
     // make token and send
-    res.cookie("auth_token", makeToken(user.username));
+    res.cookie("auth_token", makeToken(username, user._id));
 
     return res.status(201).json({
       success: true,
@@ -48,7 +49,7 @@ export const userSignIn = async (req: Request, res: Response): Promise<any> => {
       });
     }
 
-    const user = await userModel.findOne({
+    const user:IUser | null = await userModel.findOne({
       $or: [{ username: identifier }, { email: identifier }],
     });
     if (!user) {
@@ -69,15 +70,15 @@ export const userSignIn = async (req: Request, res: Response): Promise<any> => {
     }
 
     // make token and send
-    res.cookie("auth_token", makeToken(user.username));
+    res.cookie("auth_token", makeToken(user.username, user._id));
 
     return res.status(200).json({
       success: true,
       msg: "User signed in successfully",
-      user:{
+      user: {
         username: user.username,
-        email: user.email
-      }
+        email: user.email,
+      },
     });
   } catch (error) {
     logger.error("Error signing in user", error);

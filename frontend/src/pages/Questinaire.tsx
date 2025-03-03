@@ -90,14 +90,21 @@ function Questinaire() {
 
       toast.error(res.data.msg);
     },
-    [formData, makeSlug, hasEmptyValues, initialFormData, navigate, userData]
+    [
+      formData,
+      makeSlug,
+      hasEmptyValues,
+      initialFormData,
+      navigate,
+      userData.user,
+    ]
   );
 
   return (
     <div className="w-full h-screen pb-20 flex items-center justify-center">
       <form
         onSubmit={handleSubmit}
-        className="w-1/2 rounded-2xl border shadow shadow-gray-400 px-10 py-8 space-y-4"
+        className="w-[600px] flex flex-col items-center rounded-2xl border shadow shadow-gray-400 px-10 py-8 space-y-4"
       >
         <h1 className="text-lg font-bold gap-1.5">
           Answer the following questions to cook you a Customised plan

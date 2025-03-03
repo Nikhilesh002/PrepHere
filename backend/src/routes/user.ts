@@ -8,8 +8,4 @@ userRouter.post("/signup", userSignUp);
 userRouter.post("/signin", userSignIn);
 userRouter.get("/signout", userSignOut);
 
-userRouter.get("/", validateAuth, (req, res) => {
-  res.send("User Router");
-});
-
 export default userRouter;

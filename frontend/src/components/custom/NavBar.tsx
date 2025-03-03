@@ -66,11 +66,11 @@ const NavBar: React.FC = () => {
               </p>
             </MenubarMenu>
           </Link>
-          <Link className={`px-3 py-2 `} to="/plan">
+          <Link className={`px-3 py-2 `} to="/plans">
             <MenubarMenu>
               <p
                 className={`transition-colors duration-300 ease-in-out rounded px-3 py-0.5 ${isActive(
-                  "/plan"
+                  "/plans"
                 )}`}
               >
                 Your prep plans
@@ -102,7 +102,9 @@ const NavBar: React.FC = () => {
           )}
           <ModeToggle />
         </Menubar>
-        <div className=""></div>
+        <h1 className="text-2xl font-bold dark:text-black text-white">
+          PrepHere
+        </h1>
       </nav>
       <Separator />
     </div>
