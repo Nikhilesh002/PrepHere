@@ -1,35 +1,55 @@
-import mongoose from "mongoose";
-import { questionareModel } from "../models/questionare";
+import { IQuestionareDoc, questionareModel } from "../models/questionare";
 import { logger } from "../utils/logger";
 import { Response, Request } from "express";
 import { planModel } from "../models/plan";
-import { makeQuestions } from "../utils/makeQuestions/makeQuestions";
-import { makePlan } from "../utils/makePlan/makePlan";
+import { makeQuestions } from "../utils/questions/makeQuestions";
+import { getIdxQuestions } from "../utils/questions/getIdxQuestions";
+import { makeRoadmap } from "../utils/plan/makeRoadmap";
 
 export const createPlan = async (req: Request, res: Response): Promise<any> => {
   try {
-    const questionare = req.body;
+    const questionare: IQuestionareDoc = req.body;
     const userId = req.userId;
 
-    await questionareModel.create({
+    console.log(questionare);
+    console.log(userId);
+
+    questionare.userId = userId;
+    questionare.planId = userId;
+
+    // tried to just create object to get questionare._id, but not working
+    // so now saving in db
+    // -> no u can use updateOne 
+
+    const newQuestionare = new questionareModel({
       ...questionare,
-      userId: userId as mongoose.Types.ObjectId,
     });
 
     logger.info("Questionare created");
 
     // now create plan
-    const newPlan = new planModel();
-    newPlan.questionare = questionare._id;
+    const newPlan = new planModel({
+      userId,
+      questionareId: newQuestionare._id,
+      slug: questionare.slug,
+      idxs: [],
+    });
+
+    newQuestionare.updateOne({ planId: newPlan._id });
+    await newQuestionare.save();
 
     // make plan acc to questionare
-    await makePlan(questionare);
+    const createdRoadMap = await makeRoadmap(questionare);
+    console.log(createdRoadMap);
 
     // make questions acc to questionare
     const { idxs, questions } = await makeQuestions(questionare);
 
     newPlan.idxs = idxs;
     newPlan.save();
+
+    newQuestionare.planId = {};
+    await newQuestionare.save();
 
     return res.status(201).json({
       success: true,
@@ -74,10 +94,18 @@ export const getPlan = async (req: Request, res: Response): Promise<any> => {
 
     const plan = await planModel.findOne({ slug }).populate("questionare");
 
+    if (!plan) {
+      return res.status(404).json({
+        success: false,
+        msg: "Plan not found",
+      });
+    }
+
     return res.status(200).json({
       success: true,
       msg: "Plan fetched successfully",
       data: plan,
+      questions: getIdxQuestions(plan.idxs),
     });
   } catch (error) {
     logger.error("Error getting plan", error);

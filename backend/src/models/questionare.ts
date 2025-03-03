@@ -11,7 +11,9 @@ export interface IQuestionare {
   yoe: string;
   role: string;
   challenges: string;
-  plan: mongoose.Types.ObjectId;
+  planId: mongoose.Types.ObjectId;
+  noOfWeeks: number;
+  noOfHoursPerWeek: number;
 }
 
 export interface IQuestionareDoc extends IQuestionare, mongoose.Document {}
@@ -33,12 +35,14 @@ const questionareSchema = new mongoose.Schema(
     yoe: { type: String, required: true },
     role: { type: String, required: true },
     challenges: { type: String, required: true },
-    plan: {
+    planId: {
       type: mongoose.Types.ObjectId,
       refs: "plan",
       required: true,
       unique: true,
     },
+    noOfWeeks: { type: Number, required: true },
+    noOfHoursPerWeek: { type: Number, required: true },
   },
   {
     timestamps: true,

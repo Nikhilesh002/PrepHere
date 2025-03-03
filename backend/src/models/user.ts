@@ -1,19 +1,21 @@
 import mongoose, { Document } from "mongoose";
 
-export interface IUser extends Document {
+export interface IUser {
   username: string;
   password: string;
   email: string;
-  plans: mongoose.Types.ObjectId[];
-  questionares: mongoose.Types.ObjectId[];
+  planIds: mongoose.Types.ObjectId[];
+  questionareIds: mongoose.Types.ObjectId[];
 }
+
+export interface IUserDoc extends IUser, Document {}
 
 const userSchema = new mongoose.Schema(
   {
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     email: { type: String, required: true, unique: true },
-    plans: [
+    planIds: [
       {
         type: mongoose.Types.ObjectId,
         refs: "plan",
@@ -21,7 +23,7 @@ const userSchema = new mongoose.Schema(
         unique: true,
       },
     ],
-    questionares: [
+    questionareIds: [
       {
         type: mongoose.Types.ObjectId,
         refs: "questionare",

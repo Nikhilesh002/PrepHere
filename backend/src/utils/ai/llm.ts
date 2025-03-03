@@ -3,13 +3,11 @@ import { configs } from "../../configs";
 import { ChatCompletionMessage } from "groq-sdk/resources/chat/completions";
 
 const client = new Groq({
-  apiKey: process.env["GROQ_API_KEY"],
-  maxRetries: 0,
+  apiKey: configs.groqApiKey,
+  maxRetries: 1,
 });
 
-const aiMessage = "You are a helpful assistant";
-
-const makeMessages = (prompt: string) => {
+const makeMessages = (prompt: string, aiMessage: string) => {
   return [
     {
       role: "system",
@@ -22,10 +20,10 @@ const makeMessages = (prompt: string) => {
   ];
 };
 
-const askGroq = async (prompt: string): Promise<string> => {
+const askGroq = async (prompt: string, aiMessage: string): Promise<string> => {
   try {
     const chatCompletion = await client.chat.completions.create({
-      messages: makeMessages(prompt) as ChatCompletionMessage[],
+      messages: makeMessages(prompt, aiMessage) as ChatCompletionMessage[],
       model: "gemma2-9b-it",
     });
 
@@ -38,7 +36,10 @@ const askGroq = async (prompt: string): Promise<string> => {
   }
 };
 
-const askOllama = async (prompt: string): Promise<string> => {
+const askOllama = async (
+  prompt: string,
+  aiMessage: string
+): Promise<string> => {
   try {
     const chatCompletion = await fetch("http://localhost:11434/api/chat", {
       method: "POST",
@@ -47,7 +48,7 @@ const askOllama = async (prompt: string): Promise<string> => {
       },
       body: JSON.stringify({
         model: "deepseek-r1:1.5b",
-        messages: makeMessages(prompt),
+        messages: makeMessages(prompt, aiMessage),
         stream: false,
         top_p: 1,
         temperature: 0,
@@ -56,18 +57,20 @@ const askOllama = async (prompt: string): Promise<string> => {
       }),
     }).then((res) => res.json());
 
-    const resp = (chatCompletion.message.content as string) ?? "Error with AI";
+    const resp =
+      (chatCompletion.message.content as string).split("</think>\n\n")[1] ??
+      "Error with AI";
 
-    return resp.split("</think>\n\n")[1];
+    return resp;
   } catch (error) {
     console.log(error);
     return "Error with AI";
   }
 };
 
-export const askLlm = () => {
-  if (configs.nodeEnv === "production") {
-    return askGroq;
-  }
-  return askOllama;
+export const askLlm = (prompt: string, aiMessage: string): Promise<string> => {
+  // if (configs.nodeEnv === "production") {
+  //   return askGroq(prompt, aiMessage);
+  // }
+  return askOllama(prompt, aiMessage);
 };

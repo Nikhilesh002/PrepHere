@@ -1,4 +1,4 @@
-import { IUser, userModel } from "../models/user";
+import { IUserDoc, userModel } from "../models/user";
 import { compareHash, createHash } from "../utils/bcryptjs";
 import { logger } from "../utils/logger";
 import { makeToken } from "../utils/jwt";
@@ -52,7 +52,7 @@ export const userSignIn = async (req: Request, res: Response): Promise<any> => {
 
     const user = (await userModel.findOne({
       $or: [{ username: identifier }, { email: identifier }],
-    })) as IUser | null;
+    })) as IUserDoc | null;
     if (!user) {
       logger.error("User not found");
       return res.status(400).json({

@@ -1,5 +1,14 @@
 import mongoose from "mongoose";
 
+export interface IPlan {
+  userId: mongoose.Types.ObjectId;
+  questionareId: mongoose.Types.ObjectId;
+  slug: string;
+  idxs: number[];
+}
+
+export interface IPlanDoc extends IPlan, mongoose.Document {}
+
 const planSchema = new mongoose.Schema(
   {
     userId: {
@@ -8,7 +17,7 @@ const planSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    questionare: {
+    questionareId: {
       type: mongoose.Types.ObjectId,
       refs: "questionare",
       required: true,
