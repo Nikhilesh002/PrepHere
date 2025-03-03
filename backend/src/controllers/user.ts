@@ -21,6 +21,7 @@ export const userSignUp = async (req: Request, res: Response): Promise<any> => {
       email,
       password: hashedPassword,
       plans: [],
+      questionares: [],
     });
 
     // make token and send
@@ -49,9 +50,9 @@ export const userSignIn = async (req: Request, res: Response): Promise<any> => {
       });
     }
 
-    const user:IUser | null = await userModel.findOne({
+    const user = (await userModel.findOne({
       $or: [{ username: identifier }, { email: identifier }],
-    });
+    })) as IUser | null;
     if (!user) {
       logger.error("User not found");
       return res.status(400).json({
@@ -70,7 +71,7 @@ export const userSignIn = async (req: Request, res: Response): Promise<any> => {
     }
 
     // make token and send
-    res.cookie("auth_token", makeToken(user.username, user._id));
+    res.cookie("auth_token", makeToken(user.username, user.id));
 
     return res.status(200).json({
       success: true,

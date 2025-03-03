@@ -1,35 +1,35 @@
 {
-  "difficulty": ["Medium", "Easy", "Hard"],
+  "difficulty": ["Easy", "Hard", "Medium"],
   "category": [
-    "scenario based",
     "problem solving",
-    "theoretical",
-    "project based"
+    "project based",
+    "scenario based",
+    "theoretical"
   ],
   "country": [
     "India",
-    "United States",
+    "Canada",
     "Czech Republic",
     "United Kingdom",
-    "Canada"
+    "United States"
   ],
   "ctc": [
-    "40L-50L",
-    "50L-60L",
-    "30L-40L",
     "5L-10L",
     "10L-20L",
     "20L-30L",
-    "70L-80L",
-    "60L-70L"
+    "30L-40L",
+    "40L-50L",
+    "50L-60L",
+    "60L-70L",
+    "70L-80L"
   ],
-  "yoe": ["5-8", "12-15", "2-5", "<2", "8-12"],
+  "yoe": ["<2", "2-5", "5-8", "8-12", "12-15"],
   "role": [
-    "Senior Data Engineer",
-    "Data Architect",
-    "Data Engineer-2",
     "Data Engineer-1",
-    "Lead Data Engineer"
+    "Data Engineer-2",
+    "Lead Data Engineer",
+    "Senior Data Engineer",
+    "Data Architect"
   ],
   "companyName": [
     "Oportun",

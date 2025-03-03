@@ -14,7 +14,7 @@ export const validateAuth = (
   req: Request,
   res: Response,
   next: NextFunction
-) => {
+): any => {
   const token = req.cookies.auth_token;
   const payload = verifyToken(token);
 

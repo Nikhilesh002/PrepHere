@@ -1,5 +1,21 @@
 import mongoose from "mongoose";
 
+export interface IQuestionare {
+  userId: mongoose.Types.ObjectId;
+  slug: string;
+  difficulty: string;
+  category: string;
+  country: string;
+  ctc: string;
+  companyName: string;
+  yoe: string;
+  role: string;
+  challenges: string;
+  plan: mongoose.Types.ObjectId;
+}
+
+export interface IQuestionareDoc extends IQuestionare, mongoose.Document {}
+
 const questionareSchema = new mongoose.Schema(
   {
     userId: {

@@ -15,6 +15,7 @@ const planSchema = new mongoose.Schema(
       unique: true,
     },
     slug: { type: String, required: true, unique: true },
+    idxs: { type: [Number], required: true },
     // TODO add req fields
   },
   {

@@ -3,6 +3,8 @@ import { questionareModel } from "../models/questionare";
 import { logger } from "../utils/logger";
 import { Response, Request } from "express";
 import { planModel } from "../models/plan";
+import { makeQuestions } from "../utils/makeQuestions/makeQuestions";
+import { makePlan } from "../utils/makePlan/makePlan";
 
 export const createPlan = async (req: Request, res: Response): Promise<any> => {
   try {
@@ -20,10 +22,23 @@ export const createPlan = async (req: Request, res: Response): Promise<any> => {
     const newPlan = new planModel();
     newPlan.questionare = questionare._id;
 
-    //
-    return res.status(201);
+    // make plan acc to questionare
+    await makePlan(questionare);
+
+    // make questions acc to questionare
+    const { idxs, questions } = await makeQuestions(questionare);
+
+    newPlan.idxs = idxs;
+    newPlan.save();
+
+    return res.status(201).json({
+      success: true,
+      msg: "Plan created successfully",
+      data: newPlan,
+      questions,
+    });
   } catch (error) {
-    logger.error("Error creating questionare", error);
+    logger.error("Error creating plan", error);
     return res.status(500).json({
       success: false,
       msg: error,
