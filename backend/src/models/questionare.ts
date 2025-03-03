@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 export interface IQuestionare {
-  userId: mongoose.Types.ObjectId;
+  userId: Schema.Types.ObjectId;
   slug: string;
   difficulty: string;
   category: string;
@@ -11,7 +11,7 @@ export interface IQuestionare {
   yoe: string;
   role: string;
   challenges: string;
-  planId: mongoose.Types.ObjectId;
+  planId: Schema.Types.ObjectId;
   noOfWeeks: number;
   noOfHoursPerWeek: number;
 }
@@ -21,10 +21,9 @@ export interface IQuestionareDoc extends IQuestionare, mongoose.Document {}
 const questionareSchema = new mongoose.Schema(
   {
     userId: {
-      type: mongoose.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       refs: "user",
       required: true,
-      unique: true,
     },
     slug: { type: String, required: true, unique: true },
     difficulty: { type: String, required: true },
@@ -36,7 +35,7 @@ const questionareSchema = new mongoose.Schema(
     role: { type: String, required: true },
     challenges: { type: String, required: true },
     planId: {
-      type: mongoose.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       refs: "plan",
       required: true,
       unique: true,

@@ -85,6 +85,8 @@ function Questinaire() {
         toast.success(res.data.msg);
         setFormData(initialFormData);
 
+        console.log(res.data)
+
         // navigate to plan page
         navigate(`/plan/${formData.slug}`);
         return;

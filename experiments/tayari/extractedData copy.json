@@ -1,7 +1,7 @@
 [
   {
     "text": "Let's say you have a partitioned table, where one of the partition has huge amount of data and it is getting stuck. how do you handle this situation and what measures do you take?",
-    "summary": "Spark partitions",
+    "summary": " Spark partitions",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -11,8 +11,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "create table samples (\nsample_date int,\nsample_time int,\ndevice_id int,\nsample_value int\n);\n \ninsert into samples (sample_date,sample_time,device_id,sample_value) values\n(20180701, 1010, 111, 11)\n,(20180701, 1011, 111, 12)\n,(20180701, 1012, 111, 13)\n,(20180701, 1013, 222, 11)\n,(20180701, 1014, 222, 11)\n,(20180701, 1015, 222, 12)\n,(20180701, 1016, 111, 12)\n,(20180701, 1017, 111, 11)\n,(20180701, 1018, 222, 13)\n,(20180701, 1019, 222, 12)\n,(20180701, 1020, 222, 13)\n,(20180701, 1021, 222, 12)\n,(20180701, 1022, 222, 12)\n,(20180701, 1023, 111, 12)\n,(20180701, 1024, 111, 13)\n,(20180701, 1025, 111, 13)\n,(20180701, 1026, 111, 12)\n,(20180701, 1027, 111, 13)\n,(20180701, 1028, 222, 14)\n,(20180701, 1029, 222, 13)\n,(20180701, 1030, 222, 14)\n,(20180701, 1031, 222, 14)\n,(20180701, 1032, 222, 14)\n,(20180701, 1033, 222, 14)\n,(20180701, 1034, 222, 14)\n,(20180701, 1035, 222, 14)\n,(20180701, 1036, 111, 13)\n,(20180701, 1037, 111, 13)\n,(20180701, 1038, 111, 14)\n,(20180701, 1039, 111, 13);\n \n  \nwrite sql to fetch rows with same device_id, same sample values and having sample_time values are consecutive",
-    "summary": "Device Stats",
+    "text": "create table samples (\nsample_date int,\nsample_time int,\ndevice_id int,\nsample_value int\n);\n \ninsert into samples (sample_date,sample_time,device_id,sample_value) values\n(20180701, 1010, 111, 11)\n,(20180701, 1011, 111, 12)\n,(20180701, 1012, 111, 13)\n,(20180701, 1013, 222, 11)\n,(20180701, 1014, 222, 11)\n,(20180701, 1015, 222, 12)\n,(20180701, 1016, 111, 12)\n,(20180701, 1017, 111, 11)\n,(20180701, 1018, 222, 13)\n,(20180701, 1019, 222, 12)\n,(20180701, 1020, 222, 13)\n,(20180701, 1021, 222, 12)\n,(20180701, 1022, 222, 12)\n,(20180701, 1023, 111, 12)\n,(20180701, 1024, 111, 13)\n,(20180701, 1025, 111, 13)\n,(20180701, 1026, 111, 12)\n,(20180701, 1027, 111, 13)\n,(20180701, 1028, 222, 14)\n,(20180701, 1029, 222, 13)\n,(20180701, 1030, 222, 14)\n,(20180701, 1031, 222, 14)\n,(20180701, 1032, 222, 14)\n,(20180701, 1033, 222, 14)\n,(20180701, 1034, 222, 14)\n,(20180701, 1035, 222, 14)\n,(20180701, 1036, 111, 13)\n,(20180701, 1037, 111, 13)\n,(20180701, 1038, 111, 14)\n,(20180701, 1039, 111, 13);\n \n  \nwrite sql to fetch rows with same device_id, same sample values and having sample_time values are consecutive\n",
+    "summary": " Device Stats",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -22,8 +22,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "find the top 5 employees who have the highest average sales per month in the last year (from the current date), considering only those employees who have made at least 10 sales during that period. Include the employee name, average monthly sales amount, and the total number of sales for each employee.\ntables:\nemployees (employee_id, employee_name)\nsales (sale_id, employee_id, sale_date, amount)\n \nemployee_id employee_name\n1\tJohn Smith\n2\tAlice Johnson\n3\tBob Williams\n4\tEva Brown\n5\tMichael Davis\n6\tSarah Wilson\n7\tDavid Garcia\n8\tLinda Rodriguez\nsale_id   employee_id  sale_date amount\n1\t1\t2023-08-15\t1500\n2\t1\t2023-09-20\t2000\n3\t1\t2023-10-10\t1800\n4\t1\t2023-11-05\t2200\n5\t1\t2023-12-12\t1900\n6\t1\t2024-01-18\t2100\n7\t1\t2024-02-25\t2300\n8\t1\t2024-03-01\t1700\n9\t1\t2024-04-07\t2400\n10\t1\t2024-05-14\t2000\n11\t1\t2024-06-21\t1800\n12\t1\t2024-07-28\t2500\n13\t2\t2023-09-01\t1000\n14\t2\t2023-10-05\t1200\n15\t2\t2023-11-10\t1500",
-    "summary": "Highest average sales",
+    "text": "find the top 5 employees who have the highest average sales per month in the last year (from the current date), considering only those employees who have made at least 10 sales during that period. Include the employee name, average monthly sales amount, and the total number of sales for each employee.\ntables:\nemployees (employee_id, employee_name)\nsales (sale_id, employee_id, sale_date, amount)\n \nemployee_id employee_name\n1\tJohn Smith\n2\tAlice Johnson\n3\tBob Williams\n4\tEva Brown\n5\tMichael Davis\n6\tSarah Wilson\n7\tDavid Garcia\n8\tLinda Rodriguez\nsale_id   employee_id  sale_date amount\n1\t1\t2023-08-15\t1500\n2\t1\t2023-09-20\t2000\n3\t1\t2023-10-10\t1800\n4\t1\t2023-11-05\t2200\n5\t1\t2023-12-12\t1900\n6\t1\t2024-01-18\t2100\n7\t1\t2024-02-25\t2300\n8\t1\t2024-03-01\t1700\n9\t1\t2024-04-07\t2400\n10\t1\t2024-05-14\t2000\n11\t1\t2024-06-21\t1800\n12\t1\t2024-07-28\t2500\n13\t2\t2023-09-01\t1000\n14\t2\t2023-10-05\t1200\n15\t2\t2023-11-10\t1500\n",
+    "summary": " Highest average sales",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -34,7 +34,7 @@
   },
   {
     "text": "Find the companies who have at least 2 users who speak both English and German in\npyspark\n\nData:\ndata = [(A, 1, English),\n(A, 1, German),\n(A, 2, English),\n(A, 2, German),\n(A, 3, German),\n(B, 1, English),\n(B, 2, German),\n(C, 1, English),\n(C, 2, German)]\n\nschema =(company_id, user_id, language)",
-    "summary": "Languages spoken",
+    "summary": " Languages spoken",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -45,7 +45,7 @@
   },
   {
     "text": "Write a Pyspark code to convert the following input dataframe into output dataframe?\n\nInput Structure:\nID | customerID\n1 12\n1 23\n1 34\n1 54\n2 45\n2 60\n\nOutput Structure:\nID customerID\n1 [12,23,34,54]\n2 [45,60]",
-    "summary": "Pyspark dataframe",
+    "summary": " Pyspark dataframe",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -55,8 +55,8 @@
     "role": "Data Architect"
   },
   {
-    "text": "given schema with tables customers(cid,name) products(pid,pname,price) and sales(saleid,cid,pid,product,qty,store)\n1. find names of customer who have not made any purchase\n2. write query to find top 2 customers with the highest total order amount\n3. find the name of product with the lowest quantity\n\n\n\ncid name\n1 Alice\n2 Bob\n3 Carol\n4 David\n5 Eve\n\npid pname price\n101 Laptop 1200\n102 Mouse 25\n103 Keyboard 75\n104 Monitor 300\n105 Webcam 50\n\nsaleid cid pid qty store\n1 1 101 1 Store A\n2 1 102 2 Store B\n3 2 103 1 Store A\n4 2 101 1 Store C\n5 1 104 1 Store B\n6 3 102 5 Store A\n7 3 105 2 Store C\n8 1 103 1 Store A",
-    "summary": "Sales stats",
+    "text": "given schema with tables customers(cid,name) products(pid,pname,price) and sales(saleid,cid,pid,product,qty,store)\n1. find names of customer who have not made any purchase\n2. write query to find top 2 customers with the highest total order amount\n3. find the name of product with the lowest quantity\n\n\n\ncid name\n1 Alice\n2 Bob\n3 Carol\n4 David\n5 Eve\n\npid pname price\n101 Laptop 1200\n102 Mouse 25\n103 Keyboard 75\n104 Monitor 300\n105 Webcam 50\n\nsaleid cid pid qty store\n1 1 101 1 Store A\n2 1 102 2 Store B\n3 2 103 1 Store A\n4 2 101 1 Store C\n5 1 104 1 Store B\n6 3 102 5 Store A\n7 3 105 2 Store C\n8 1 103 1 Store A\n",
+    "summary": " Sales stats",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -66,8 +66,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "You have 2 tables namely tbl_a and tbl_b. Perform left join, inner join, full outer join on both the tables and give me the results when tbl_a data is selected\n\nTbl_a : 1 , 2, 1 NULL\n\nTbl_b: 1, 1, NULL",
-    "summary": "SQL Joins",
+    "text": "You have 2 tables namely tbl_a and tbl_b. Perform left join, inner join, full outer join on both the tables and give me the results when tbl_a data is selected\n\nTbl_a : 1 , 2, 1 NULL\n\nTbl_b: 1, 1, NULL ",
+    "summary": "SQL Joins ",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -77,8 +77,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "Given two tables, Customers and Products, find all customers who spent less in the current month than they did in the previous month.\n\nSchema:\n\n    Customers:\n        Customer_id (INT, Primary Key)\n        User_name (VARCHAR)\n        City (VARCHAR)\n    Products:\n        customer_id (INT, Foreign Key referencing Customers.Customer_id)\n        product_id (INT)\n        purchase_date (DATE)\n        Money_spent (DECIMAL)\n\nSample Data:\n\nCustomers Table:\nCustomer_id\tUser_name\tCity\n1\t   Alice\tNew York\n2\tBob\tLos Angeles\n3\tCarol\tChicago\n4\tDavid\tHouston\n\nProducts Table:\ncustomer_id\tproduct_id\tpurchase_date\tMoney_spent\n1\t101\t2023-10-15\t100\n1\t102\t2023-10-20\t50\n1\t103\t2023-11-05\t75\n1\t104\t2023-11-10\t25\n2\t201\t2023-10-01\t200\n2\t202\t2023-11-15\t150\n3\t301\t2023-10-25\t30\n3\t302\t2023-11-20\t40\n4\t401\t2023-10-01\t100\n4\t402\t2023-11-15\t200",
-    "summary": "Money spent less",
+    "text": "Given two tables, Customers and Products, find all customers who spent less in the current month than they did in the previous month.\n\nSchema:\n\n    Customers:\n        Customer_id (INT, Primary Key)\n        User_name (VARCHAR)\n        City (VARCHAR)\n    Products:\n        customer_id (INT, Foreign Key referencing Customers.Customer_id)\n        product_id (INT)\n        purchase_date (DATE)\n        Money_spent (DECIMAL)\n\nSample Data:\n\nCustomers Table:\nCustomer_id\tUser_name\tCity\n1\t   Alice\tNew York\n2\tBob\tLos Angeles\n3\tCarol\tChicago\n4\tDavid\tHouston\n\nProducts Table:\ncustomer_id\tproduct_id\tpurchase_date\tMoney_spent\n1\t101\t2023-10-15\t100\n1\t102\t2023-10-20\t50\n1\t103\t2023-11-05\t75\n1\t104\t2023-11-10\t25\n2\t201\t2023-10-01\t200\n2\t202\t2023-11-15\t150\n3\t301\t2023-10-25\t30\n3\t302\t2023-11-20\t40\n4\t401\t2023-10-01\t100\n4\t402\t2023-11-15\t200\n",
+    "summary": " Money spent less",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -89,7 +89,7 @@
   },
   {
     "text": "You are given two tables, TableA and TableB. Perform the following SQL operations and explain the results:\n\nTable1\tTable2\n1\t1\n1\t1\n1\t2\n2\t3\nNULL\t3\n4\tNULL",
-    "summary": "SQL Joins",
+    "summary": " SQL Joins",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -111,7 +111,7 @@
   },
   {
     "text": "Difference between where and group by in SQL?",
-    "summary": "GroupBy function",
+    "summary": " GroupBy function",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "India",
@@ -122,7 +122,7 @@
   },
   {
     "text": "Question:\nYou are given two tables, Orders and Products. The Orders table records each order made by a customer, and the Products table records product details.\n\nTables:\nOrders Table:\n\nOrderID\tCustomerID\tProductID\tOrderDate\tQuantity\n1\t101\t201\t2023-01-10\t2\n2\t102\t202\t2023-01-15\t1\n3\t101\t203\t2023-02-05\t3\n4\t103\t201\t2023-03-20\t4\n5\t104\t202\t2023-02-25\t1\nProducts Table:\n\nProductID\tProductName\tPrice\n201\tProduct A\t500\n202\tProduct B\t1500\n203\tProduct C\t700\nTask:\nWrite an SQL query to find the total revenue generated by each product in the first quarter of 2023 (from January 1, 2023, to March 31, 2023).\n\nReturn the following columns:\n\nProductID\nProductName\nTotalRevenue\nThe result should be sorted by TotalRevenue in descending order.",
-    "summary": "Revenue Generated",
+    "summary": "Revenue Generated ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -133,7 +133,7 @@
   },
   {
     "text": "Question:\nYou are given two tables, Employees and Departments. The Employees table contains information about employees, including their department, and the Departments table contains information about each department.\n\nTables:\nEmployees Table:\n\nEmployeeID\tEmployeeName\tDepartmentID\tSalary\n1\tJohn Doe\t101\t50000\n2\tAlice Smith\t102\t60000\n3\tBob Johnson\t101\t55000\n4\tCarol Lee\t103\t70000\n5\tDave Brown\t102\t65000\nDepartments Table:\n\nDepartmentID\tDepartmentName\n101\tIT\n102\tHR\n103\tMarketing\nTask:\nWrite an SQL query to find the average salary of employees in each department, but only for departments where the average salary is greater than 55,000.\n\nReturn the following columns:\n\nDepartmentID\nDepartmentName\nAverageSalary\nThe result should be sorted by AverageSalary in descending order.",
-    "summary": "Average employee salary",
+    "summary": " Average employee salary",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -144,7 +144,7 @@
   },
   {
     "text": "Question:\nYou are given two tables, Orders and Customers. The Orders table contains information about customer orders, and the Customers table contains information about customers.\n\nTables:\nOrders Table:\n\nOrderID\tCustomerID\tOrderDate\tOrderAmount\n1\t101\t2023-01-10\t500\n2\t102\t2023-01-15\t1500\n3\t103\t2023-02-05\t700\n4\t101\t2023-03-20\t200\n5\t104\t2023-03-25\t1200\n6\t102\t2023-04-10\t300\nCustomers Table:\n\nCustomerID\tCustomerName\tCity\n101\tJohn Doe\tNew York\n102\tAlice Smith\tLos Angeles\n103\tBob Johnson\tChicago\n104\tCarol Lee\tSan Francisco\nTask:\nWrite an SQL query to find the total order amount for each customer who has placed orders in both January and February 2023.\n\nReturn the following columns:\n\nCustomerID\nCustomerName\nTotalOrderAmount\nThe result should be sorted by TotalOrderAmount in descending order.",
-    "summary": "Customers order amount",
+    "summary": " Customers order amount",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -154,8 +154,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Write a SQL query to find the topmost manager (head) for each employee in the company.\n\nCREATE TABLE Employees (\n    EmployeeID INT,\n    EmployeeName STRING,\n    ManagerID INT\n);\n\nINSERT INTO Employees (EmployeeID, EmployeeName, ManagerID)\nVALUES\n    (1, 'John', NULL),       -- Topmost Manager 1\n    (2, 'Alice', 1),\n    (3, 'Bob', 1),\n    (4, 'Carol', 2),\n    (5, 'Dave', 3),\n    (6, 'Eve', 4),\n    (7, 'Michael', NULL),    -- Topmost Manager 2\n    (8, 'Sarah', 7),\n    (9, 'Tom', 7),\n    (10, 'Lily', 8);\n\nHint - For Dave topmost manager head is John, For Lily topmost manager head is Michael",
-    "summary": "Manager for each employee",
+    "text": "Write a SQL query to find the topmost manager (head) for each employee in the company.\n\nCREATE TABLE Employees (\n    EmployeeID INT,\n    EmployeeName STRING,\n    ManagerID INT\n);\n\nINSERT INTO Employees (EmployeeID, EmployeeName, ManagerID)\nVALUES\n    (1, 'John', NULL),       -- Topmost Manager 1\n    (2, 'Alice', 1),\n    (3, 'Bob', 1),\n    (4, 'Carol', 2),\n    (5, 'Dave', 3),\n    (6, 'Eve', 4),\n    (7, 'Michael', NULL),    -- Topmost Manager 2\n    (8, 'Sarah', 7),\n    (9, 'Tom', 7),\n    (10, 'Lily', 8);\n\nHint - For Dave topmost manager head is John, For Lily topmost manager head is Michael\n",
+    "summary": " Manager for each employee",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -166,7 +166,7 @@
   },
   {
     "text": "Find Number of rows returned after joining two datasets by inner join, left outer join, right outer join, full outer join, cross join\n\nDataSet A\n1\n1\n1\nNULL\n\nDataSet B\n1\n1\nNULL\nNULL",
-    "summary": "SQL Joins",
+    "summary": " SQL Joins",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -188,7 +188,7 @@
   },
   {
     "text": "How would you implement SCD-2 in Pyspark and how would you handle scenarios where we need to delete record in a dimension table.",
-    "summary": "SCD-2 records",
+    "summary": "SCD-2 records ",
     "difficulty": "Easy",
     "category": "scenario based",
     "country": "India",
@@ -199,7 +199,7 @@
   },
   {
     "text": "Write SQL query to delete duplicate records from a dataset.",
-    "summary": "Delete duplicate records",
+    "summary": " Delete duplicate records",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -210,7 +210,7 @@
   },
   {
     "text": "Write sql query to find second highest salary from each department.",
-    "summary": "Second highest salary",
+    "summary": " Second highest salary",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -221,7 +221,7 @@
   },
   {
     "text": "Consider you are having orders and customers table. \nFind out the customers who have spent most on their orders in the last month in SQL as well as Pyspark.",
-    "summary": "Customers spent",
+    "summary": "Customers spent ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -232,7 +232,7 @@
   },
   {
     "text": "Can you write a SQL query to find the first highest salary as well as the lowest salary within each department?",
-    "summary": "Lowest salary",
+    "summary": " Lowest salary",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -243,7 +243,7 @@
   },
   {
     "text": "Write a query to show customer_id for the customers that did not have any orders in 2023 from the customers table.",
-    "summary": "Customer Orders",
+    "summary": " Customer Orders",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -254,7 +254,7 @@
   },
   {
     "text": "Consider we have table like this named market. \n \nMarketid\t         Item\t         Amount\tType\n1\t\t\tA\t\t50\t\tCurrent\n1\t\t\tB\t\t100\t\tCurrent\n1\t\t\tC\t\t60\t\tCurrent\n2\t\t\tA\t\t100\t\tCurrent\n2\t\t\tB\t\t60\t\tCurrent\n3\t\t\tC\t\t70\t\tCurrent\n4\t\t\tA\t\t50\t\tCurrent\n4\t\t\tC\t\t20\t\tCurrent\n1\t\t\tA\t\t40\t\tPrevious\n1\t\t\tB\t\t80\t\tPrevious\n1\t\t\tC\t\t70\t\tPrevious\n2\t\t\tA\t\t80\t\tPrevious\n2\t\t\tB\t\t50\t\tPrevious\n3\t\t\tC\t\t60\t\tPrevious\n4\t\t\tA\t\t40\t\tPrevious\n\nAlso note that formula for contribution looks something like this. \nContribution = ((sum of current amount by item for a market/total sum of current amount by market) – (sum of previous amount by item for a market /total sum of previous amount by market))*100\n\nWrite a SQL query to find out the contribution which comes from each item.",
-    "summary": "Contribution from each item",
+    "summary": " Contribution from each item",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
@@ -265,7 +265,7 @@
   },
   {
     "text": "Consider we have input which looks this.\n\n1|A|25|X|\n2|B|26|Y|\n3|C|27|Z\n\nWrite a code in python to get a output which looks like below. Note that '|' is also a alphabet.\n\nColumn1\tColumn2\tColumn3\tColumn4\n1\t\tA\t \t25\t\tX\n2\t\tB\t \t26\t\tY\n3\t\tC\t \t27\t\tZ\n\nFollow up question: How would you do it in pyspark?",
-    "summary": "Data ordering",
+    "summary": " Data ordering",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -276,7 +276,7 @@
   },
   {
     "text": "Consider we have table department like below.\nUser\tDepartment\nA\tX\nA\tX\nB\tY\nC\tX\nC\tY\nD\tX\nD\tX\n\nHow would you remove duplicates in SQL? \nNote that User D has Department X in both the rows. This case should also be handled.",
-    "summary": "Duplicates in department",
+    "summary": "Duplicates in department ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -287,7 +287,7 @@
   },
   {
     "text": "How would you automate the process of adding new columns into databricks notebook without manually changing it on Databricks notebook?",
-    "summary": "Column addition",
+    "summary": " Column addition",
     "difficulty": "Medium",
     "category": "project based",
     "country": "India",
@@ -309,7 +309,7 @@
   },
   {
     "text": "Input Table:\nnum\n1\n2\n3\n4\n\nExpected result:\n\n1\n2\n2\n3\n3\n3\n4\n4\n4\n4",
-    "summary": "Numbers repition",
+    "summary": " Numbers repition",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -320,7 +320,7 @@
   },
   {
     "text": "table:customer\n--emp_no\n--emp_name\n--salary\n--dep\n\nwrite a query to get department with at least 5 employee and salary in greater than 10000\n\nin both SQL and pyspark",
-    "summary": "Department details",
+    "summary": " Department details",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -330,8 +330,8 @@
     "role": "Data Engineer-1"
   },
   {
-    "text": "why we need cloud service like azure , aws\nwhat is etl\nOLAP vs OLTP\nwhat is data warehouse\nbatch vs streaming processing\nwhat is NoSQL\nwhat is distributed computing",
-    "summary": "ETL Questions",
+    "text": "\nwhy we need cloud service like azure , aws\nwhat is etl\nOLAP vs OLTP\nwhat is data warehouse\nbatch vs streaming processing\nwhat is NoSQL\nwhat is distributed computing",
+    "summary": " ETL Questions",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "India",
@@ -342,7 +342,7 @@
   },
   {
     "text": "onprimes database vs cloud database",
-    "summary": "Onprem database",
+    "summary": " Onprem database",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "India",
@@ -353,7 +353,7 @@
   },
   {
     "text": "write a sql query to update a record in table for the emp_id 225 with salary 15000\n\nwhat is corelated subquery ,write a query using it",
-    "summary": "corelated subquery",
+    "summary": " corelated subquery",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -364,7 +364,7 @@
   },
   {
     "text": "Employee\n--employeeid\n--name\n--department\n\nsalaries\n--id\n--employeeid\n--date\n--amount\n\nwrite a sql query to get top 2 department where employees get highest total salary in last 6 month",
-    "summary": "Top employee salary",
+    "summary": " Top employee salary",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -374,8 +374,8 @@
     "role": "Data Engineer-1"
   },
   {
-    "text": "Find the total number of orders placed by each customer, excluding orders placed in June.\n\n\nTables :::::\n\n\nCustomers Table ::\n\nname,cust_id\nTeena,1\nSeema,2\nRevi,3\nGany,4\n\nOrders table ::::\n\ncust_id,order_date\n1,2015-12-18 \n1,2011-10-11\n2,2012-06-19\n2,2015-09-07\n2,2018-11-09\n3,2014-03-14",
-    "summary": "Exclude orders in june",
+    "text": "Find the total number of orders placed by each customer, excluding orders placed in June.\n\n\nTables :::::\n\n\nCustomers Table ::\n\nname,cust_id\nTeena,1\nSeema,2\nRevi,3\nGany,4\n\nOrders table ::::\n\ncust_id,order_date\n1,2015-12-18 \n1,2011-10-11\n2,2012-06-19\n2,2015-09-07\n2,2018-11-09\n3,2014-03-14\n",
+    "summary": " Exclude orders in june",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -386,7 +386,7 @@
   },
   {
     "text": "Write a query to find the department with the highest average salary for employees who have been with the company for more than 2 years?\n\n\nEmp Table ::\n\nSalary,DeptID,HireDate\n10000,1,2015-12-18 \n35000,2,2021-12-18\n27000,3,2020-12-18\n14000,3,2021-12-18\n\nDept Table ::\n\nDeptID,DeptName \n1,HR\n2,Finance\n3,Logistics\n4,Sales",
-    "summary": "Highest average salary",
+    "summary": " Highest average salary",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -396,7 +396,7 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "1. What is SCD? Different types of SCD?\n2. Difference b/w map and filter in python?\n3. What is generator in python?\n4. What is magic function in python?\n5. What is difference between generator function and normal function in python?\n6. Difference between NVL, NVL2 and Coalesce ?\n7. Difference between rank and dense_rank?\n8. Difference between star schema and galaxy schema?\n9. How to optimize any spark job?\n10. What is broadcast join?",
+    "text": "1. What is SCD? Different types of SCD?\n2. Difference b/w map and filter in python?\n3. What is generator in python?\n4. What is magic function in python?\n5. What is difference between generator function and normal function in python?\n6. Difference between NVL, NVL2 and Coalesce ?\n7. Difference between rank and dense_rank?\n8. Difference between star schema and galaxy schema?\n9. How to optimize any spark job?\n10. What is broadcast join?\n",
     "summary": "DE theory questions",
     "difficulty": "Medium",
     "category": "theoretical",
@@ -407,8 +407,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "eid, name, desig, date \n1, a, e, 11/12/2024\n2, b, e, 12/12/2024\n1, a, m, 12/12/2024\nWrite a SQL query to find eid who have latest designation.",
-    "summary": "Latest designation",
+    "text": "eid, name, desig, date \n1, a, e, 11/12/2024\n2, b, e, 12/12/2024\n1, a, m, 12/12/2024\nWrite a SQL query to find eid who have latest designation.\n",
+    "summary": " Latest designation",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -418,8 +418,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "eid, name, desig, date -- emp(dimension table)\n1, a, e, 11/12/2024\n\neid, name, desig, date -- emp_stage(staging table)\n2, b, e, 12/12/2024\n1, a, m, 12/12/2024\nWrite a incremental load query(Actually insert/update query) to insert data from emp_stage to emp. Scenerio was like latest data is coming, you have to keep on adding it.",
-    "summary": "Incremental data load",
+    "text": "eid, name, desig, date -- emp(dimension table)\n1, a, e, 11/12/2024\n\neid, name, desig, date -- emp_stage(staging table)\n2, b, e, 12/12/2024\n1, a, m, 12/12/2024\nWrite a incremental load query(Actually insert/update query) to insert data from emp_stage to emp. Scenerio was like latest data is coming, you have to keep on adding it.\n",
+    "summary": " Incremental data load",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -430,7 +430,7 @@
   },
   {
     "text": "What is the count of inner, left, right and outer join for below.\n      t1 - c1 - 1,1,1,2,2,3, null\n      t2 - c2 - 1,1,2,2,4,null,null\n      where t1 is table and column present in t1 is c1 & t2 is table and column present in t2 is c2.",
-    "summary": "SQL Joins",
+    "summary": " SQL Joins",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -441,7 +441,7 @@
   },
   {
     "text": "In table t1, 3 columns are present a, b, c with no primary key.\n       Write a SQL query to find the duplicate records.",
-    "summary": "Find duplicates",
+    "summary": " Find duplicates",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -452,7 +452,7 @@
   },
   {
     "text": "There are several csv files are present in HDFS folder with state names like bihar.csv, kerala.csv etc.\nWrite a pyspark program where you have to add one more column with column name as \"State\" in each csv file and data of \"State\" column should be the filename.",
-    "summary": "Display the states based on filename",
+    "summary": " Display the states based on filename",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -462,8 +462,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Table-tmp\nInput\nid\na\nb\nc\nd\ne\nf\n\nOutput\nid        column\na        [a,b,c,d,e,f]\nb        [a,b,c,d,e]\nc        [a,b,c,d]\nd        [a,b,c]\ne        [a,b]\nf        [a]",
-    "summary": "Python pattern print",
+    "text": "    Table-tmp\nInput\nid\na\nb\nc\nd\ne\nf\n\nOutput\nid        column\na        [a,b,c,d,e,f]\nb        [a,b,c,d,e]\nc        [a,b,c,d]\nd        [a,b,c]\ne        [a,b]\nf        [a]",
+    "summary": " Python pattern print",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
@@ -474,7 +474,7 @@
   },
   {
     "text": "We have applied partition in a hive table. But when we are quering the data on that partition, data is not coming/showing. How you will resolve this issue so that I can see the data?",
-    "summary": "Data is not visible",
+    "summary": " Data is not visible",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -485,7 +485,7 @@
   },
   {
     "text": "What are attributes & measures? Can a dimension table have measures?",
-    "summary": "Dimensional modelling",
+    "summary": " Dimensional modelling",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
@@ -496,7 +496,7 @@
   },
   {
     "text": "Given the table,\n  \nName\tSub1\tSub2\nX\t34\t45\nY\t45\t56\n\nConvert it into\nName\tSub\tMarks\nX\tSub1\t34\nX\tSub2\t45\nY\tSub1\t45\nY\tSub2\t56",
-    "summary": "Data conversion",
+    "summary": " Data conversion",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -507,7 +507,7 @@
   },
   {
     "text": "Q1.Pyspark coding problem\n================================\nI have 3 dataframes/tables named tasks, user and driver_city consisting of following columns \nfor tasks-task_id,no_of_tasks,task_cost \nfor user- user_id,user_city,distance_km\nfor driver_city driver_id,driver_city,start_time,end_time\ngive me pyspark ad SQL code to get amount earned by driver in a day,but the condition is cut off time is 5pm\"",
-    "summary": "Amount earned by driver",
+    "summary": " Amount earned by driver",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -517,8 +517,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Q2.Coding\n============\n data = [(\"\"2023-01-01\"\", \"\"AAPL\"\", 150.00), (\"\"2023-01-02\"\", \"\"AAPL\"\",\n 155.00), (\"\"2023-01-01\"\", \"\"GOOG\"\", 2500.00), (\"\"2023-01-02\"\", \"\"GOOG\"\",\n 2550.00), (\"\"2023-01-01\"\", \"\"MSFT\"\", 300.00), (\"\"2023-01-02\"\", \"\"MSFT\"\",\n 310.00)]\n create dataframe in pyspark\n find avg. stock value on daily basis for each stock\n find max avg stock value of each stock",
-    "summary": "Average stock value",
+    "text": "Q2.Coding\n============\n data = [(\"\"2023-01-01\"\", \"\"AAPL\"\", 150.00), (\"\"2023-01-02\"\", \"\"AAPL\"\",\n 155.00), (\"\"2023-01-01\"\", \"\"GOOG\"\", 2500.00), (\"\"2023-01-02\"\", \"\"GOOG\"\",\n 2550.00), (\"\"2023-01-01\"\", \"\"MSFT\"\", 300.00), (\"\"2023-01-02\"\", \"\"MSFT\"\",\n 310.00)]\n create dataframe in pyspark\n find avg. stock value on daily basis for each stock\n find max avg stock value of each stock\n",
+    "summary": " Average stock value",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -528,8 +528,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Q1.Pyspark coding\n==============\nEmp Id\temp_name\tmanagerid\tsalary\n1\tDavid\t3\t100\n2\tSam\t1\t200\n3\tJeff\t3\t2000\n4\tJacob\t4\t2000\nreturn managerid,Manager_name,Emp_id,emp_name, \nsalary where salary is the 2nd highest for employees under each manager.",
-    "summary": "Second highest salary",
+    "text": "Q1.Pyspark coding\n==============\nEmp Id\temp_name\tmanagerid\tsalary\n1\tDavid\t3\t100\n2\tSam\t1\t200\n3\tJeff\t3\t2000\n4\tJacob\t4\t2000\nreturn managerid,Manager_name,Emp_id,emp_name, \nsalary where salary is the 2nd highest for employees under each manager.\n\n",
+    "summary": " Second highest salary",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -539,7 +539,7 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Q2.Pyspark coding\n==============\nI have data frame which consists of following columns,give me pyspark code to get most purchased product\norder_id, product_id, quantity, price, cust_id\n\norder_schema=(order_id int, product_id int, quantity int, price int, cust_id int)",
+    "text": "Q2.Pyspark coding\n==============\nI have data frame which consists of following columns,give me pyspark code to get most purchased product\norder_id, product_id, quantity, price, cust_id\n\norder_schema=(order_id int, product_id int, quantity int, price int, cust_id int)\n",
     "summary": "Most purchased product",
     "difficulty": "Easy",
     "category": "problem solving",
@@ -551,7 +551,7 @@
   },
   {
     "text": "Table A\ncol1\n1\nnull\n1\n\nTable B\ncol1\n1\n1\n1\n\nselect count(*) from A left join B on A.col1=B.col1",
-    "summary": "SQL Joins",
+    "summary": " SQL Joins",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "United States",
@@ -561,8 +561,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "Emp table\n\n| empname | location  | year | vaccination | infected |\n| ------- | --------- | ---- | ----------- | -------- |\n| A       | Delhi     | 2020 | No          | No       |\n| A       | Delhi     | 2021 | Yes         | Yes      |\n| A       | Delhi     | 2022 | Yes         | No       |\n| B       | Delhi     | 2020 | No          | Yes      |\n| B       | Delhi     | 2021 | Yes         | No       |\n| B       | Delhi     | 2022 | Yes         | Yes      |\n| C       | Bangalore | 2020 | Yes         | Yes      |\n| C       | Bangalore | 2021 | No          | No       |\n| C       | Bangalore | 2022 | Yes         | Yes      |\n| D       | Bangalore | 2020 | Yes         | No       |\n| D       | Bangalore | 2021 | Yes         | Yes      |\n| D       | Bangalore | 2022 | Yes         | No       |\n\nWrite a SQL query to fetch the empname those who were vaccinated a particular year but got infected the immediate next year.",
-    "summary": "Employee who was vacinated",
+    "text": "Emp table\n\n| empname | location  | year | vaccination | infected |\n| ------- | --------- | ---- | ----------- | -------- |\n| A       | Delhi     | 2020 | No          | No       |\n| A       | Delhi     | 2021 | Yes         | Yes      |\n| A       | Delhi     | 2022 | Yes         | No       |\n| B       | Delhi     | 2020 | No          | Yes      |\n| B       | Delhi     | 2021 | Yes         | No       |\n| B       | Delhi     | 2022 | Yes         | Yes      |\n| C       | Bangalore | 2020 | Yes         | Yes      |\n| C       | Bangalore | 2021 | No          | No       |\n| C       | Bangalore | 2022 | Yes         | Yes      |\n| D       | Bangalore | 2020 | Yes         | No       |\n| D       | Bangalore | 2021 | Yes         | Yes      |\n| D       | Bangalore | 2022 | Yes         | No       |\n\nWrite a SQL query to fetch the empname those who were vaccinated a particular year but got infected the immediate next year.\n",
+    "summary": " Employee who was vacinated",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "United States",
@@ -572,8 +572,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "1.\tExplain partitioning & clustering in Bigquery\n2.\tHow will you decide which column to be used for partitioning & clustering\n3.\tCan we create index in Bigquery?\n4.\tOptimization techniques in Pyspark jobs\n5.\tData modeling in DW",
-    "summary": "Spark theory questions",
+    "text": "1.\tExplain partitioning & clustering in Bigquery\n2.\tHow will you decide which column to be used for partitioning & clustering\n3.\tCan we create index in Bigquery?\n4.\tOptimization techniques in Pyspark jobs\n5.\tData modeling in DW\n",
+    "summary": " Spark theory questions",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "United States",
@@ -583,8 +583,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "GCP:\n1.\tWhat is dataproc?\n2.\tClasses used in pyspark job\n3.\tBasic configurations details for creating a dataproc cluster\n4.\tHow to load data without spinning clusters using dataproc\n5.\tDifferent sections in pyspark code. How to initiate spark shell?\n6.\tHow will you check logs in dataflow and dataproc\n7.\tHow to submit a dataproc job",
-    "summary": "DE theory questions",
+    "text": "GCP:\n1.\tWhat is dataproc?\n2.\tClasses used in pyspark job\n3.\tBasic configurations details for creating a dataproc cluster\n4.\tHow to load data without spinning clusters using dataproc\n5.\tDifferent sections in pyspark code. How to initiate spark shell?\n6.\tHow will you check logs in dataflow and dataproc\n7.\tHow to submit a dataproc job\n",
+    "summary": " DE theory questions",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "United States",
@@ -594,8 +594,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "Employee:\nemployee_id| emp_name |dept_id   |salary\n-------------|-------------|------------|------\n\t1\t   |\tAlice       |101\t         |80000\n\t1\t   |\tBob         |101\t         |75000\n\t1\t   |\tCharlie    |101\t         |90000\n\t1\t   |\tDavid      |102\t         |60000\n\t1\t   |\tEva         |102\t         |65000\n\t1\t   |\tFrank      |102\t         |62000\n\t1\t   |\tGrace      |103\t         |70000\n\t1\t   |\tHelen      |103\t         |82000\n\t1\t   |\tIan           |103\t         |91000\n\nWrite a query to find the top 2 highest-paid employees from each department.",
-    "summary": "Highest paid employees",
+    "text": "Employee:\nemployee_id| emp_name |dept_id   |salary\n-------------|-------------|------------|------\n\t1\t   |\tAlice       |101\t         |80000\n\t1\t   |\tBob         |101\t         |75000\n\t1\t   |\tCharlie    |101\t         |90000\n\t1\t   |\tDavid      |102\t         |60000\n\t1\t   |\tEva         |102\t         |65000\n\t1\t   |\tFrank      |102\t         |62000\n\t1\t   |\tGrace      |103\t         |70000\n\t1\t   |\tHelen      |103\t         |82000\n\t1\t   |\tIan           |103\t         |91000\n\nWrite a query to find the top 2 highest-paid employees from each department. ",
+    "summary": " Highest paid employees",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "United States",
@@ -605,8 +605,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "How do you write an incremental update data pipeline with the following sample data\n\nemp_data : \n \nemp_id mob_no   Address                Flag\n123         7777777         Bangalore                Y\n456   8888888         Chennai                     Y\n789   9999999         Pune                        Y\n124   6666666         Hyderabad                Y\n333   9199191         Delhi                        Y\n \nemp_file :  latest data\n \nemp_id mob_no   Address\n789   9999999   Bangalore\n124   6666666   Hyderabad\n333   9199191   Bangalore\n444   7171717   Jaipur\n \n \nResult :\n \nemp_id  mob_no  Address           Flag\n123   7777777   Bangalore          Y\n456   8888888   Chennai            Y\n789   9999999   Pune               N\n124   6666666   Hyderabad          Y\n333   9199191   Delhi              N\n444   7171717   Jaipur             Y\n789   9999999   Bangalore          Y\n333   9199191   Bangalore          Y",
-    "summary": "Incremental data update",
+    "text": "How do you write an incremental update data pipeline with the following sample data\n\nemp_data : \n \nemp_id mob_no   Address                Flag\n123         7777777         Bangalore                Y\n456   8888888         Chennai                     Y\n789   9999999         Pune                        Y\n124   6666666         Hyderabad                Y\n333   9199191         Delhi                        Y\n \nemp_file :  latest data\n \nemp_id mob_no   Address\n789   9999999   Bangalore\n124   6666666   Hyderabad\n333   9199191   Bangalore\n444   7171717   Jaipur\n \n \nResult :\n \nemp_id  mob_no  Address           Flag\n123   7777777   Bangalore          Y\n456   8888888   Chennai            Y\n789   9999999   Pune               N\n124   6666666   Hyderabad          Y\n333   9199191   Delhi              N\n444   7171717   Jaipur             Y\n789   9999999   Bangalore          Y\n333   9199191   Bangalore          Y\n\n\n",
+    "summary": " Incremental data update",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -616,30 +616,30 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "Given a table with 2 columns, id and value like below:\nID\nValue\n\n1\nA\n\n2\nB\n\n3\nc\n\n\nDisplay the result as below using SQL & Spark:\nA, B, C",
-    "summary": "Display the alphabets",
+    "text": "Given a table with 2 columns, id and value like below:\nID\nValue\n\n1\nA\n\n2\nB\n\n3\nc\n\n\nDisplay the result as below using SQL & Spark:\nA, B, C ",
+    "summary": " Display the alphabets ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
     "ctc": "5L-10L",
-    "companyName": "Deloitte",
+    "companyName": "Deloitte ",
     "yoe": "2-5",
     "role": "Data Engineer-2"
   },
   {
     "text": "How to find duplicates from the given table using SQL & Spark?\nHow to find the duplicate records and save them in another path in spark?",
-    "summary": "Find duplicates",
+    "summary": " Find duplicates",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "India",
     "ctc": "5L-10L",
-    "companyName": "Deloitte",
+    "companyName": "Deloitte ",
     "yoe": "2-5",
     "role": "Data Engineer-2"
   },
   {
     "text": "Que1 - Write an SQL query to find the month with the highest expenditure.\nQue2 - Write an SQL query to calculate the expenditure for each month\n\nItem\t  Expenditure\tDate   \nApple\t400\t    1-Jul-23\nBananas\t200\t    4-Jul-23\nCarrots\t100\t    3-Jun-23\nGuava\t50\t   20-Jun-23",
-    "summary": "Highest expenditure",
+    "summary": " Highest expenditure",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -649,8 +649,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Que -Write an SQL query to find 2nd highest score in each department.\n\nStudent\tDepartment\tPoints\nRam\tECE\t9\nAjay\tECE\t9.2\nGopal\tECE\t9\nNikhil\tEEE\t8.8\nSai\tEEE\t8.5\nChaand\tEEE\t8.9\nVimal\tMech\t9\nRaju\tMech\t9\nNaveen\tMech\t9\nAditya\tCSE\t9.2\nShweta\tCSE\t9.4\nPriya\tCSE\t9.1\nManisha\tCSE\t9",
-    "summary": "Highest score in each dept",
+    "text": "Que -Write an SQL query to find 2nd highest score in each department.\n\nStudent\tDepartment\tPoints\nRam\tECE\t9\nAjay\tECE\t9.2\nGopal\tECE\t9\nNikhil\tEEE\t8.8\nSai\tEEE\t8.5\nChaand\tEEE\t8.9\nVimal\tMech\t9\nRaju\tMech\t9\nNaveen\tMech\t9\nAditya\tCSE\t9.2\nShweta\tCSE\t9.4\nPriya\tCSE\t9.1\nManisha\tCSE\t9\n",
+    "summary": "Highest score in each dept ",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -661,7 +661,7 @@
   },
   {
     "text": "SQL Question -\nwith source_table as(\nSELECT  'a1' as customer , 'swift' as product, 'maruti' as brand\nUNION ALL\nSELECT 'a2','vento','volkswagen'\nUNION ALL\nSELECT 'a2','polo','volkswagen'\nUNION ALL\nSELECT 'a1','hector','mg'\nUNION ALL\nSELECT 'a2','tiguan','volkswagen'\nUNION ALL\nSELECT 'a3','swift','maruti'\nUNION ALL\nSELECT 'a3','scross','maruti'\n)\nselect * from source_table\n \n\n-- normal-has bought multiple products from multiple brands\n-- loyal_customer-has bought products only from single brand\n-- Write sql query to find brand and number of loyal customers?",
-    "summary": "Loyal customers",
+    "summary": " Loyal customers",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "Czech Republic",
@@ -672,7 +672,7 @@
   },
   {
     "text": "Find the count of each letters in a word using SQL\nINSERT INTO sample_table (text_column) VALUES\n('this'),\n('another'),\n('text');",
-    "summary": "character count",
+    "summary": " character count",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "Czech Republic",
@@ -683,7 +683,7 @@
   },
   {
     "text": "How to split the delimiter and load into a dataframe using pyspark\nName~|Age\nVirat, Kohli~|28\nAndrew, Simond~|137\nGeogre, Bush~|159\nFlintoff, David~|12\nAdam, James~|20",
-    "summary": "Split the delimiter",
+    "summary": " Split the delimiter",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "Czech Republic",
@@ -694,7 +694,7 @@
   },
   {
     "text": "Que-How many records will be present in the result for each of the following joins?\n\nLeft Join\nRight Join\nInner Join\nFull Outer Join\n\nColumn 1\n0\n1\n2\nNULL\n\nColumn 2\n2\n4\nNULL\nNULL",
-    "summary": "SQL Joins",
+    "summary": "SQL Joins ",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -705,7 +705,7 @@
   },
   {
     "text": "SQL\nWrite a query to delete duplicates from table",
-    "summary": "Delete duplicates",
+    "summary": "  Delete duplicates",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -716,7 +716,7 @@
   },
   {
     "text": "1. Catalyst Optimizer and Adaptive Query Execution (AQE): - How both help in optimization",
-    "summary": "Catalyst Optimizer",
+    "summary": " Catalyst Optimizer",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
@@ -737,8 +737,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Find the record having the latest date for each ID - to answer in both SQL and Pyspark\n +----+------------+--------+\n  | id | date       | value  |\n  +----+------------+--------+\n  | 1  | 2024-01-16 | AA     |\n  | 2  | 2023-05-17 | BB     |\n  | 1  | 2023-06-13 | AC     |\n  | 2  | 2024-03-18 | AD     |\n  +----+------------+--------+",
-    "summary": "Latest ID data",
+    "text": "Find the record having the latest date for each ID - to answer in both SQL and Pyspark\n +----+------------+--------+\n  | id | date       | value  |\n  +----+------------+--------+\n  | 1  | 2024-01-16 | AA     |\n  | 2  | 2023-05-17 | BB     |\n  | 1  | 2023-06-13 | AC     |\n  | 2  | 2024-03-18 | AD     |\n  +----+------------+--------+ ",
+    "summary": " Latest ID data",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -748,8 +748,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| num         | varchar |\n+-------------+---------+\nid is the Unique key for this table.\nid is an autoincrement column.\n\nFind all numbers that appear at least three times consecutively.\n\nReturn the result table in any order.\n\nExample 1:\n\nInput: \nLogs table:\n+----+-----+\n| id | num |\n+----+-----+\n| 1  | 1   | \n| 2  | 1   |\n| 3  | 1   |\n| 4  | 2   |\n| 5  | 1   |\n| 6  | 2   |\n| 7  | 2   |\n+----+-----+\nOutput: \n+-----------------+\n| ConsecutiveNums |\n+-----------------+\n| 1               |\n+-----------------+\nExplanation: 1 is the only number that appears consecutively for at least three times.",
-    "summary": "Consecutive appearance",
+    "text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| num         | varchar |\n+-------------+---------+\nid is the Unique key for this table.\nid is an autoincrement column.\n\nFind all numbers that appear at least three times consecutively.\n\nReturn the result table in any order.\n\nExample 1:\n\nInput: \nLogs table:\n+----+-----+\n| id | num |\n+----+-----+\n| 1  | 1   | \n| 2  | 1   |\n| 3  | 1   |\n| 4  | 2   |\n| 5  | 1   |\n| 6  | 2   |\n| 7  | 2   |\n+----+-----+\nOutput: \n+-----------------+\n| ConsecutiveNums |\n+-----------------+\n| 1               |\n+-----------------+\nExplanation: 1 is the only number that appears consecutively for at least three times.\n",
+    "summary": "Consecutive appearance  ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -760,7 +760,7 @@
   },
   {
     "text": "You are given a dataset of customer transactions stored as a PySpark DataFrame:\n\nCustomerID\tTransactionDate\tAmount\tCategory\n101\t2024-12-01\t500\tElectronics\n102\t2024-12-02\t150\tGroceries\n101\t2024-12-03\t300\tApparel\n102\t2024-12-04\t100\tGroceries\n103\t2024-12-05\t250\tElectronics\n\nWrite a PySpark code to calculate the total spending per customer.\nFilter the customers who have spent more than 400 in total.",
-    "summary": "Customer spend transactions",
+    "summary": " Customer spend transactions",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -771,7 +771,7 @@
   },
   {
     "text": "About the optimization technique used in SQL and Pyspark.",
-    "summary": "Optimization techniques",
+    "summary": " Optimization techniques",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "India",
@@ -782,7 +782,7 @@
   },
   {
     "text": "You are given two tables:\n\nCustomers\n\nCustomerID\tName\tCity\n1\tAlice\tNew York\n2\tBob\tLondon\n3\tCharlie\tParis\n\nOrders\n\nOrderID\tCustomerID\tOrderAmount\tOrderDate\n101\t1\t500\t2024-11-01\n102\t2\t200\t2024-11-02\n103\t3\t300\t2024-11-03\n104\t1\t400\t2024-11-04\n\nWrite an SQL query to find:\n\nThe total order amount for each customer along with their name and city.\nCustomers who have placed more than one order and the total amount spent.",
-    "summary": "Customers orders",
+    "summary": "Customers orders ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -792,8 +792,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Given a table named Sales:\nSaleID\tProductID\tSaleAmount\tSaleDate\n1\t101\t500\t2024-10-01\n2\t102\t300\t2024-10-02\n3\t101\t400\t2024-10-03\n4\t103\t600\t2024-10-04\nAnd a table named Products:\nProductID\tProductName\tCategory\n101\tLaptop\tElectronics\n102\tPhone\tElectronics\n103\tChair\tFurniture\nWrite a query to calculate total sales for each product category.\nIdentify the product with the highest sales amount.",
-    "summary": "Highest sales in product",
+    "text": "Given a table named Sales:\nSaleID\tProductID\tSaleAmount\tSaleDate\n1\t101\t500\t2024-10-01\n2\t102\t300\t2024-10-02\n3\t101\t400\t2024-10-03\n4\t103\t600\t2024-10-04\nAnd a table named Products:\nProductID\tProductName\tCategory\n101\tLaptop\tElectronics\n102\tPhone\tElectronics\n103\tChair\tFurniture\nWrite a query to calculate total sales for each product category.\nIdentify the product with the highest sales amount.\n",
+    "summary": " Highest sales in product",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
@@ -804,7 +804,7 @@
   },
   {
     "text": "You have a PySpark DataFrame of employees and their salaries:\nEmployeeID\tDepartment\tSalary\tDateHired\n1\tHR\t50000\t2020-06-15\n2\tIT\t75000\t2018-09-20\n3\tHR\t60000\t2022-03-11\n4\tIT\t72000\t2021-12-01\nWrite a PySpark code to calculate the average salary per department.\nFilter out departments where the average salary is less than 60,000.\nAdd a column indicating how many years each employee has worked in the company (based on the current date)",
-    "summary": "Employee experience in dept",
+    "summary": " Employee experience in dept",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -815,7 +815,7 @@
   },
   {
     "text": "Explain the concept of shuffle operations in PySpark. Why are shuffle operations costly, and how can their impact be minimized? Provide examples of transformations in PySpark that result in shuffle operations",
-    "summary": "Spark shuffling",
+    "summary": " Spark shuffling",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
@@ -826,7 +826,7 @@
   },
   {
     "text": "I have deleted one partition from HDFS end , now will my metastore identify that \nmissed partition ?",
-    "summary": "Missing partitions",
+    "summary": " Missing partitions",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -837,7 +837,7 @@
   },
   {
     "text": "I want to change my internal table to external table , what is the command ?",
-    "summary": "Hive managed table",
+    "summary": " Hive managed table",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -847,8 +847,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Input:\ntable\nid\tname\n1\tIndia\n2\tPakistan\n3\tBangladesh\n4\tSrilanka\n5\tAfghanistan\n\noutput:\nIndia Vs Pakistan\nPakistan Vs Bangladesh\nSrilanka Vs Afghanistan",
-    "summary": "Matches between countries",
+    "text": "Input:\ntable\nid\tname\n1\tIndia\n2\tPakistan\n3\tBangladesh\n4\tSrilanka\n5\tAfghanistan\n\noutput:\nIndia Vs Pakistan\nPakistan Vs Bangladesh\nSrilanka Vs Afghanistan\n",
+    "summary": " Matches between countries",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -859,7 +859,7 @@
   },
   {
     "text": "What is difference betweem hive internal and external table?\nWhy Spark is faster than MP?\nWhat is repartition in Spark?",
-    "summary": "Spark theory",
+    "summary": " Spark theory",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "India",
@@ -869,8 +869,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Given below 2 tables what are outupts for each join\nTable 1\nId\n1\nNull\nNull\n1 \n\nTable 2\nId\nNull\n1\nNull\n1 \n\ninner join \nleft outer join \nright outer \nfull",
-    "summary": "SQL Joins",
+    "text": "Given below 2 tables what are outupts for each join\nTable 1\nId\n1\nNull\nNull\n1 \n\nTable 2\nId\nNull\n1\nNull\n1 \n\ninner join \nleft outer join \nright outer \nfull \n",
+    "summary": " SQL Joins",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
@@ -880,8 +880,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "you have a csv file with columns adhaar_ID , name , dob, transaction_id, trancsaction_amount, load_timestamp on hdfs path \"/another/hdfs/path/csv_adhaar\"\nadhaar_ID is like a nation id for a person living in India\nname : name of the person who did a transaction \ndob : dob of the person who did a transaction\ntransaction_id: id for each transaction done\ntransaction_amount : amount used for transaction\nload_timestamp : time when the transaction loaded into the table.\nhas context menu\n\nfind the person who did the second least transaction done last month using spark",
-    "summary": "Aadhaar Transaction",
+    "text": "you have a csv file with columns adhaar_ID , name , dob, transaction_id, trancsaction_amount, load_timestamp on hdfs path \"/another/hdfs/path/csv_adhaar\"\nadhaar_ID is like a nation id for a person living in India\nname : name of the person who did a transaction \ndob : dob of the person who did a transaction\ntransaction_id: id for each transaction done\ntransaction_amount : amount used for transaction\nload_timestamp : time when the transaction loaded into the table.\nhas context menu\n\nfind the person who did the second least transaction done last month using spark\n",
+    "summary": " Aadhaar Transaction",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -891,8 +891,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "We have 3 tables A,B,C .write a sql query to fetch details from table B which are not in A,C",
-    "summary": "Fetch details from tables",
+    "text": "We have 3 tables A,B,C .write a sql query to fetch details from table B which are not in A,C\n",
+    "summary": " Fetch details from tables",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -902,8 +902,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Table Name : Products\n\nColumn_Name\tType\n\nproduct_id\tint\nproduct_name\tvarchar(50)\ncategory\tvarchar(50)\n\nproduct_id is Primary Key of this table.\n\nTable Name : Sales\n\nColumn_Name\tType\n\nproduct_id\tint\nyear\tint\ntotal_sales_revenue\tDECIMAL(10, 2)\n\n\nproduct_id, year is the Primary Key of this table.\nproduct_id is the Foreign key to Products table.\n\nWrite a sql query to find the products whose total sales revenue has increased every year. Include the product_id , product_name and category in the result. Sort the result by product_id.",
-    "summary": "Increase in sales revenue",
+    "text": "Table Name : Products\n\nColumn_Name\tType\n\nproduct_id\tint\nproduct_name\tvarchar(50)\ncategory\tvarchar(50)\n\nproduct_id is Primary Key of this table.\n\nTable Name : Sales\n\nColumn_Name\tType\n\nproduct_id\tint\nyear\tint\ntotal_sales_revenue\tDECIMAL(10, 2)\n\n\nproduct_id, year is the Primary Key of this table.\nproduct_id is the Foreign key to Products table.\n\nWrite a sql query to find the products whose total sales revenue has increased every year. Include the product_id , product_name and category in the result. Sort the result by product_id.\n",
+    "summary": " Increase in sales revenue",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -914,7 +914,7 @@
   },
   {
     "text": "Table Name : login_details\n\nColumn Name\tType\ntimes\ttime\nstatus\tvarchar(3)\n\ntimes is the primary key column for this table and increasing in order.\n'in'\n'out'\n\n\nThis table provides login and logoff details of one user.\n\nWrite a SQL query to to reqpresent the different periods (in mins) when user was logged in.\n\n\n\n\n\ntimes\tstatus\n10:00:00\ton\n10:01:00\ton\n10:02:00\ton\n10:03:00\toff\n10:04:00\ton\n10:05:00\ton\n10:06:00\toff\n10:07:00\toff\n10:08:00\toff\n10:09:00\ton\n10:10:00\ton\n10:11:00\ton\n10:12:00\ton\n10:13:00\toff\n10:14:00\toff\n10:15:00\ton\n10:16:00\toff\n10:17:00\toff\n\n\n\nlog_on\tlog_off\tduration\n10:00:00\t10:03:00\t3\n10:04:00\t10:06:00\t2\n10:09:00\t10:13:00\t4\n10:15:00\t10:16:00\t1",
-    "summary": "Users login activity",
+    "summary": " Users login activity",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
@@ -925,7 +925,7 @@
   },
   {
     "text": "Find the 3-month rolling average of total revenue from purchases given a table with users, their purchase amount, and date purchased (YYYY-MM-DD). Output the year-month (YYYY-MM) and 3-month rolling average of revenue, sorted from earliest month to latest month.",
-    "summary": "Rolling average of revenue",
+    "summary": " Rolling average of revenue",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
@@ -936,7 +936,7 @@
   },
   {
     "text": "Assume that you are working with Big Data in a project that follows the Star Schema data warehousing model. In this architecture, you have fact tables and dimension tables. There may be situations where the dimension tables are relatively small, while the fact tables are extremely large. You are tasked with preparing a report that combines both the fact and dimension tables.\n\nGiven this scenario, what strategies or methods would you use to optimize the processing speed when combining data from these tables? How would you ensure faster query performance and efficient processing in this case?",
-    "summary": "Processing dimensional modelling tables",
+    "summary": " Processing dimensional modelling tables",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -947,7 +947,7 @@
   },
   {
     "text": "Suppose you have two dataframes:\nThe first dataframe contains columns ID (integer) and name.\nThe second dataframe contains columns ID (string) and salary.\nIf you attempt to join these two dataframes on the ID column, what will be the behavior when the data types of ID differ (i.e., one being an integer and the other a string)? Specifically, how will SQL Server handle this join operation, and will the join succeed?",
-    "summary": "Spark dataframes join",
+    "summary": "Spark dataframes join ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -958,7 +958,7 @@
   },
   {
     "text": "Implement SCD2 in Address table",
-    "summary": "Implementation of SCD-2",
+    "summary": " Implementation of SCD-2",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -969,7 +969,7 @@
   },
   {
     "text": "You have 2 tables namely A and B. Perform left join, inner join, full outer join on both the tables and give the join results\n\nA :\n\n 1\n 2\n 1\n NULL\n\nB:\n 1\n 1\n NULL",
-    "summary": "SQL Joins",
+    "summary": "SQL Joins ",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -980,7 +980,7 @@
   },
   {
     "text": "Input:\ndata1 = [(\"Alice\", 1), (\"Bob\", 2), (\"Charlie\", 3)]\n\ndata2 = [(1, \"HR\"), (2, \"Finance\"), (4, \"IT\")]\n\ndata1_schema = [\"name\", \"dept_id\"]\n\ndata2_schema= [\"dept_id\", \"department\"]\n\nJoin these two tables and display the below output in pyspark:\n1,\"Alice\",\"HR\"\n2,\"Bob\",\"Finance\"\n4,NULL,\"IT\"",
-    "summary": "Spark dataframe role display",
+    "summary": "  Spark dataframe role display",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -991,7 +991,7 @@
   },
   {
     "text": "Emp - id, location, salary \nDep - depid, emp_id\n\nemp_data = [(1,'blr',10000),(2,'chn',20000),(3,'pune',5000)]\nemp_schema = ['id','location','salary']\n\ndep_data = [(10,1),(10,2),(20,3)]\ndep_schema = ['depid','empid']\nfrom depid 10 how many emp we have in Pune and total salary in pyspark?",
-    "summary": "",
+    "summary": " ",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1002,7 +1002,7 @@
   },
   {
     "text": "Input:\ndata1 = [(\"Alice\", 1), (\"Bob\", 2), (\"Charlie\", 3)] \n\ndata2 = [(1, \"HR\"), (2, \"Finance\"), (4, \"IT\")]\n\ndata1_schema = [\"name\", \"dept_id\"]\n\ndata2_schema= [\"dept_id\", \"department\"]\n\nJoin these two tables and display the below output in pyspark:\n1,\"Alice\",\"HR\"\n2,\"Bob\",\"Finance\"",
-    "summary": "Spark dataframe dept display",
+    "summary": " Spark dataframe dept display",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1012,8 +1012,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Need to derive the due column from the data. There a table with columns load_id, demand,collection, demanddate,collectiondate.\nUser a demand a loan amount daily as 100. he needs to pay to bank daily basics i.e,  collection column. if the user paid on that day then due will be zero as user paid on the same day right only. If he skips the amount which he needs pay then due will be one, one next day user requested 100 and paid 100 then due will one because the previous day he didnt paid right so due will be one. attaching the details below.\nInput - demand,collection, demanddate,collectiondate \n   100 100 2025010120250101 \n  100 100 20250102 20250102 \n  100 0 20250103 20250103 \n  100 100 20250104 20250104 \n  100 0 20250105 20250105 \n  100 300 20250106 20250106 . \noutput - \ndemand,collection, demanddate,collectiondate, due \n   100 100 2025010120250101 0\n  100 100 20250102 20250102 0\n  100 0 20250103 20250103 1\n  100 100 20250104 20250104 1\n  100 0 20250105 20250105 2\n  100 300 20250106 20250106 0. \n\nSummary of the question if user paid the demanded amount the due will be 0, if user skips amount the due will be 1, due will increase as days will increase if wont pay, user skips for two days then due will 2(5 row). if user paid all the due amount then due will become zero(last row).",
-    "summary": "User due loan amount",
+    "text": "Need to derive the due column from the data. There a table with columns load_id, demand,collection, demanddate,collectiondate.\nUser a demand a loan amount daily as 100. he needs to pay to bank daily basics i.e,  collection column. if the user paid on that day then due will be zero as user paid on the same day right only. If he skips the amount which he needs pay then due will be one, one next day user requested 100 and paid 100 then due will one because the previous day he didnt paid right so due will be one. attaching the details below.\nInput - demand,collection, demanddate,collectiondate \n   100 100 2025010120250101 \n  100 100 20250102 20250102 \n  100 0 20250103 20250103 \n  100 100 20250104 20250104 \n  100 0 20250105 20250105 \n  100 300 20250106 20250106 . \noutput - \ndemand,collection, demanddate,collectiondate, due \n   100 100 2025010120250101 0\n  100 100 20250102 20250102 0\n  100 0 20250103 20250103 1\n  100 100 20250104 20250104 1\n  100 0 20250105 20250105 2\n  100 300 20250106 20250106 0. \n\nSummary of the question if user paid the demanded amount the due will be 0, if user skips amount the due will be 1, due will increase as days will increase if wont pay, user skips for two days then due will 2(5 row). if user paid all the due amount then due will become zero(last row). \n",
+    "summary": " User due loan amount",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
@@ -1024,7 +1024,7 @@
   },
   {
     "text": "find the second highest salary from the table",
-    "summary": "Second highest salary",
+    "summary": " Second highest salary",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1035,7 +1035,7 @@
   },
   {
     "text": "write a pyspark program to find the word count of a given txt file\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.functions import split, explode, regexp, regexp_extract, col\n\nspark=SparkSession.builder.appName(\"count\").master(\"local\").getOrCreate()\ndf=spark.read.text(\"D:\\python_final\\word_count_sample.txt\")\ndf.show()\ndf_split=df.withColumn(\"result\",split(\"value\",\" \")).drop(\"value\")\ndf_explode=df_split.withColumn(\"words\",explode(df_split[\"result\"]))\ndf_explode.show()\ndf_explode.groupby(\"words\").count().orderBy(col(\"count\").desc()).show()",
-    "summary": "Word count in txt file",
+    "summary": " Word count in txt file",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1045,8 +1045,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "I have a data with 2 columns id and count we have to display name column based on the value of an count column and count column should be like 0 to count\ninput:+---+-----+\n| id|count|\n+---+-----+\n|  1|    2|\n|  2|    3|\n|  3|    4|\n+---+-----+\noutput:\n+---+---+\n| id|seq|\n+---+---+\n|  1|  0|\n|  1|  1|\n|  2|  0|\n|  2|  1|\n|  2|  2|\n|  3|  0|\n|  3|  1|\n|  3|  2|\n|  3|  3|\nsolution:\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.functions import expr, explode\nfrom pyspark.sql.functions import concat_ws,collect_list\n\n# Initialize Spark session\nspark = SparkSession.builder.appName(\"RepeatIDs\").getOrCreate()\n\n# Create a DataFrame with 'id' and 'count' columns\ndata = [(1, 2), (2, 3), (3, 4)]\ncolumns = [\"id\", \"count\"]\n\ndf = spark.createDataFrame(data, columns)\ndf.show()\n\n# Create a sequence from 0 to count-1, then expand it using explode\ndf.createOrReplaceTempView(\"repeat\")\ndf_expanded = (df.withColumn(\n    \"seq\", explode(expr(\"sequence(0, count - 1)\")))).drop(\"count\")\ndf_expanded.show()\n#df_expanded.selectExpr(\"id\", \"explode(seq) as repeated\").show() # Explode sequence to rows\n\n# Show the result\n\ndf_expanded.show(truncate=False)\nspark.sql(\"select id,explode(sequence(0,count-1)) from repeat\").show()",
-    "summary": "Spark dataframes sequencing",
+    "text": "I have a data with 2 columns id and count we have to display name column based on the value of an count column and count column should be like 0 to count\ninput:+---+-----+\n| id|count|\n+---+-----+\n|  1|    2|\n|  2|    3|\n|  3|    4|\n+---+-----+\noutput:\n+---+---+\n| id|seq|\n+---+---+\n|  1|  0|\n|  1|  1|\n|  2|  0|\n|  2|  1|\n|  2|  2|\n|  3|  0|\n|  3|  1|\n|  3|  2|\n|  3|  3|\nsolution:\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.functions import expr, explode\nfrom pyspark.sql.functions import concat_ws,collect_list\n\n# Initialize Spark session\nspark = SparkSession.builder.appName(\"RepeatIDs\").getOrCreate()\n\n# Create a DataFrame with 'id' and 'count' columns\ndata = [(1, 2), (2, 3), (3, 4)]\ncolumns = [\"id\", \"count\"]\n\ndf = spark.createDataFrame(data, columns)\ndf.show()\n\n# Create a sequence from 0 to count-1, then expand it using explode\ndf.createOrReplaceTempView(\"repeat\")\ndf_expanded = (df.withColumn(\n    \"seq\", explode(expr(\"sequence(0, count - 1)\")))).drop(\"count\")\ndf_expanded.show()\n#df_expanded.selectExpr(\"id\", \"explode(seq) as repeated\").show() # Explode sequence to rows\n\n# Show the result\n\ndf_expanded.show(truncate=False)\nspark.sql(\"select id,explode(sequence(0,count-1)) from repeat\").show()\n",
+    "summary": " Spark dataframes sequencing",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1057,7 +1057,7 @@
   },
   {
     "text": "Suppose you're reading the data from csv files but it has multiple delimiters how can you read the data from csv in pyspark \ndf_final_csv=df_csv2.withColumn(\"value\",expr(\"regexp_replace(value,'[^a-zA-Z0-9]',',')\"))",
-    "summary": "Handling multiple delimiters",
+    "summary": " Handling multiple delimiters",
     "difficulty": "Easy",
     "category": "scenario based",
     "country": "India",
@@ -1068,7 +1068,7 @@
   },
   {
     "text": "Given a dataframe containing the customer transactions - \nschema\n----------------------------------------\ncustomer_id                     String\ntransaction_timestamp    Timestamp\n----------------------------------------\nFind the distinct number of customers who ordered at least once every month in the past year",
-    "summary": "Distinct orders from customers",
+    "summary": " Distinct orders from customers",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1078,8 +1078,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "- Explain AQE, what are the benefits of AQE. How does AQE help (Dynamically Coalescing, Dynamically handling Partition Skew, Dynamically Switching Join Strategies).\n- Have used UDFs in Spark? What is your opinion about the same? What is it's impact on performance? How about vectorized UDFs?\n- Databricks and different types of compute in Databricks.\n- What are the different join strategies in Spark?\n- Have you used constraints in Databricks?\n- What is Delta format? What is the advantage it gives? Explain vacuum command?\n- What is small file problem? How can you solve it?\n- What are the different security options in BigQuery?\n- What are the different types of storage in BigQuery?\n- What is row level and column level security in BigQuery?",
-    "summary": "DE theory",
+    "text": "- Explain AQE, what are the benefits of AQE. How does AQE help (Dynamically Coalescing, Dynamically handling Partition Skew, Dynamically Switching Join Strategies).\n- Have used UDFs in Spark? What is your opinion about the same? What is it's impact on performance? How about vectorized UDFs?\n- Databricks and different types of compute in Databricks.\n- What are the different join strategies in Spark?\n- Have you used constraints in Databricks?\n- What is Delta format? What is the advantage it gives? Explain vacuum command?\n- What is small file problem? How can you solve it?\n- What are the different security options in BigQuery?\n- What are the different types of storage in BigQuery?\n- What is row level and column level security in BigQuery?\n",
+    "summary": " DE theory",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "India",
@@ -1090,7 +1090,7 @@
   },
   {
     "text": "Given a file, read the contents of the file and then create a word counter function using python file handler(Not using Pyspark or pandas, use the python basic file handler here)",
-    "summary": "Python file handler",
+    "summary": "Python file handler ",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1101,7 +1101,7 @@
   },
   {
     "text": "Given multiple data sources -> DBs like Oracle/Postgres, Flat files, APIs, SFTP etc. Design an end to end architecture in GCP using different services such that it can fulfill both batch and real time data needs for the end users. The solution should have an efficient way to store and process huge amount of data and provisions for end users to query the data and do dashboarding.",
-    "summary": "Design architecture handling batch&real data",
+    "summary": " Design architecture handling batch&real data",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1111,18 +1111,18 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "1) SQL Challenge: \n\nYou have been given two tables: \"orders\" and \"customers.\" The \"orders\" table contains order information, including the order ID, customer ID, order date, and order amount. The \"customers\" table contains customer information, including the customer ID, customer name, and customer city. \n\nWrite a SQL query to retrieve the top 5 customers (based on the total order amount) from the city of \"London\" who have placed at least 2 orders. The result should include the customer name, city, and total order amount.",
-    "summary": "Top customers in london",
+    "text": "1) SQL Challenge: \n\nYou have been given two tables: \"orders\" and \"customers.\" The \"orders\" table contains order information, including the order ID, customer ID, order date, and order amount. The \"customers\" table contains customer information, including the customer ID, customer name, and customer city. \n\nWrite a SQL query to retrieve the top 5 customers (based on the total order amount) from the city of \"London\" who have placed at least 2 orders. The result should include the customer name, city, and total order amount. \n\n",
+    "summary": " Top customers in london",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "United Kingdom",
     "ctc": "60L-70L",
     "companyName": "BLOOMBERG",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
-    "text": "3) PySpark Challenge: \n\nYou have been given a dataset containing information about user activity on a website. The dataset consists of the following columns: \"user_id\" (integer), \"timestamp\" (timestamp), \"page_visited\" (string). Your task is to write a PySpark program to perform the following operations: \n\nRead the dataset into a PySpark DataFrame. \n\nCalculate the total count of page visits for each user. \n\nFind the user with the highest number of page visits. \n\nCalculate the average number of page visits per user. \n\nWrite the results to a new CSV file named \"user_activity_summary.csv\" with the following columns: \"user_id,\" \"total_page_visits,\" \"average_page_visits\". \n\nFor this challenge, you can assume that the dataset is in a CSV file format and the column delimiter is a comma.",
+    "text": "\n3) PySpark Challenge: \n\nYou have been given a dataset containing information about user activity on a website. The dataset consists of the following columns: \"user_id\" (integer), \"timestamp\" (timestamp), \"page_visited\" (string). Your task is to write a PySpark program to perform the following operations: \n\nRead the dataset into a PySpark DataFrame. \n\nCalculate the total count of page visits for each user. \n\nFind the user with the highest number of page visits. \n\nCalculate the average number of page visits per user. \n\nWrite the results to a new CSV file named \"user_activity_summary.csv\" with the following columns: \"user_id,\" \"total_page_visits,\" \"average_page_visits\". \n\nFor this challenge, you can assume that the dataset is in a CSV file format and the column delimiter is a comma. ",
     "summary": "Page visitors in pyspark",
     "difficulty": "Medium",
     "category": "problem solving",
@@ -1130,51 +1130,51 @@
     "ctc": "60L-70L",
     "companyName": "BLOOMBERG",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
-    "text": "We will have the employee table empid and mgrid \nwirte the Pyspark query for to find the manager level  and employee count reporting to them",
-    "summary": "Employees reporting to manager",
+    "text": "We will have the employee table empid and mgrid \nwirte the Pyspark query for to find the manager level  and employee count reporting to them ",
+    "summary": " Employees reporting to manager",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
     "ctc": "30L-40L",
     "companyName": "Natwest",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
     "text": "we have 2 tables tableA and tableB with column B how many rows output for all 4 join types\nA   B\n1    1\n1    1\n      1\n      1",
-    "summary": "SQL Joins",
+    "summary": " SQL Joins",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
     "ctc": "30L-40L",
     "companyName": "Natwest",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
     "text": "we have customer table with orderdate, orderid, customerid,qty the output should be the with customerid and days_taken_to_2nd_order_from1st and  days_taken_to_3rd_order_from1st",
-    "summary": "Days taken for next order",
+    "summary": " Days taken for next order",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
     "ctc": "20L-30L",
     "companyName": "Mcafee",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
     "text": "how are you migrating the databricks workflows.",
-    "summary": "Databricks migration",
+    "summary": " Databricks migration",
     "difficulty": "Medium",
     "category": "project based",
     "country": "India",
     "ctc": "20L-30L",
     "companyName": "Mcafee",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
     "text": "we have susbscriptions table with subid,tansactionid,duration in the out the duration should be concated as a single value for the respective subid.",
@@ -1185,11 +1185,11 @@
     "ctc": "20L-30L",
     "companyName": "Mcafee",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
     "text": "In below mention PySpark Operation, how many will be executed in driver node vs worker node\nFunction Invocation\nFilter \nMap\nResult and Formatting\nreduceByKeys\nSave file to AWS S3 Bucket",
-    "summary": "Execution tasks",
+    "summary": " Execution tasks",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -1200,7 +1200,7 @@
   },
   {
     "text": "Given the below dataset using pyspark, find the employee with 2nd highest salary\nemp_id|name|salary|dept_id\n1|Donald|2600|Sales\n2|Douglas|2600|Sales\n3|Jennifer|4400|IT\n4|Michael|13000|IT\n5|Pat|6000|HR\n6|Susan|6500|IT\n7|Hermann|10000|IT\n8|Shelley|12008|Sales\n9|William|8300|HR\n10|Steven|24000|IT\n11|Neena|17000|HR\n12|Lex|17000|IT\n13|Alexander|9000|Sales\n14|Bruce|6000|HR\n15|David|4800|IT",
-    "summary": "Employee second highest salary",
+    "summary": " Employee second highest salary",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1211,7 +1211,7 @@
   },
   {
     "text": "Given the below dataset, read the file in PySpark and transform the dataset such that is has 3 columns :- first_name, last_name, age. \nName ~| Age\nArjun, Kapoor ~| 25\nAlia, Bhatt ~| 24\nDeepika, Padukone ~| 26\nRanbir, Kapoor ~|26",
-    "summary": "Actors data transformation",
+    "summary": " Actors data transformation",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1222,7 +1222,7 @@
   },
   {
     "text": "Given below 2 tables using SQL, find all the number of records from left, right and inner join output\ntable 1 :\n1\n2\n1\n2\n4\nNULL\n\ntable 2:\n1\n1\n2\n2\n3\nNULL",
-    "summary": "SQL Joins",
+    "summary": " SQL Joins",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1233,40 +1233,40 @@
   },
   {
     "text": "Write a SQL query to retrieve number of customers who have made a purchase in last 30 days but did not purchase anything in the previous 30 days",
-    "summary": "No purchase made",
+    "summary": " No purchase made",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
     "ctc": "10L-20L",
-    "companyName": "McKinsey",
+    "companyName": " McKinsey",
     "yoe": "2-5",
     "role": "Data Engineer-2"
   },
   {
     "text": "Given the below PySpark script, how many time will the script actually execute?\n\ndf1 = spark.read.parquet()\ndf2 = df1.filter()\ndf3 = df2.groupBy().agg()\ndf4 = df3.filter()\n\ndf4.write.parquet()\ndf4.count()",
-    "summary": "Count script execution",
+    "summary": " Count script execution",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
     "ctc": "10L-20L",
-    "companyName": "McKinsey",
+    "companyName": " McKinsey",
     "yoe": "2-5",
     "role": "Data Engineer-2"
   },
   {
     "text": "How many types of transformations are present in PySpark. State with an example for each",
-    "summary": "Pyspark transformations",
+    "summary": " Pyspark transformations",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
     "ctc": "10L-20L",
-    "companyName": "McKinsey",
+    "companyName": " McKinsey",
     "yoe": "2-5",
     "role": "Data Engineer-2"
   },
   {
-    "text": "2)\nhow to delete logical duplicates from table?\ncol1 Col2\nA     B\nB     A\nC     D\nD     C\nE     F\n\noutput:\ncol1 col2\nA     B\nC     D\nE     F",
-    "summary": "Delete logical duplicates",
+    "text": "2)\nhow to delete logical duplicates from table?\ncol1 Col2\nA     B\nB     A\nC     D\nD     C\nE     F\n\noutput:\ncol1 col2\nA     B\nC     D\nE     F\n",
+    "summary": " Delete logical duplicates",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1277,7 +1277,7 @@
   },
   {
     "text": "Q1). mother asked you to bring 2 types of Fruits from Market. You went to Market. Fruit Vendor has the following Fruits\nFruit\n-----\nApple\nBananas\nOranges\n \nYou called your Mom to asked which 2 sets of fruits needs to brought ?\noutput:\nApple, Oranges\nApple Bananas\nBananas Oranges\nWrite a sql query for the above output",
-    "summary": "Fruits combination",
+    "summary": " Fruits combination",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1288,7 +1288,7 @@
   },
   {
     "text": "Write a Code to load nested JSON with dynamic schema in table using pyspark",
-    "summary": "Load nested JSON",
+    "summary": " Load nested JSON",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1299,18 +1299,18 @@
   },
   {
     "text": "Data Question : My data is coming from 5 Sources A,B,C,D & E, I have to maintain whole data in one single table how i manage that?",
-    "summary": "Data from 5 sources",
+    "summary": " Data from 5 sources",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "United Kingdom",
     "ctc": "60L-70L",
     "companyName": "Bloomberg UK PLC",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
     "text": "Context: You are tasked with analyzing clickstream data to understand user behavior on a platform. The platform's clickstream data is stored in the following table:\n\nTable: Clickstream\n\n+--------------+-----------+-------------------------------------+\n| Column Name  | Data Type | Description                         |\n+--------------+-----------+-------------------------------------+\n| UserId       | INT       | Unique identifier for each user.    |\n| ClickTime    | DATETIME  | Timestamp of a user's click event.  |\n+--------------+-----------+-------------------------------------+\n\n+--------+---------------------+\n| UserId | ClickTime           |\n+--------+---------------------+\n| 1      | 2025-01-20 10:00:00 |\n| 1      | 2025-01-20 10:15:00 |\n| 1      | 2025-01-20 11:00:00 |\n| 2      | 2025-01-20 09:00:00 |\n| 2      | 2025-01-20 09:45:00 |\n+--------+---------------------+\n\n\nRequirements:\n\nA new session starts if either:\nIt is the first click for the user.\nThe time difference between two consecutive clicks exceeds 30 minutes.\n\nFor each user, determine using Pyspark:\n1. The total number of sessions (TotalSessions).\n2. The total time spent across all sessions (TotalTimeSpent), calculated as the sum of the durations of all their sessions.",
-    "summary": "User clicks in platform",
+    "summary": " User clicks in platform",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
@@ -1321,7 +1321,7 @@
   },
   {
     "text": "1.How can you control the number of partitions in a DataFrame or RDD?\n2.What are the implications of too many or too few partitions on performance?\n3.How does PySpark handle data shuffling, and how can you minimize its impact?\n4.Why are DataFrames considered more efficient than RDDs in PySpark?",
-    "summary": "Spark Theory",
+    "summary": " Spark Theory",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
@@ -1331,8 +1331,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "Scenario: You are tasked with analyzing the performance using SQL of 4 teams participating in the Asia Cup. The match results are stored in the following table:\n\n+-------------+---------+--------------------------------------+\n| Column Name | Data Type | Description                        |\n+-------------+---------+--------------------------------------+\n| MatchId     | INT      | Unique identifier for each match.   |\n| TeamA       | VARCHAR  | Name of the first team.             |\n| TeamB       | VARCHAR  | Name of the second team.            |\n| RunsA       | INT      | Runs scored by Team A.              |\n| RunsB       | INT      | Runs scored by Team B.              |\n| MatchDate   | DATE     | Date on which the match occurred.   |\n+-------------+---------+--------------------------------------+\nSample Data:\n\n\n+---------+--------+--------+-------+-------+------------+\n| MatchId | TeamA  | TeamB  | RunsA | RunsB | MatchDate  |\n+---------+--------+--------+-------+-------+------------+\n| 1       | India  | Pakistan | 250   | 200   | 2025-01-10 |\n| 2       | India  | Sri Lanka| 300   | 320   | 2025-01-12 |\n| 3       | Pakistan | Bangladesh | 280   | 275   | 2025-01-14 |\n| 4       | Sri Lanka | Bangladesh | 310   | 290   | 2025-01-16 |\n| 5       | India  | Bangladesh | 270   | 260   | 2025-01-18 |\n+---------+--------+--------+-------+-------+------------+\nRequirements:\n\n1.Determine the total matches played by each team.\n2. Calculate the number of matches won by each team (a team wins if it scores more runs than its opponent).\n3. Rank the teams based on their total wins.",
-    "summary": "Asia cup matches",
+    "text": "Scenario: You are tasked with analyzing the performance using SQL of 4 teams participating in the Asia Cup. The match results are stored in the following table:\n\n+-------------+---------+--------------------------------------+\n| Column Name | Data Type | Description                        |\n+-------------+---------+--------------------------------------+\n| MatchId     | INT      | Unique identifier for each match.   |\n| TeamA       | VARCHAR  | Name of the first team.             |\n| TeamB       | VARCHAR  | Name of the second team.            |\n| RunsA       | INT      | Runs scored by Team A.              |\n| RunsB       | INT      | Runs scored by Team B.              |\n| MatchDate   | DATE     | Date on which the match occurred.   |\n+-------------+---------+--------------------------------------+\nSample Data:\n\n\n+---------+--------+--------+-------+-------+------------+\n| MatchId | TeamA  | TeamB  | RunsA | RunsB | MatchDate  |\n+---------+--------+--------+-------+-------+------------+\n| 1       | India  | Pakistan | 250   | 200   | 2025-01-10 |\n| 2       | India  | Sri Lanka| 300   | 320   | 2025-01-12 |\n| 3       | Pakistan | Bangladesh | 280   | 275   | 2025-01-14 |\n| 4       | Sri Lanka | Bangladesh | 310   | 290   | 2025-01-16 |\n| 5       | India  | Bangladesh | 270   | 260   | 2025-01-18 |\n+---------+--------+--------+-------+-------+------------+\nRequirements:\n\n1.Determine the total matches played by each team.\n2. Calculate the number of matches won by each team (a team wins if it scores more runs than its opponent).\n3. Rank the teams based on their total wins.\n",
+    "summary": " Asia cup matches",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
@@ -1343,7 +1343,7 @@
   },
   {
     "text": "Question 1:\n\nScenario: A company tracks employee attendance data in the following table:\n\n+-------------+----------+---------------------+\n| Column Name | Data Type | Description |\n+-------------+----------+---------------------+\n| EmployeeId | INT | Unique employee ID. |\n| CheckIn | DATETIME | Employee check-in time. |\n| CheckOut | DATETIME | Employee check-out time. |\n| Date | DATE | Date of attendance. |\n+-------------+----------+---------------------+\nSample Data:\n\n+------------+---------------------+---------------------+------------+\n| EmployeeId | CheckIn | CheckOut | Date |\n+------------+---------------------+---------------------+------------+\n| 1 | 2025-01-01 09:00:00 | 2025-01-01 17:00:00 | 2025-01-01 |\n| 1 | 2025-01-02 09:30:00 | 2025-01-02 16:45:00 | 2025-01-02 |\n| 2 | 2025-01-01 10:00:00 | 2025-01-01 18:00:00 | 2025-01-01 |\n| 3 | 2025-01-01 08:45:00 | 2025-01-01 17:15:00 | 2025-01-01 |\n| 3 | 2025-01-02 08:50:00 | 2025-01-02 17:10:00 | 2025-01-02 |\n+------------+---------------------+---------------------+------------+\nRequirements:\n\n1.Calculate the total working hours for each employee for each day using SQL.\n2.Find the employee with the maximum total working hours across all dates using SQL.",
-    "summary": "Employee attendance tracker",
+    "summary": " Employee attendance tracker",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1354,7 +1354,7 @@
   },
   {
     "text": "Scenario: You are analyzing the sales performance of an online store using the following table:\n\n+--------------+-----------+-----------------------------+\n| Column Name | Data Type | Description |\n+--------------+-----------+-----------------------------+\n| OrderId | INT | Unique identifier for orders. |\n| CustomerId | INT | Unique identifier for customers. |\n| OrderDate | DATE | Date when the order was placed. |\n| Amount | DECIMAL | Total amount of the order. |\n| Region | VARCHAR | Region where the order was placed. |\n+--------------+-----------+-----------------------------+\nSample Data:\n\n+---------+------------+------------+--------+--------+\n| OrderId | CustomerId | OrderDate | Amount | Region |\n+---------+------------+------------+--------+--------+\n| 1 | 101 | 2025-01-01 | 200.50 | North |\n| 2 | 102 | 2025-01-01 | 150.00 | South |\n| 3 | 103 | 2025-01-02 | 300.75 | East |\n| 4 | 101 | 2025-01-03 | 120.00 | North |\n| 5 | 102 | 2025-01-03 | 180.50 | West |\n+---------+------------+------------+--------+--------+\nRequirements: Write an SQL query to generate below insights\n\n1.Calculate the total sales amount per region.\n2.Find the top 3 customers based on their total purchase amount.",
-    "summary": "Online sales performance",
+    "summary": " Online sales performance",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1365,7 +1365,7 @@
   },
   {
     "text": "Customer data is stored in table which contains a column mobile number. Write an sql query or pyspark code to check if the mobile number is in given format(xxxx-xxx-xxx)",
-    "summary": "Mobile number format",
+    "summary": " Mobile number format",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1376,7 +1376,7 @@
   },
   {
     "text": "Given the FruitHarvest table, write a SQL query to retrieve the record ID, farm ID, harvest date, harvest quantity, and the average harvest quantity over the current harvest and the three preceding harvests for the same farm. The result should be ordered by farm ID and harvest date.\n \nTable:\nrecord_id\tfarm_id\tharvest_date\tharvest_quantity\n1\t701\t2023-03-01\t120\n2\t701\t2023-03-10\t150\n3\t701\t2023-03-20\t180\n4\t701\t2023-03-30\t200\n5\t702\t2023-04-01\t220\n6\t702\t2023-04-10\t250\n7\t702\t2023-04-20\t270\n8\t702\t2023-04-30\t300",
-    "summary": "Fruit farm harvesting",
+    "summary": "Fruit farm harvesting ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1387,7 +1387,7 @@
   },
   {
     "text": "Write a SQL query to get an output as an output table.\n\nt1 Country\n----------\nIndia\t\nSrilanka\nAustralia\nPakistan\n \nt2 Country\n--------\nIndia\nSrilanka\nAustralia\nPakistan\n \nOutput\n=====\nCountry1   Country2\t\t\n-------------------\nIndia      Srilanka\nIndia      Australia\nIndia      Pakistan\nSrilanka   Australia\nSrilanka   Pakistan\nAustralia  Pakistan",
-    "summary": "Countries combination",
+    "summary": " Countries combination",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1398,7 +1398,7 @@
   },
   {
     "text": "Write a SQL query to get the output as an output table.\nInput table\ncommunication_code\tevent_type\ncom1\t              Sent\ncom2\t              Open\ncom3\t              Sent\ncom1\t              Bounced\ncom3\t              Bounced\ncom2\t              Sent\ncom2\t              Sent\ncom1\t              Bounced\n\n\nOutput\n======= \ncommunication_code\tSent\tOpen\tBounced\ncom1\t             1\t     0\t      2\ncom2\t             2\t     1\t      0\ncom3\t             1\t     0\t      1",
-    "summary": "communication codes",
+    "summary": "communication codes ",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1409,7 +1409,7 @@
   },
   {
     "text": "Write a SQL query to get the max salary from the each department.",
-    "summary": "Max salary from dept",
+    "summary": " Max salary from dept",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1420,7 +1420,7 @@
   },
   {
     "text": "Write a SQL query to get the second highest salary.",
-    "summary": "Second highest salary",
+    "summary": " Second highest salary",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1430,8 +1430,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "What would be the output of the below code?\n\nresult = joinedDF.select('cust_name').filter(joinedDF.lob = 4 AND datediff(current_date(),joinedDF.booking_date)=30).show()",
-    "summary": "Dataframe output",
+    "text": "What would be the output of the below code?\n\nresult = joinedDF.select('cust_name').filter(joinedDF.lob = 4 AND datediff(current_date(),joinedDF.booking_date)=30).show()\n",
+    "summary": " Dataframe output",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1442,7 +1442,7 @@
   },
   {
     "text": "What is Autoloader in Databricks?",
-    "summary": "Autoloader in databricks",
+    "summary": "Autoloader in databricks ",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "India",
@@ -1453,7 +1453,7 @@
   },
   {
     "text": "You are working for an e-commerce platform that tracks customer transactions. You are given a dataset containing customer_id, purchase_date, product_id, and quantity. The platform wants to analyze repeat purchases. Your task is to identify the customers who bought the same product on more than one occasion within a 30-day window.\n \ndata = [\n    (101, \"2024-01-01\", 201, 2),\n    (101, \"2024-01-15\", 201, 3),\n    (102, \"2024-01-02\", 202, 1),\n    (103, \"2024-02-05\", 203, 5),\n    (103, \"2024-02-10\", 203, 2),\n    (101, \"2024-03-01\", 201, 1),\n]\n \ncolumns = [\"customer_id\", \"purchase_date\", \"product_id\", \"quantity\"]",
-    "summary": "Repeat order customers",
+    "summary": " Repeat order customers",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1464,62 +1464,62 @@
   },
   {
     "text": "Wordcupnum\tCountry\n1\tWest Indies\n2\tWest Indies\n3\tIndia\n4\tAustralia\n5\tPakistan\n6\tSri Lanka\n7\tAustralia\n8\tAustralia\n9\tAustralia\n10\tIndia\n11\tAustralia\n12\tEngland\n13\tAustralia\nFind consecutive winner using pyspark",
-    "summary": "Consecutive winter",
+    "summary": " Consecutive winter",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
     "ctc": "10L-20L",
-    "companyName": "EY",
+    "companyName": "EY ",
     "yoe": "5-8",
     "role": "Senior Data Engineer"
   },
   {
-    "text": "01. Let's assume through SFTP File came and resided on S3 and duplicate came . We need both old and new file how do you keep both ?\n02. How do you schedule the Glue job ? \n03. Why event based approach is feasible for running Glue Job ? If Yes how ? If No why ?\n04. Glue architecture ?\n05. spark-submit\n06. What transformation have you done ?\n07. There are junk values in the file/data frame that is read how do you find it and rectify it\n08. How do you deploy?\n09.  Let's say there are 100s of projects and you need to give required access for projects for required AWS Service how would you automate ?\nAny reason to choose Terraform over CloudFormation when IAC on AWS can be done using AWS CloudFormation.\n10. Difference between SparkSession, SparkContext and Hivecontext\n11. Why service will you use for Notifying users , Keep the notification in queue the delete the notification ?\n12. There are different ways to connect to on-premise Database to AWS i.e. DMS,JDBC,GLUE-Connection when all does the same work\nwhat's the need for different ways?\n13. Let assume you have 100 files yesterday in S3 Bucket , Today you see 70 files . 30 Files are delete . You have not implemented CloudWatch logging \nHow do you verify the delete files ?\n14. Let assume there is a long running job, redshift team reports that data is not refreshing ? How do you handle this issue ? What may be the cause ?\n15. How do you know data skewness happened and how do you conclude the issue reason ?",
-    "summary": "DE scenarios",
+    "text": "01. Let's assume through SFTP File came and resided on S3 and duplicate came . We need both old and new file how do you keep both ?\n02. How do you schedule the Glue job ? \n03. Why event based approach is feasible for running Glue Job ? If Yes how ? If No why ?\n04. Glue architecture ?\n05. spark-submit\n06. What transformation have you done ?\n07. There are junk values in the file/data frame that is read how do you find it and rectify it\n08. How do you deploy?\n09.  Let's say there are 100s of projects and you need to give required access for projects for required AWS Service how would you automate ?\nAny reason to choose Terraform over CloudFormation when IAC on AWS can be done using AWS CloudFormation.\n10. Difference between SparkSession, SparkContext and Hivecontext\n11. Why service will you use for Notifying users , Keep the notification in queue the delete the notification ?\n12. There are different ways to connect to on-premise Database to AWS i.e. DMS,JDBC,GLUE-Connection when all does the same work\nwhat's the need for different ways?\n13. Let assume you have 100 files yesterday in S3 Bucket , Today you see 70 files . 30 Files are delete . You have not implemented CloudWatch logging \nHow do you verify the delete files ?\n14. Let assume there is a long running job, redshift team reports that data is not refreshing ? How do you handle this issue ? What may be the cause ?\n15. How do you know data skewness happened and how do you conclude the issue reason ?\n",
+    "summary": " DE scenarios",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
     "ctc": "10L-20L",
-    "companyName": "EY",
+    "companyName": "EY ",
     "yoe": "5-8",
     "role": "Senior Data Engineer"
   },
   {
     "text": "Customer table:\n+------------+-------------+\n| customer_id | customer_name |\n+------------+-------------+\n| 101 | Alice |\n| 102 | Bob |\n| 103 | Charlie |\n+------------+-------------+\n\nOrders table:\n+-------------+------------+--------------+-------------+-------------+\n| order_id | sale_date | order_cost | customer_id | seller_id |\n+-----------+----------+------------+-----------+-----------+\n| 1 | 2020-03-01 | 1500 | 101 | 1 |\n| 2 | 2020-05-25 | 2400 | 102 | 2 |\n| 3 | 2019-05-25 | 800 | 101 | 3 |\n| 4 | 2020-09-13 | 1000 | 103 | 2 |\n| 5 | 2019-02-11 | 700 | 101 | 2 |\n+-----------+----------+------------+-----------+-----------\n+Seller table:\n+-----------+-----------+\n| seller_id | seller_name |\n+-----------+-----------+\n| 1 | Daniel |\n| 2 | Elizabeth |\n| 3 | Frank\n\nWrite an SQL query to report the names of all sellers who did not make any sales in 2020",
-    "summary": "No sales made",
+    "summary": " No sales made",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
     "ctc": "10L-20L",
-    "companyName": "EY",
+    "companyName": "EY ",
     "yoe": "5-8",
     "role": "Senior Data Engineer"
   },
   {
-    "text": "PySpark Question :\n Give a Employee Table .Find the top 2 salaries for each department.\n\nemp_id\temp_name\tdepartment_id\tsalary\n1\tAlice\t1\t100000\n2\tBob\t        1\t90000\n3\tCharlie\t1\t95000\n4\tDavid\t2\t120000\n5\tEve\t        2\t110000\n6\tFrank\t2\t115000\n7\tGrace\t3\t85000\n8\tHarry\t3\t80000\n9\tIvy\t        3\t88000",
-    "summary": "Top salaries in dept",
+    "text": "PySpark Question :\n Give a Employee Table .Find the top 2 salaries for each department.\n\nemp_id\temp_name\tdepartment_id\tsalary\n1\tAlice\t1\t100000\n2\tBob\t        1\t90000\n3\tCharlie\t1\t95000\n4\tDavid\t2\t120000\n5\tEve\t        2\t110000\n6\tFrank\t2\t115000\n7\tGrace\t3\t85000\n8\tHarry\t3\t80000\n9\tIvy\t        3\t88000\n",
+    "summary": " Top salaries in dept",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
     "ctc": "10L-20L",
-    "companyName": "CGI",
+    "companyName": "CGI ",
     "yoe": "5-8",
     "role": "Senior Data Engineer"
   },
   {
     "text": "01. Introduce about Yourself , Latest Project.\n02. Why AWS Glue ? Why not AWS EMR ?\n03. Have you used Dynamic Data frame in your project ?\n04. How is Schema Evolution Handled .\n05. Have you worked on NoSQL / AWS DynamoDB ? What is Pagination\n06. Have you used AWS Step Function , have you used Cloud Formation or Terraform ? \n07. How do you delete 10 years data without writing Code\n08. Have you worked or do you know on CI/CD ?\n   how do you do unit testing ?\n09. Have you used any APIs.\n10. what is Vertical and Horizontal Scaling?\n11. Do you use OOPS concepts in Project like polymorphism, inheritance ?\n12. How do you find duplicates count in the data frame.\n13. Suppose there is a Data frame , need to change the datatype of one column to String Type from Int Type how do you do ?\n14. What is Executors ? Spark Architecture .\n15. What is Logical and Physical Plan ?\n16. Difference between drop, truncate, purge in spark.",
-    "summary": "DE scenario questions",
+    "summary": " DE scenario questions",
     "difficulty": "Medium",
     "category": "project based",
     "country": "India",
     "ctc": "10L-20L",
-    "companyName": "CGI",
+    "companyName": "CGI ",
     "yoe": "5-8",
     "role": "Senior Data Engineer"
   },
   {
     "text": "Get  customer who are placing highest orders from below tables\n\ncustomers\n+----+----------+\n| ID | Name     |\n+----+----------+\n| 1  | John     |\n| 2  | Alice    |\n| 3  | Bob      |\n| 4  | Sarah    |\n+----+----------+\n\norders\n+-----+------------+\n| ID  | CustomerID |\n+-----+------------+\n| 101 | 1          |\n| 102 | 2          |\n| 103 | 3          |\n| 104 | 1          |\n| 105 | 3          |\n| 106 | 4          |\n| 107 | 2          |\n| 108 | 3          |\n+-----+------------+",
-    "summary": "Highest orders placed",
+    "summary": " Highest orders placed",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1530,7 +1530,7 @@
   },
   {
     "text": "read 2 csv files from S3.\n1st CSV - remove DOB NULL records\n2nd CSV - remove duplicate from SSN \nJoin both and write to other s3 bucket",
-    "summary": "CSV files operations",
+    "summary": "CSV files operations ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1541,7 +1541,7 @@
   },
   {
     "text": "Write a query to fetch details of employees whose EmpLname ends with an alphabet ‘A’ and contains five alphabets",
-    "summary": "Employee name",
+    "summary": " Employee name",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1552,7 +1552,7 @@
   },
   {
     "text": "Write an SQL query to create an empty table with the same structure as some other table.",
-    "summary": "SQL table structure",
+    "summary": " SQL table structure",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1563,7 +1563,7 @@
   },
   {
     "text": "you are running 2 processes at same time which are running into load data at same hive table into the same partition at sametime. What do you think will happen. Both the jobs will run fine? or one of the fail or one of them succeed.",
-    "summary": "2 parallel spark jobs",
+    "summary": " 2 parallel spark jobs",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -1574,7 +1574,7 @@
   },
   {
     "text": "Write a function to locate the left insertion point for a specified value in sorted order.",
-    "summary": "Left insertion point",
+    "summary": " Left insertion point",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
@@ -1585,7 +1585,7 @@
   },
   {
     "text": "Write SQL query to find running total from a table",
-    "summary": "Running total",
+    "summary": "Running total ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1596,7 +1596,7 @@
   },
   {
     "text": "Write Python/Pyspark code to do following:\n1. Read 2 tables from oracle db\n2. join tables\n3. Convert to csv\n4. Convert to json\n5. Upload to s3",
-    "summary": "Pyspark file operations",
+    "summary": " Pyspark file operations",
     "difficulty": "Hard",
     "category": "scenario based",
     "country": "India",
@@ -1607,7 +1607,7 @@
   },
   {
     "text": "We are loading the output from below query to a file everyday. This process is taking more time, How to optimize it?\n\nQuery:\nselcct * from tabl1\nunion\nselcct * from tabl2\nunion\nselcct * from tabl3\nunion\nselcct * from tabl4",
-    "summary": "File loading process",
+    "summary": " File loading process",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -1618,7 +1618,7 @@
   },
   {
     "text": "Explain different techniques to fill null values? Write code for it in Pyspark/Python",
-    "summary": "Fill null values",
+    "summary": " Fill null values",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -1629,7 +1629,7 @@
   },
   {
     "text": "List the Products Ordered in a Period (this question directly pickup from leet code \n\n+------------------+---------+\n| Column Name      | Type    |\n+------------------+---------+\n| product_id       | int     |\n| product_name     | varchar |\n| product_category | varchar |\n+------------------+---------+\nproduct_id is the primary key (column with unique values) for this table.\nThis table contains data about the company's products.\n \n\nTable: Orders\n\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| product_id    | int     |\n| order_date    | date    |\n| unit          | int     |\n+---------------+---------+\nThis table may have duplicate rows.\nproduct_id is a foreign key (reference column) to the Products table.\nunit is the number of products ordered in order_date.\n \n\nWrite a solution to get the names of products that have at least 100 units ordered in February 2020 and their amount.\n\nReturn the result table in any order.\n\nThe result format is in the following example.",
-    "summary": "Fetch name of the products",
+    "summary": " Fetch name of the products",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1640,7 +1640,7 @@
   },
   {
     "text": "Average Delivery Time per Restaurant\nAs an analyst at DoorDash, you are asked to measure the performance of restaurant partners. One important measure is the average delivery time associated with each restaurant. Assume that we calculate the delivery time by the difference between the order time and delivery completion time. Can you write a SQL query to find the average delivery time for each restaurant?\n\nPlease consider the following tables:\n\norders Example Input:\norder_id\torder_time\tdelivery_time\trestaurant_id\tcustomer_id\n0001\t08/25/2021 18:00:00\t08/25/2021 18:40:00\t100\t123\n0002\t08/25/2021 19:00:00\t08/25/2021 19:30:00\t200\t265\n0003\t08/25/2021 20:00:00\t08/25/2021 20:40:00\t200\t362\n0004\t08/25/2021 21:00:00\t08/25/2021 21:35:00\t300\t192\n0005\t08/25/2021 22:00:00\t08/25/2021 22:45:00\t100\t981\nExample Output:\nrestaurant_id\tavg_delivery_time_in_minutes\n100\t42.5\n200\t35.0\n300\t35.0",
-    "summary": "Average delivery time per restaurant",
+    "summary": "Average delivery time per restaurant ",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1651,7 +1651,7 @@
   },
   {
     "text": "Write sql query to get Nth highest salary",
-    "summary": "Nth highest salary",
+    "summary": " Nth highest salary",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1662,7 +1662,7 @@
   },
   {
     "text": "Find the customer who purchased items from all category using SQL & pysaprk\nCustomer - name , cat_id\nCategory - cat_id, pur_id\npurchase - purchase_id,cat_id",
-    "summary": "All items purchase",
+    "summary": " All items purchase",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1673,7 +1673,7 @@
   },
   {
     "text": "How would you group products with different prices using PySpark?\nAnswer : using collect_list",
-    "summary": "Products grouping",
+    "summary": " Products grouping",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "India",
@@ -1684,7 +1684,7 @@
   },
   {
     "text": "Give the count of rows in result for Inner join, left join, right join, full outer join\n for the following tables\n\nTable 1 \nid -1,1,1,1,1\n\nTable2\nId - 1,1,1,1,1,1",
-    "summary": "SQL Joins",
+    "summary": " SQL Joins",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1695,7 +1695,7 @@
   },
   {
     "text": "2.SQL: We have 4 tables, employees, jobtitle, salary, address\n1. write a query to display the first_name, last_name, jobtitle and salary of each employee. (JOINS)\n2. write a query to display the first_name, last_name of employees whose address is not present in the address table. (LEFT JOIN)\n3. write a query to display the first_name, last_name and the most recent address of each employee. (Window functions and CTE)",
-    "summary": "Employee table functions",
+    "summary": " Employee table functions",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "Canada",
@@ -1705,8 +1705,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Imagine you are doing a migration project and you have ingested 1000 records from a table and after doing data cleaning and transformations as per business requirement, the target has 800 records in it. Now, the QA teams comes back to you and says that as per their testing, there should be 900 records, not 800. How would you handle such scenario?",
-    "summary": "Data migration scenario",
+    "text": "Imagine you are doing a migration project and you have ingested 1000 records from a table and after doing data cleaning and transformations as per business requirement, the target has 800 records in it. Now, the QA teams comes back to you and says that as per their testing, there should be 900 records, not 800. How would you handle such scenario?\n\n",
+    "summary": " Data migration scenario",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "Canada",
@@ -1717,7 +1717,7 @@
   },
   {
     "text": "Write a pyspark code\n1. read csv file\n2. Do deduplication\n3. Create new column age_category on given condition\n4. write the final dataframe as a delta table and partition it on age_caegory.",
-    "summary": "Pysarpk CSV operations",
+    "summary": " Pysarpk CSV operations",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
@@ -1727,8 +1727,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Achieve expected output from Input table.\n\nInput table\n------------\nEmp Floor\n\na    1\n\nb    4\n\nc    5\n\na    3\n\nd    2\n\nd    6\n\nOutput table\n---------------\nEmp Floor\n\na    Multiple\n\nb    4\n\nc    5\n\nd   Multiple",
-    "summary": "Employees in floors",
+    "text": "Achieve expected output from Input table.\n\nInput table\n------------\nEmp Floor\n\na    1\n\nb    4\n\nc    5\n\na    3\n\nd    2\n\nd    6\n\nOutput table\n---------------\nEmp Floor\n\na    Multiple\n\nb    4\n\nc    5\n\nd   Multiple\n",
+    "summary": "Employees in floors ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1739,7 +1739,7 @@
   },
   {
     "text": "Left join output of these 2 tables\n\nTable 1\t\nID \tcol1\n1\tA\n2\tC\n3\tB\nnull\tnull\nnull\tnull\n\t\n\n\nTable 2\t\nID \tcol1\n2\tE\n2\tF\n3\tF\nnull\tnull",
-    "summary": "SQL Joins",
+    "summary": " SQL Joins",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1750,7 +1750,7 @@
   },
   {
     "text": "Write a pyspark code to get highest 3 salaries in each department",
-    "summary": "Highest salary in dept",
+    "summary": " Highest salary in dept",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1761,7 +1761,7 @@
   },
   {
     "text": "Write a sql query for below type of table to get third highest salary in each department also consider department having less than 3 employees\nempid empname depid salary",
-    "summary": "Dept with less employees",
+    "summary": " Dept with less employees",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1772,7 +1772,7 @@
   },
   {
     "text": "For below tables write the count of outputs for every join\nTable A\n1\n1\n \nTable B\n1\n1\n1",
-    "summary": "SQL Joins",
+    "summary": " SQL Joins",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
@@ -1783,7 +1783,7 @@
   },
   {
     "text": "Write SQL query to get output as below \ncountry\nind\naus\nnz\n\n output\nind vs aus\nind vs nz\naus vs nz",
-    "summary": "Cricket matches",
+    "summary": "Cricket matches ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1793,8 +1793,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Load 10 input files to 10 target tables at a time which has different metadata",
-    "summary": "Load files with different metadata",
+    "text": "Load 10 input files to 10 target tables at a time which has different metadata\n",
+    "summary": "Load files with different metadata ",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -1805,84 +1805,84 @@
   },
   {
     "text": "4. Write pySpark code for below scanrio\nInput:\n('James','Java'),\n('James','Python'),\n('James','Python'),\n('Anna','PHP'),\n('Anna','Javascript'),\n('Maria','Java'),\n('Maria','C++'),\n('James','Scala'),\n('Anna','PHP'),\n('Anna','HTML')\nOutput:\njames, [java,pyhton,scala]",
-    "summary": "Pyspark languages list",
+    "summary": " Pyspark languages list",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
     "ctc": "30L-40L",
     "companyName": "Clairvoyant",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
-    "text": "10. SQL window funtions\n11. AWS EMR and lambda funtions\n12. How to build realtime ETL pipeline in AWS",
-    "summary": "DE theory questions",
+    "text": "10. SQL window funtions\n11. AWS EMR and lambda funtions\n12. How to build realtime ETL pipeline in AWS\n",
+    "summary": " DE theory questions",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "India",
     "ctc": "30L-40L",
     "companyName": "Clairvoyant",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
     "text": "5.Write python code to print all the substrings from given input string\n6.Write SQL Query for Number of employees falling in each band\n \nInput file:\nempid,empsal\n102, 20000,\n103, 30000,\n140, 56999,\n\nOutput:\nbandwidth, number of employee in that bandwidth\n 0-10000 , 0\n 10001-20000, 1\n 20001-30000,1",
-    "summary": "Employees salary bandwidth",
+    "summary": " Employees salary bandwidth",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
     "ctc": "30L-40L",
     "companyName": "Clairvoyant",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
     "text": "2.SQL Query for match Fixers:\nId, TeamName\n1, India\n2, Australia\n3, England\n4, New Zealand\n\n\nIndia vs Australia\nIndia vs England\nIndia vs New Zealand\nAustralia vs England\nAustralia vs New Zealand\nEngland vs New Zealand\n\n3. Write Pyspark code to mask Email column",
-    "summary": "Match fixers",
+    "summary": " Match fixers",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
     "ctc": "30L-40L",
     "companyName": "Oracle",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
     "text": "12. How to upload TB file to S3. How to invoke lambda functions\n\n13. Data bricks realted basic questions\n\n14. Job scheduling pattern in Airflow\n\n15. SCD2 implementation in Pyspark\n\n16. How to handle ETL flow and monitor , fail over scenarios\n\n17. Count of null values in each column\n\n18. Merge to soreted arrays into single array",
-    "summary": "DE theory",
+    "summary": " DE theory",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
     "ctc": "30L-40L",
     "companyName": "Oracle",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
     "text": "1. How to delete partitions in Hive\n2. How to use broad cast in Spark SQL\n3. Data modeling..difference between snowflake and star schema\n4. challenge to migrate pyspark app from python 2 to 3\n5. Employee & department tables SQL queries",
-    "summary": "Project questions",
+    "summary": " Project questions",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
     "ctc": "30L-40L",
     "companyName": "Concentrix",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
-    "text": "5. SQL queries\n\nInput:\nEmpId,EmpName,ManagerId\n1,Ramesh,2\n2,Suresh,3\n3,Mahesh,4\n4,CEO,null\n5,Mallesh,3\n\nOutput:\nEmpName,Level_1_MgrName,Level_2_MgrName,Level_3_MgrName\nRamesh,Suresh,Mahesh,CEO\nSuresh,Mahesh,CEO,null\nMahesh,CEO,null,null\nMallesh,Mahesh,CEO,null\nCEO,null,null,null",
-    "summary": "Manager levels of employees",
+    "text": "5. SQL queries\n\nInput:\nEmpId,EmpName,ManagerId\n1,Ramesh,2\n2,Suresh,3\n3,Mahesh,4\n4,CEO,null\n5,Mallesh,3\n\nOutput:\nEmpName,Level_1_MgrName,Level_2_MgrName,Level_3_MgrName\nRamesh,Suresh,Mahesh,CEO\nSuresh,Mahesh,CEO,null\nMahesh,CEO,null,null\nMallesh,Mahesh,CEO,null\nCEO,null,null,null\n",
+    "summary": " Manager levels of employees",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
     "ctc": "30L-40L",
     "companyName": "Concentrix",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
-    "text": "\"Give me the count of records for inner join,left join,right join and full outer join for the below 2 tables.\n\ntable A\nid1\n1\n1\n2\n2\n \ntable B\n \nid1\n1\n1\n1\n4\n2\"",
-    "summary": "SQL Joins",
+    "text": "\"Give me the count of records for inner join,left join,right join and full outer join for the below 2 tables.\n\ntable A\nid1\n1\n1\n2\n2\n \ntable B\n \nid1\n1\n1\n1\n4\n2\"\n",
+    "summary": " SQL Joins",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1892,8 +1892,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "\"Write a sql query to transform rows to cols witout using pivots given data :\n\nInput:\nemp_id\tsalary_type\tval\n1\tsalary\t10000\n1\tbonus\t5000\n1\thike_prc\t10\n2\tsalary\t15000\n2\tbonus\t7000\n2\thike_prc\t8\n3\tsalary\t12000\n3\tbonus\t6000\n3\thike_prc\t7\n\nOutput:\nemp_id\tsalary\tbonus\thike_prc\n1\t10000\t5000\t10\n2\t15000\t7000\t8\n3\t12000\t6000\t7",
-    "summary": "Salary hike percent",
+    "text": "\"Write a sql query to transform rows to cols witout using pivots given data :\n\nInput:\nemp_id\tsalary_type\tval\n1\tsalary\t10000\n1\tbonus\t5000\n1\thike_prc\t10\n2\tsalary\t15000\n2\tbonus\t7000\n2\thike_prc\t8\n3\tsalary\t12000\n3\tbonus\t6000\n3\thike_prc\t7\n\nOutput:\nemp_id\tsalary\tbonus\thike_prc\n1\t10000\t5000\t10\n2\t15000\t7000\t8\n3\t12000\t6000\t7\n",
+    "summary": " Salary hike percent",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1903,8 +1903,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "3. Find number of instances where signal 1 is greater than 50 and signal 2 is greater than 55\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.types import StructType, StructField, StringType, IntegerType\nimport random\n \n# Initialize Spark session\nspark = SparkSession.builder.appName(\"Sample DataFrame\").getOrCreate()\n \n# Define the schema\nschema = StructType([\n    StructField(\"Vehicle Number\", StringType(), True),\n    StructField(\"Time Stamp\", IntegerType(), True),\n    StructField(\"Signal Name\", StringType(), True),\n    StructField(\"Value\", IntegerType(), True)\n])\n \n# Create sample data\ndata = []\nvehicles = [\"V1\", \"V2\"]\nsignals = [\"Signal1\", \"Signal2\", \"Signal3\"]\ntimestamps = [1, 2, 3, 4, 5]\n \nfor vehicle in vehicles:\n    for ts in timestamps:\n        for signal in signals:\n            value = random.randint(1, 100)  # Random value between 1 and 100\n            data.append((vehicle, ts, signal, value))\n \n# Create DataFrame\ndf = spark.createDataFrame(data, schema=schema)\ndf.display()\n\nAns: Explained the logic how to solve using pivot logic but failed to address how to handle for large dataset.",
-    "summary": "Vehicle stops near signal",
+    "text": "3. Find number of instances where signal 1 is greater than 50 and signal 2 is greater than 55\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.types import StructType, StructField, StringType, IntegerType\nimport random\n \n# Initialize Spark session\nspark = SparkSession.builder.appName(\"Sample DataFrame\").getOrCreate()\n \n# Define the schema\nschema = StructType([\n    StructField(\"Vehicle Number\", StringType(), True),\n    StructField(\"Time Stamp\", IntegerType(), True),\n    StructField(\"Signal Name\", StringType(), True),\n    StructField(\"Value\", IntegerType(), True)\n])\n \n# Create sample data\ndata = []\nvehicles = [\"V1\", \"V2\"]\nsignals = [\"Signal1\", \"Signal2\", \"Signal3\"]\ntimestamps = [1, 2, 3, 4, 5]\n \nfor vehicle in vehicles:\n    for ts in timestamps:\n        for signal in signals:\n            value = random.randint(1, 100)  # Random value between 1 and 100\n            data.append((vehicle, ts, signal, value))\n \n# Create DataFrame\ndf = spark.createDataFrame(data, schema=schema)\ndf.display()\n\nAns: Explained the logic how to solve using pivot logic but failed to address how to handle for large dataset. ",
+    "summary": " Vehicle stops near signal",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1914,8 +1914,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "2. In the table defined below show the number of occurances for which the speed between two consecutive time sample changed more than 700 rpm\n\ndf = spark.createDataFrame([(1,2000),(2,2100),(3,4000),(5,4500),(6,60),(7,90),(8,9000)],schema=['time','engrpm'])\n\nAns: \nfrom pyspark.sql import Window as W\nfrom pyspark.sql import functions as F\ndf.withColumn('Speed_lag', F.lag('engrpm').over(W.orderBy(F.col('time').desc()))).withColumn('diff', F.abs(F.col('engrpm') - F.col('speed_lag'))).where('diff >= 700').display()",
-    "summary": "Speed lag difference",
+    "text": "\n2. In the table defined below show the number of occurances for which the speed between two consecutive time sample changed more than 700 rpm\n\ndf = spark.createDataFrame([(1,2000),(2,2100),(3,4000),(5,4500),(6,60),(7,90),(8,9000)],schema=['time','engrpm'])\n\nAns: \nfrom pyspark.sql import Window as W\nfrom pyspark.sql import functions as F\ndf.withColumn('Speed_lag', F.lag('engrpm').over(W.orderBy(F.col('time').desc()))).withColumn('diff', F.abs(F.col('engrpm') - F.col('speed_lag'))).where('diff >= 700').display()\n",
+    "summary": " Speed lag difference",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1926,7 +1926,7 @@
   },
   {
     "text": "1. Find maximum call duration using pyspark API (Both incoming and outgoing should be calculated).\n\ndf = spark.createDataFrame([(\"Coimbatore\",\"Thirunelveli\",20),(\"Madurai\",\"Thirunelveli\",15),(\"Madurai\",\"Thootukudi\",150),(\"Madurai\",\"Coimbatore\",15),(\"Coimbatore\",\"Chennai\",15),(\"Tiruchi\",\"Coimbatore\",15)],schema=['Origin','Destination','CallDuration'])\n\nAns:\nfrom pyspark.sql import functions as F\ndf.groupBy('Origin').agg(F.sum('CallDuration').alias('MaxDuration')).sort(F.col('MaxDuration').desc()).display()",
-    "summary": "Maximum call duration",
+    "summary": " Maximum call duration",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1937,7 +1937,7 @@
   },
   {
     "text": "1. You want to view the second highest revenue generated by the product each year. Use Pyspark API to solve the problem\n\nNote: No dataset was given in the interview. Instructed to code in notepad++. \nProviding a sample dataset below for your reference. \ndata = [\n    # Year 2022 - 10 products\n    (2022, \"Electronics\", 12000),\n    (2022, \"Electronics\", 10000),\n    (2022, \"Electronics\", 15000),\n    (2022, \"Clothing 5000),\n    (2022, \"Clothing\", 7000),\n    (2022, \"Clothing\", 6500),\n    (2022, \"Grocery\", 3000),\n    (2022, \"Grocery\", 2500),\n    (2022, \"Grocery\", 3200),\n    (2022, \"Grocery\", 2800),\n\n    # Year 2023 - 10 products\n    (2023, \"Electronics\", 14000),\n    (2023, \"Electronics\", 11000),\n    (2023, \"Electronics\", 16000),\n    (2023, \"Clothing\", 6000),\n    (2023, \"Clothing\", 8000),\n    (2023, \"Clothing\", 7000),\n    (2023, \"Grocery\", 3500),\n    (2023, \"Grocery\", 3000),\n    (2023, \"Grocery\", 3800),\n    (2023, \"Grocery\", 3300),\n\n    # Year 2024 - 10 products\n    (2024, \"Electronics\", 16000),\n    (2024, \"Electronics\", 13000),\n    (2024, \"Electronics\", 17000),\n    (2024, \"Clothing\", 7000),\n    (2024, \"Clothing\", 9000),\n    (2024, \"Clothing\", 7500),\n    (2024, \"Grocery\", 4000),\n    (2024, \"Grocery\", 3500),\n    (2024, \"Grocery, 4200),\n    (2024, \"Grocery\", 3800),\n]\n\n# Define schema\ncolumns = [\"year\", \"product\", \"revenue\"]\n\n# Create DataFrame\ndf = spark.createDataFrame(data, columns)\n\nHint: Need to use Dense_Rank() functio",
-    "summary": "Second highest revenue",
+    "summary": " Second highest revenue",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1948,7 +1948,7 @@
   },
   {
     "text": "1. What are the optimization Techniques you used in your project? How would you identify skew join and steps you will take to solve it?\n\nAns: Cache, Checkpointing, Repartition to distribute data even across partition. Avoiding UDFs if spark has inbuilt operation to handle it. To check data skewness - use spark ui metrics",
-    "summary": "Spark optimization techniques",
+    "summary": " Spark optimization techniques",
     "difficulty": "Medium",
     "category": "project based",
     "country": "India",
@@ -1959,7 +1959,7 @@
   },
   {
     "text": "What is broadcasting and when to use it. How it helps to complete the task run faster. Write the code to broadcast smaller dataframe to larger dataframe.\n\nAns: sales_df.join(broadcast(products_df), \"product_id\", \"inner\")",
-    "summary": "Broadcast join",
+    "summary": " Broadcast join",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1969,8 +1969,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "\"filters all the elements in the list that has ‘interview’ in the element .[\"\"pyspark\"\", \n  \"\"interview\"\", \n  \"\"questions\"\", \n  \"\"at\"\", \n  \"\"interviewbit\"\"]\"",
-    "summary": "Filtering Interview",
+    "text": "\"filters all the elements in the list that has ‘interview’ in the element .[\"\"pyspark\"\", \n  \"\"interview\"\", \n  \"\"questions\"\", \n  \"\"at\"\", \n  \"\"interviewbit\"\"]\"\n",
+    "summary": " Filtering Interview",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -1980,8 +1980,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "\"From the given tables, give the count for left,right,inner and full join\n\nTable-A\n-----\n1\n1\n0\nnull\n \n\nTable-B\n------\n1\n0\nnull\nnull\"",
-    "summary": "SQL Joins",
+    "text": "\"From the given tables, give the count for left,right,inner and full join\n\nTable-A\n-----\n1\n1\n0\nnull\n \n\nTable-B\n------\n1\n0\nnull\nnull\"\n",
+    "summary": " SQL Joins",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -1991,8 +1991,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "There are 10 files with different schema in a S3 bucket. design a Generic and robust system to read files and ingest into table with schema enforcement.",
-    "summary": "Design file system",
+    "text": "There are 10 files with different schema in a S3 bucket. design a Generic and robust system to read files and ingest into table with schema enforcement. ",
+    "summary": "Design file system ",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "Canada",
@@ -2003,7 +2003,7 @@
   },
   {
     "text": "left join vs right join example",
-    "summary": "SQL Joins",
+    "summary": " SQL Joins",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2014,7 +2014,7 @@
   },
   {
     "text": "write a dataflow pipeline using apachebeam which takes csv file as input,transforms and loads into bigquery .",
-    "summary": "Apache beam pipeline",
+    "summary": " Apache beam pipeline",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -2025,7 +2025,7 @@
   },
   {
     "text": "what is capacitor in bigquery",
-    "summary": "Capacitor in bigquery",
+    "summary": " Capacitor in bigquery",
     "difficulty": "Easy",
     "category": "theoretical",
     "country": "India",
@@ -2036,7 +2036,7 @@
   },
   {
     "text": "explain bigquery architecture",
-    "summary": "Bigquery architecture",
+    "summary": " Bigquery architecture",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
@@ -2046,8 +2046,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "1..Given are ropes of different lengths, the task is to connect these ropes into one rope with minimum cost, such that the cost to connect two ropes is equal to the sum of their lengths.\nExamples:\nInput: arr[] = {5,4,3,2,1} , \nOutput: 33\nExplanation:You are given multiple ropes of different lengths, and the goal is to connect all of them into one single rope. However, there's a cost involved each time you connect two ropes, and the cost is equal to the combined length of those two ropes. Your task is to find a way to connect all the ropes while minimizing the total cost.\nStep-by-Step Explanation:\nInitial array: {5, 4, 3, 2, 1}\n1. Combine the two smallest ropes (1 and 2):\n    * Cost = 1 + 2 = 3\n    * Updated array after combining: {5, 4, 3, 3}\n2. Combine the two smallest ropes (3 and 3):\n    * Cost = 3 + 3 = 6\n    * Updated array after combining: {5, 4, 6}\n3. Combine the two smallest ropes (4 and 5):\n    * Cost = 4 + 5 = 9\n    * Updated array after combining: {6, 9}\n4. Combine the remaining ropes (6 and 9):\n    * Cost = 6 + 9 = 15\n    * Updated array: {15}\nNow we have combined all the ropes into one, so the total cost is the sum of all the individual combination costs:\nTotal cost = 3 + 6 + 9 + 15 = 33\n\nExamples 2:\nInput: arr[] = {4,3,2,6} , \nOutput: 29",
-    "summary": "connect the ropes",
+    "text": "\n1..Given are ropes of different lengths, the task is to connect these ropes into one rope with minimum cost, such that the cost to connect two ropes is equal to the sum of their lengths.\nExamples:\nInput: arr[] = {5,4,3,2,1} , \nOutput: 33\nExplanation:You are given multiple ropes of different lengths, and the goal is to connect all of them into one single rope. However, there's a cost involved each time you connect two ropes, and the cost is equal to the combined length of those two ropes. Your task is to find a way to connect all the ropes while minimizing the total cost.\nStep-by-Step Explanation:\nInitial array: {5, 4, 3, 2, 1}\n1. Combine the two smallest ropes (1 and 2):\n    * Cost = 1 + 2 = 3\n    * Updated array after combining: {5, 4, 3, 3}\n2. Combine the two smallest ropes (3 and 3):\n    * Cost = 3 + 3 = 6\n    * Updated array after combining: {5, 4, 6}\n3. Combine the two smallest ropes (4 and 5):\n    * Cost = 4 + 5 = 9\n    * Updated array after combining: {6, 9}\n4. Combine the remaining ropes (6 and 9):\n    * Cost = 6 + 9 = 15\n    * Updated array: {15}\nNow we have combined all the ropes into one, so the total cost is the sum of all the individual combination costs:\nTotal cost = 3 + 6 + 9 + 15 = 33\n\nExamples 2:\nInput: arr[] = {4,3,2,6} , \nOutput: 29\n",
+    "summary": " connect the ropes",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2057,8 +2057,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "How to get 3rd highest salary using PySpark & SQL code?",
-    "summary": "3rd highest salary",
+    "text": "How to get 3rd highest salary using PySpark & SQL code?\n",
+    "summary": " 3rd highest salary",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2069,7 +2069,7 @@
   },
   {
     "text": "SQL Query for match Fixers:\nId, TeamName\n1, India\n2, Australia\n3, England\n4, New Zealand\n\nThe output should look like this \nIndia vs Australia\nIndia vs England\nIndia vs New Zealand\nAustralia vs England\nAustralia vs New Zealand\nEngland vs New Zealand",
-    "summary": "Match Fixers",
+    "summary": " Match Fixers",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2080,7 +2080,7 @@
   },
   {
     "text": "data = [\n    (\"U1\", \"2024-12-30 10:00:00\", \"LOGIN\"),\n    (\"U1\", \"2024-12-30 10:05:00\", \"BROWSE\"),\n    (\"U1\", \"2024-12-30 10:20:00\", \"LOGOUT\"),\n    (\"U2\", \"2024-12-30 11:00:00\", \"LOGIN\"),\n    (\"U2\", \"2024-12-30 11:15:00\", \"BROWSE\"),\n    (\"U2\", \"2024-12-30 11:30:00\", \"LOGOUT\"),  # Duplicate entry\n    (None, \"2024-12-30 12:00:00\", \"LOGIN\"),   # Missing user_id\n    (\"U3\", None, \"LOGOUT\")                    # Missing timestamp\n]\n\nQues: Determine the top 3 most frequent activity types for each user_id\nWrite above query in both SQL and PySpark",
-    "summary": "Frequent activity types",
+    "summary": " Frequent activity types",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2091,7 +2091,7 @@
   },
   {
     "text": "Input: 235|0|0|1|99999|1|20230101|0 \nExpected output: 235|0|0|ONE|99999|PERFECT|20230101|0\nWrite a pyspark code to solve this.",
-    "summary": "Pyspark pattern print",
+    "summary": "Pyspark pattern print ",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2101,8 +2101,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Question-1:- SQL\nWrite a query to find higest salary of each department.",
-    "summary": "Highest salary in dept",
+    "text": "Question-1:- SQL\nWrite a query to find higest salary of each department.\n",
+    "summary": " Highest salary in dept",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2112,8 +2112,8 @@
     "role": "Data Engineer-1"
   },
   {
-    "text": "Qestion-2:- SQL\n\nPROBLEM STATEMENT: In this problem, we are given information about Categories of Chocolates and their Prices. For each category we need to find top 2 sub categories based on it's price:\n\nIf for a category we have a single subcategory then we've to check it's price. \nif the price is >50 then we need to include in o/p\n \n SCRIPTS :\n create table category(\nCategory varchar(50),\nSubCategory varchar(50),\nPrice varchar(50) );\n\ninsert into category values('Chips', 'Bingo', 10), \n('Chips', 'Lays', 40),\n('Chips', 'Kurkure', 60), \n('Choclate', 'Dairy Milk', 120), \n('Choclate', 'Five Star', 40),\n('Choclate', 'Perk', 25), \n('Choclate', 'Munch', 5), \n('Biscuits', 'Oreo', 120)",
-    "summary": "Top chocoloates sub-category",
+    "text": "\nQestion-2:- SQL\n\nPROBLEM STATEMENT: In this problem, we are given information about Categories of Chocolates and their Prices. For each category we need to find top 2 sub categories based on it's price:\n\nIf for a category we have a single subcategory then we've to check it's price. \nif the price is >50 then we need to include in o/p\n \n SCRIPTS :\n create table category(\nCategory varchar(50),\nSubCategory varchar(50),\nPrice varchar(50) );\n\ninsert into category values('Chips', 'Bingo', 10), \n('Chips', 'Lays', 40),\n('Chips', 'Kurkure', 60), \n('Choclate', 'Dairy Milk', 120), \n('Choclate', 'Five Star', 40),\n('Choclate', 'Perk', 25), \n('Choclate', 'Munch', 5), \n('Biscuits', 'Oreo', 120)",
+    "summary": " Top chocoloates sub-category",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2123,8 +2123,8 @@
     "role": "Data Engineer-1"
   },
   {
-    "text": "generate an end_date if end date is not availble make it as 31-12-9999\nemp_name country joining_date --emp\nA         IND     12-12-2020\nB         IND     12-12-2021\nA         PAK     12-12-2022\nB         SL      12-12-2024\nA         SL      12-12-2025\n\nexpected output:\nemp_name country joining_date end_date  \nA         IND     12-12-2020  12-12-2022\nB         IND     12-12-2021  12-12-2024\nA         PAK     12-12-2022  12-12-2025\nB         SL      12-12-2024  31-12-9999\nA         SL      12-12-2025  31-12-9999\n\nsolution:\ndf=spark.createDataFrame(data,[\"empid\",\"country\",\"joining_date\"])\ndf.show()\nwind=Window.partitionBy(\"empid\").orderBy(\"joining_date\")\n(df.withColumn(\"end_date\",lead(\"joining_date\").over(wind))\n .withColumn(\"end_date\",when(col(\"end_date\").isNull(),\"12-31-9999\").otherwise(col(\"end_date\"))).show())\ndf.createOrReplaceTempView(\"emp\")\nspark.sql(\"select empid,country,joining_date,coalesce(lead(joining_date) over(partition by empid order by joining_date) ,'12-31-9999')as end_date from emp\").show()",
-    "summary": "Employee tenture",
+    "text": "generate an end_date if end date is not availble make it as 31-12-9999\nemp_name country joining_date --emp\nA         IND     12-12-2020\nB         IND     12-12-2021\nA         PAK     12-12-2022\nB         SL      12-12-2024\nA         SL      12-12-2025\n\nexpected output:\nemp_name country joining_date end_date  \nA         IND     12-12-2020  12-12-2022\nB         IND     12-12-2021  12-12-2024\nA         PAK     12-12-2022  12-12-2025\nB         SL      12-12-2024  31-12-9999\nA         SL      12-12-2025  31-12-9999\n\nsolution:\ndf=spark.createDataFrame(data,[\"empid\",\"country\",\"joining_date\"])\ndf.show()\nwind=Window.partitionBy(\"empid\").orderBy(\"joining_date\")\n(df.withColumn(\"end_date\",lead(\"joining_date\").over(wind))\n .withColumn(\"end_date\",when(col(\"end_date\").isNull(),\"12-31-9999\").otherwise(col(\"end_date\"))).show())\ndf.createOrReplaceTempView(\"emp\")\nspark.sql(\"select empid,country,joining_date,coalesce(lead(joining_date) over(partition by empid order by joining_date) ,'12-31-9999')as end_date from emp\").show()\n\n",
+    "summary": " Employee tenture",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2135,7 +2135,7 @@
   },
   {
     "text": "write an sql query to delete the duplicates from the table\ndelete from cars\nwhere ctid in ( select max(ctid)\n                from cars\n                group by model, brand\n                having count(1) > 1);",
-    "summary": "Duplicate deletion",
+    "summary": " Duplicate deletion",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2145,8 +2145,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "write a pyspark program to create match fixtures for the given df.\nsolution:\nfrom turtledemo.sorting_animate import partition\n\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.functions import col,hash\n\n# Create a DataFrame with the teams\nspark = SparkSession.builder.appName(\"null\").master(\"local\").getOrCreate()\n\nteams = [(\"India\",), (\"Pakistan\",), (\"Sri Lanka\",), (\"Bangladesh\",), (\"Australia\",), (\"New Zealand\",)]\nschema = [\"Team\"]  # Schema should be a list of column names\n\ndf_teams = spark.createDataFrame(teams, schema)\ndf_teams1=spark.createDataFrame(teams, [\"Team1\"])\n\ndf_join=df_teams.crossJoin(df_teams1).filter(col(\"Team\") <  col(\"Team1\"))\n\ndf_join.show(100)\n\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.functions import col, row_number\nfrom pyspark.sql.window import Window\n\n# Create a Spark session\nspark = SparkSession.builder.appName(\"match_fixtures\").master(\"local\").getOrCreate()\n\n# List of teams\nteams = [(\"India\",), (\"Pakistan\",), (\"Sri Lanka\",), (\"Bangladesh\",), (\"Australia\",), (\"New Zealand\",)]\nschema = [\"Team\"]\n\n# Create DataFrames for teams\ndf_teams = spark.createDataFrame(teams, schema)\ndf_teams1 = spark.createDataFrame(teams, [\"Team1\"])\n\n# Assign row numbers to teams\nwindowSpec = Window.orderBy(\"Team\")\nwindowSpec1 = Window.orderBy(\"Team1\")# Row number will be based on alphabetical order of Team\n\ndf_teams_with_row = df_teams.withColumn(\"row_num\", row_number().over(windowSpec))\ndf_teams1_with_row = df_teams1.withColumn(\"row_num\", row_number().over(windowSpec1))\n\n# Perform a self-join based on the row numbers where Team's row number is less than Team1's\ndf_join1 = df_teams_with_row.join(df_teams1_with_row, df_teams_with_row[\"row_num\"] < df_teams1_with_row[\"row_num\"])\n\n# Select relevant columns and show results\ndf_join1.select(\"Team\",\"Team1\").orderBy(\"Team\").show()\n\ndf_join_left=df_teams.join(df_teams1,df_teams[\"Team\"]!=df_teams1[\"Team1\"],how=\"left\")\ndf_final=(df_join_left.withColumn(\"Hash\",hash(\"Team\")+hash(\"Team1\"))\n .select(\"*\",row_number().over(windowSpec.partitionBy(\"hash\")).alias(\"rank\")).filter(col(\"rank\")==1))\ndf_final.select(\"Team\",\"Team1\").orderBy(\"Team\").show()",
-    "summary": "Pyspark match fixes",
+    "text": "write a pyspark program to create match fixtures for the given df.\nsolution:\nfrom turtledemo.sorting_animate import partition\n\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.functions import col,hash\n\n# Create a DataFrame with the teams\nspark = SparkSession.builder.appName(\"null\").master(\"local\").getOrCreate()\n\nteams = [(\"India\",), (\"Pakistan\",), (\"Sri Lanka\",), (\"Bangladesh\",), (\"Australia\",), (\"New Zealand\",)]\nschema = [\"Team\"]  # Schema should be a list of column names\n\ndf_teams = spark.createDataFrame(teams, schema)\ndf_teams1=spark.createDataFrame(teams, [\"Team1\"])\n\ndf_join=df_teams.crossJoin(df_teams1).filter(col(\"Team\") <  col(\"Team1\"))\n\ndf_join.show(100)\n\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.functions import col, row_number\nfrom pyspark.sql.window import Window\n\n# Create a Spark session\nspark = SparkSession.builder.appName(\"match_fixtures\").master(\"local\").getOrCreate()\n\n# List of teams\nteams = [(\"India\",), (\"Pakistan\",), (\"Sri Lanka\",), (\"Bangladesh\",), (\"Australia\",), (\"New Zealand\",)]\nschema = [\"Team\"]\n\n# Create DataFrames for teams\ndf_teams = spark.createDataFrame(teams, schema)\ndf_teams1 = spark.createDataFrame(teams, [\"Team1\"])\n\n# Assign row numbers to teams\nwindowSpec = Window.orderBy(\"Team\")\nwindowSpec1 = Window.orderBy(\"Team1\")# Row number will be based on alphabetical order of Team\n\ndf_teams_with_row = df_teams.withColumn(\"row_num\", row_number().over(windowSpec))\ndf_teams1_with_row = df_teams1.withColumn(\"row_num\", row_number().over(windowSpec1))\n\n# Perform a self-join based on the row numbers where Team's row number is less than Team1's\ndf_join1 = df_teams_with_row.join(df_teams1_with_row, df_teams_with_row[\"row_num\"] < df_teams1_with_row[\"row_num\"])\n\n# Select relevant columns and show results\ndf_join1.select(\"Team\",\"Team1\").orderBy(\"Team\").show()\n\ndf_join_left=df_teams.join(df_teams1,df_teams[\"Team\"]!=df_teams1[\"Team1\"],how=\"left\")\ndf_final=(df_join_left.withColumn(\"Hash\",hash(\"Team\")+hash(\"Team1\"))\n .select(\"*\",row_number().over(windowSpec.partitionBy(\"hash\")).alias(\"rank\")).filter(col(\"rank\")==1))\ndf_final.select(\"Team\",\"Team1\").orderBy(\"Team\").show()\n\n\n\n\n\n\n\n",
+    "summary": "Pyspark match fixes ",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
@@ -2156,8 +2156,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "Show patient_id, diagnosis from admissions. Find patients admitted multiple times for the same diagnosis.\n\nPatient table \n------------------\npatient_id\tINT\nfirst_name\tTEXT\nlast_name\tTEXT\ngender\t    CHAR(1) \nbirth_date\tDATE\ncity\t    TEXT\nprovince_id\tCHAR(2) \nallergies\tTEXT\nheight\t    INT\nweight\t    INT\n\n \nadmissions table \n-----------------\npatient_id\t        INT\nadmission_date\t    DATE\ndischarge_date\t    DATE\ndiagnosis\t        TEXT \nattending_doctor_id\tINT",
-    "summary": "Patients admissions",
+    "text": " Show patient_id, diagnosis from admissions. Find patients admitted multiple times for the same diagnosis.\n\nPatient table \n------------------\npatient_id\tINT\nfirst_name\tTEXT\nlast_name\tTEXT\ngender\t    CHAR(1) \nbirth_date\tDATE\ncity\t    TEXT\nprovince_id\tCHAR(2) \nallergies\tTEXT\nheight\t    INT\nweight\t    INT\n\n \nadmissions table \n-----------------\npatient_id\t        INT\nadmission_date\t    DATE\ndischarge_date\t    DATE\ndiagnosis\t        TEXT \nattending_doctor_id\tINT",
+    "summary": "Patients admissions ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2168,7 +2168,7 @@
   },
   {
     "text": "Show the provinces (province_name) that has more patients identified as 'M' than 'F'.\n\nPatient table \n------------------\npatient_id\tINT\nfirst_name\tTEXT\nlast_name\tTEXT\ngender\t    CHAR(1) \nbirth_date\tDATE\ncity\t    TEXT\nprovince_id\tCHAR(2) \nallergies\tTEXT\nheight\t    INT\nweight\t    INT\n\n\nprovince table\n----------------\nprovince_id\t    CHAR(2)\nprovince_name\tTEXT",
-    "summary": "Provinces of patients",
+    "summary": "Provinces of patients ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2179,7 +2179,7 @@
   },
   {
     "text": "If 1st Jan 2025 is on Monday then find what day it is on 26th Jan 2025. Write Solution in Pyspark.",
-    "summary": "Republic day pysarpk",
+    "summary": " Republic day pysarpk",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2201,7 +2201,7 @@
   },
   {
     "text": "If 1st jan and 2nd jan 2025 is on weekend i.e. Saturday and Sunday then calculate all weekend in month of jan 2025 in pyspark.",
-    "summary": "Calendar days calculation",
+    "summary": " Calendar days calculation",
     "difficulty": "Hard",
     "category": "problem solving",
     "country": "India",
@@ -2212,7 +2212,7 @@
   },
   {
     "text": "SQL: Given a table emp_details, produce a result which tells you all the direct and indirect  reportees of emp_id = 1\n\nInput:\nemp_id | name     | mgr_id\n1             CJ           NULL\n2             EB           1\n3             MB          1\n4             SW          2\n5             YT           NULL\n6             IS            5\n7             DA          4\n\nOutput:\n\nemp_id | name | mgr_id\n2      EB    1\n3      MB    1\n4      SW    2\n7       DA    4",
-    "summary": "Employee direct reportees",
+    "summary": " Employee direct reportees",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2222,7 +2222,7 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Spark Theory Questions: \n1.Explain your any one previous project in detail.\n2. Explain Spark Architecture in Detail.\n3. Performance optimizations you have done in your project.\n4. Explain about Broadcast variable.\n5. Pyspark:\n\n\"/path/to/csv\"\n\"/path/to/json\"\n\"/path/to/parquet\"\n \nUnion the final dataframe out of above 3 files using pyspark",
+    "text": "Spark Theory Questions: \n1.Explain your any one previous project in detail.\n2. Explain Spark Architecture in Detail.\n3. Performance optimizations you have done in your project.\n4. Explain about Broadcast variable.\n5. Pyspark:\n\n\"/path/to/csv\"\n\"/path/to/json\"\n\"/path/to/parquet\"\n \nUnion the final dataframe out of above 3 files using pyspark\n",
     "summary": "pyspark dataframe",
     "difficulty": "Medium",
     "category": "project based",
@@ -2234,7 +2234,7 @@
   },
   {
     "text": "SQL:\n\nFind all the employees who has salary that is higher than the average salary of their department\n\nemp_id | salary | dep_id\n1           25000     1\n2           30000      1\n3           45000      2\n4           22000      2\n5           50000      3\n\nOutput:\n\nemp_id | dep_id\n2              1\n3              2\n5              3",
-    "summary": "Employees salary average",
+    "summary": " Employees salary average",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2245,7 +2245,7 @@
   },
   {
     "text": "The Position is for Azure Datafactory developer.\n1. How to read the latest modified file from ADLS( Explain what activities you will use and walk through the process)\n2. How will you ingest 1 billion records from oracle Source to ADL\n3. Source has 1 billion records, how will you perform incremental load using ADF and store data in ADL.\n4. we have one on-prem oracle database, explain the end to end process on how will you connect to it and move data to ADL.",
-    "summary": "ADL operations",
+    "summary": " ADL operations",
     "difficulty": "Hard",
     "category": "scenario based",
     "country": "India",
@@ -2256,7 +2256,7 @@
   },
   {
     "text": "SQL: \nproject_details:\n \nproject_id\temp_id\n1\t\t\t1     3\n1\t\t\t2     1\n1\t\t\t3     2\n2\t\t\t1     3\n2\t\t\t4     1\n \nemp_details:\n \nemp_id\t      emp_name\t                   exp_years \n1\t\tJoe\t\t\t\t3\n2\t\tDaniel\t\t\t        1\n3\t\tAndrew\t\t\t        2\n4\t\tTim\t\t\t\t3\n \nFind the employee who's having highest years of experience in each project\n\nOuput: \n\nproject_id  | emp_id | emp_name | exp_years\n1            1      Joe       3\n2            4       Tim      3",
-    "summary": "employee highest experience",
+    "summary": " employee highest experience",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2267,7 +2267,7 @@
   },
   {
     "text": "Given a table emloyeelogin which has columns empid, time, state\nthe state has 2 values IN and OUT. time is the time at which the employee has either entered or exited the office. Also it is confirmed first he will enter and then exit and he can do this multiple times. We need to find the total time for each emloyee till the time he is in office",
-    "summary": "Employee office engage",
+    "summary": " Employee office engage ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2289,7 +2289,7 @@
   },
   {
     "text": "Why are you using memory tables in mysql to connect to Looker studio. When you can store your data in HDFS also?",
-    "summary": "Memory management mysql",
+    "summary": " Memory management mysql",
     "difficulty": "Medium",
     "category": "project based",
     "country": "India",
@@ -2299,30 +2299,30 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Match \n\nTeam1 team2 winner\nA\tC\tC\nB\tD\tB\nD\tA\tA\nC\tB\tB\nE\tC\tE\n \n  Query to find the total number of matches\n \n Team matches_played #_wins #_loss",
-    "summary": "Total matches query",
+    "text": "Match \n\nTeam1 team2 winner\nA\tC\tC\nB\tD\tB\nD\tA\tA\nC\tB\tB\nE\tC\tE\n \n  Query to find the total number of matches\n \n Team matches_played #_wins #_loss\n",
+    "summary": " Total matches query",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
     "ctc": "30L-40L",
     "companyName": "Seven Eleven",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
-    "text": "1) Explain the end to end architecture of project. Explain the ingestion mechanism, the different processing layers, the Data Quality checks, the platform used. Asked to explain the different Data Quality checks implemented.\n2) Compare using Databricks for a Data warehousing projects versus BigQuery. What are the pros and cons of each solution? Why would you choose one over the other? \n3) Spark internal questions like how to choose the cluster configuration in Databricks - Given a 10GB file, explain your thought process behind choosing a Cluster configuration\n4) What is the small file problem? How do you overcome the same in Databricks. How is the same done in BigQuery?",
-    "summary": "Project DE",
+    "text": "1) Explain the end to end architecture of project. Explain the ingestion mechanism, the different processing layers, the Data Quality checks, the platform used. Asked to explain the different Data Quality checks implemented.\n2) Compare using Databricks for a Data warehousing projects versus BigQuery. What are the pros and cons of each solution? Why would you choose one over the other? \n3) Spark internal questions like how to choose the cluster configuration in Databricks - Given a 10GB file, explain your thought process behind choosing a Cluster configuration\n4) What is the small file problem? How do you overcome the same in Databricks. How is the same done in BigQuery?\n",
+    "summary": " Project DE",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
     "ctc": "40L-50L",
     "companyName": "Sigmoid",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
-    "text": "Optimizing Joins in PySpark\n\nYou have two large datasets:\n\norders (100M rows) with columns: order_id, customer_id, order_date, amount.\ncustomers (10M rows) with columns: customer_id, name, email.\nYou need to join them efficiently to get the total amount spent by each customer.\n\n1. What type of join strategy would you use?\n2. How would you optimize performance for large-scale joins in PySpark?\n3. How would broadcast joins help, and when should they be avoided?",
-    "summary": "Join optimizations",
+    "text": " Optimizing Joins in PySpark\n\nYou have two large datasets:\n\norders (100M rows) with columns: order_id, customer_id, order_date, amount.\ncustomers (10M rows) with columns: customer_id, name, email.\nYou need to join them efficiently to get the total amount spent by each customer.\n\n1. What type of join strategy would you use?\n2. How would you optimize performance for large-scale joins in PySpark?\n3. How would broadcast joins help, and when should they be avoided?",
+    "summary": " Join optimizations",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2333,7 +2333,7 @@
   },
   {
     "text": "Designing a Data Lake & Warehouse for a FinTech Company\n\nA FinTech startup wants to build a data lake for storing raw transaction logs and a data warehouse for analytics and reporting.\n\nRequirements:\nIngest data from multiple sources (Kafka, APIs, Cloud Storage).\nStore raw data in a Data Lake (GCS/S3) and process it into a structured format.\nUse a data warehouse (BigQuery/Snowflake) for BI & dashboards.\nImplement data governance, access control, and security.\n\nQuestions:\nHow would you design the data lake and warehouse architecture?\nWhat file formats (Parquet, Avro, JSON) would you use for efficient querying?\nHow would you partition, cluster, and optimize queries in BigQuery/Snowflake?\nHow would you ensure compliance with security standards (GDPR, PII masking, encryption)",
-    "summary": "Design Fintect pipeline",
+    "summary": " Design Fintect pipeline",
     "difficulty": "Hard",
     "category": "project based",
     "country": "India",
@@ -2343,8 +2343,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Q . Given the table information like this asked to get the difference\tbtw them\n\nTable - employee\n\nDate \t\t type\t\tfruits\t\tcost\n2025-01-01\t   1\t\tmango\t100\n2025-01-01\t   2\t\tapple\t\t50\n2025-01-02\t   1\t\tmango\t70\n2025-01-02\t   2\t\tapple\t\t120\n2025-01-03\t   1\t\tmango\t95\n\nHe wants results like below\n\nDate\t\t\tcost(difference abs(mango - apple)\n2025-01-01\t\t50\n2025-01-02\t\t50\n2025-01-03\t\t95",
-    "summary": "Table difference list",
+    "text": "Q . Given the table information like this asked to get the difference\tbtw them\n\nTable - employee\n\nDate \t\t type\t\tfruits\t\tcost\n2025-01-01\t   1\t\tmango\t100\n2025-01-01\t   2\t\tapple\t\t50\n2025-01-02\t   1\t\tmango\t70\n2025-01-02\t   2\t\tapple\t\t120\n2025-01-03\t   1\t\tmango\t95\n\nHe wants results like below\n\nDate\t\t\tcost(difference abs(mango - apple)\n2025-01-01\t\t50\n2025-01-02\t\t50\n2025-01-03\t\t95\n",
+    "summary": "  Table difference list",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2354,8 +2354,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "1) SQL:- pivot the given table below\n\nTable: Sales\nAssume you have a table called sales with the following structure:\n\nElectronics\tTV\t1000\nElectronics   Radio 500\nFurniture\t     Sofa\t1500\n\nFurniture\t    Table\t700\n\nElectronics\t1000\t500\t   0\t               0\nFurniture\t        0\t     \t0\t    1500\t     700\n\n\nDepart ,prod, amount—\n\nOutput - dept , TV,Radio,Sofa,Table",
-    "summary": "Electronics sales",
+    "text": "\n1) SQL:- pivot the given table below\n\nTable: Sales\nAssume you have a table called sales with the following structure:\n\nElectronics\tTV\t1000\nElectronics   Radio 500\nFurniture\t     Sofa\t1500\n\nFurniture\t    Table\t700\n\nElectronics\t1000\t500\t   0\t               0\nFurniture\t        0\t     \t0\t    1500\t     700\n\n\nDepart ,prod, amount—\n\nOutput - dept , TV,Radio,Sofa,Table\n",
+    "summary": " Electronics sales",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2366,7 +2366,7 @@
   },
   {
     "text": "Q - Consecutive Numbers From Leetcode SQL 50\nQ - Exchange Seats from Leetcode SQL 50",
-    "summary": "Numbers, seats in Leetcode",
+    "summary": "Numbers, seats in Leetcode ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2377,18 +2377,18 @@
   },
   {
     "text": "Your Kafka-to-Spark Streaming pipeline processes fuel transaction logs from multiple refineries. Suddenly, you notice that 10% of the incoming data contains NULL values in critical fields like fuel_quantity . How will you handle this in real time without stopping the pipeline?",
-    "summary": "NULL values scenario",
+    "summary": " NULL values scenario",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
     "ctc": "30L-40L",
     "companyName": "Value Labs",
     "yoe": "8-12",
-    "role": "Lead Data Engineer"
+    "role": " Lead Data Engineer"
   },
   {
-    "text": "Design a query that identifies the top 5 students based on their scores from a Students table. select only those students who are in the top 5 ranks.\nSolution:\n\nWITH cte AS (\n    SELECT \n        StudentID, \n        Name, \n        Score,\n        RANK() OVER (ORDER BY Score DESC) AS rank\n    FROM Students\n)\nSELECT *\nFROM cte\nWHERE rank <= 5\n\nSample Input (Example Students Table):\n| StudentID | Name      | Score |\n|-----------|-----------|-------|\n| 1         | Alice     | 95    |\n| 2         | Bob       | 88    |\n| 3         | Charlie   | 92    |\n| 4         | David     | 85    |\n| 5         | Eve       | 90    |\n| 6         | Frank     | 87    |\n| 7         | Grace     | 93    |\n| 8         | Henry     | 89    |\n\nSample Output (Top 5 Students):\n| StudentID | Name      | Score | rank |\n|-----------|-----------|-------|------|\n| 1         | Alice     | 95    | 1    |\n| 3         | Charlie   | 92    | 2    |\n| 7         | Grace     | 93    | 3    |\n| 5         | Eve       | 90    | 4    |\n| 2         | Bob       | 88    | 5    |",
-    "summary": "Top 5 ranks of students",
+    "text": "Design a query that identifies the top 5 students based on their scores from a Students table. select only those students who are in the top 5 ranks.\nSolution:\n\nWITH cte AS (\n    SELECT \n        StudentID, \n        Name, \n        Score,\n        RANK() OVER (ORDER BY Score DESC) AS rank\n    FROM Students\n)\nSELECT *\nFROM cte\nWHERE rank <= 5\n\nSample Input (Example Students Table):\n| StudentID | Name      | Score |\n|-----------|-----------|-------|\n| 1         | Alice     | 95    |\n| 2         | Bob       | 88    |\n| 3         | Charlie   | 92    |\n| 4         | David     | 85    |\n| 5         | Eve       | 90    |\n| 6         | Frank     | 87    |\n| 7         | Grace     | 93    |\n| 8         | Henry     | 89    |\n\nSample Output (Top 5 Students):\n| StudentID | Name      | Score | rank |\n|-----------|-----------|-------|------|\n| 1         | Alice     | 95    | 1    |\n| 3         | Charlie   | 92    | 2    |\n| 7         | Grace     | 93    | 3    |\n| 5         | Eve       | 90    | 4    |\n| 2         | Bob       | 88    | 5    |\n",
+    "summary": " Top 5 ranks of students",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2398,8 +2398,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Question:\nGiven a table with a sequence of numbers, find the missing numbers in the range 1 to the maximum number present in the table.\n\nSolution:\nSample Table (Numbers)\nID\n1\n2\n3\n5\n6\n8\nExpected Output (Missing Numbers in Sequence)\nMissing_Number\n4\n7\n\n\nWITH NumberSeries AS (\n    SELECT ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS Num\n    FROM master.dbo.spt_values  -- Generates a sequence of numbers (SQL Server)\n)\nSELECT Num AS Missing_Number\nFROM NumberSeries\nLEFT JOIN Numbers N ON NumberSeries.Num = N.ID\nWHERE Num BETWEEN 1 AND (SELECT MAX(ID) FROM Numbers) -- Restricting range\nAND N.ID IS NULL;",
-    "summary": "Missing number",
+    "text": "Question:\nGiven a table with a sequence of numbers, find the missing numbers in the range 1 to the maximum number present in the table.\n\nSolution:\nSample Table (Numbers)\nID\n1\n2\n3\n5\n6\n8\nExpected Output (Missing Numbers in Sequence)\nMissing_Number\n4\n7\n\n\nWITH NumberSeries AS (\n    SELECT ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS Num\n    FROM master.dbo.spt_values  -- Generates a sequence of numbers (SQL Server)\n)\nSELECT Num AS Missing_Number\nFROM NumberSeries\nLEFT JOIN Numbers N ON NumberSeries.Num = N.ID\nWHERE Num BETWEEN 1 AND (SELECT MAX(ID) FROM Numbers) -- Restricting range\nAND N.ID IS NULL;\n",
+    "summary": " Missing number",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2410,7 +2410,7 @@
   },
   {
     "text": "You are given a table named sales with the following columns:\n\nColumn Name\tData Type\tDescription\nid\tINT\tUnique identifier for each sale\nname\tVARCHAR\tName of the employee\nmonth\tVARCHAR\tMonth of the sale\nsales\tINT\tSales amount for that month\nSample Data:\nid\tname\tmonth\tsales\n1\txyz\taug\t2000\n2\tabc\tsept\t3000\n1\txyz\tjan\t3000\n2\tabc\tfeb\t4000\n1\txyz\tfeb\t3000\n3\text\tjan\t3000\nQuestion:\nWrite an SQL query to find the top 5 employees based on their total sales across all months.\nIf multiple employees have the same sales amount, they should have the same rank.\n\nUse the RANK() window function to assign ranks based on total sales, and return only the top 5 ranked employees.\n\nExpected Output Format:\nname\ttotal_sales\trank\nxyz\t8000\t1\nabc\t7000\t2\next\t3000\t3",
-    "summary": "Top 5 employees sales",
+    "summary": "Top 5 employees sales ",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2421,7 +2421,7 @@
   },
   {
     "text": "Write a SQL query/Spark code to calculate and populate how much hours employee spent inside office for a specific day.\n\ne.g. Input Table\nEmp_id status created\nEMP0001 check_in 2024-11-22 08:00:00\nEMP0002 check_in 2024-11-22 08:00:50\nEMP0001 check_out 2024-11-22 13:00:00\nEMP0002 check_out 2024-11-22 13:01:00\nEMP0001 check_in 2024-11-22 13:31:00\nEMP0002 check_in 2024-11-22 13:33:50\nEMP0001 check_out 2024-11-22 18:03:00\nEMP0002 check_out 2024-11-22 18:04:00\n\nExpected Output:\nEmp_id created time_spend_in office\nEMP0001 2024-11-24 08:00:00 09:32:00\nEMP0002 2024-11-24 08:00:50 09:30:20",
-    "summary": "Employee working hours",
+    "summary": " Employee working hours",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2432,7 +2432,7 @@
   },
   {
     "text": "Write a program read/query data from any type SQL database and write data to a output file.\n\ne.g. Say you have MYSQL DB, write script to perform following steps:\n1) Use any Library/module of your choice\n2) establish connection to DB using connector\n3) execute SQL query\n4) Fetch the query output and store in a file.\nType: problem solving",
-    "summary": "SQL Write & Read",
+    "summary": " SQL Write & Read",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -2443,7 +2443,7 @@
   },
   {
     "text": "Consider there is a OLTP data like MySQL. you need to bring the data from that database to a data warehouse in near realtime. Assume the compute and storage is not a problem. And the data will be transferred in during business hours and there is a lot of read operations that happens during that time. Wht would be your approach?",
-    "summary": "Design OLTP system",
+    "summary": "Design OLTP system ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "United States",
@@ -2454,7 +2454,7 @@
   },
   {
     "text": "You are designing a batch ETL pipeline that processes daily sales data from an S3 bucket and loads it into a Snowflake data warehouse. The raw data files are in CSV format and contain duplicate records due to data ingestion issues.\n\n\nHow would you design the batch pipeline to efficiently process and deduplicate the data before loading it into Snowflake?\nWhat strategies would you use to handle late-arriving data in batch processing?\nWrite a SQL or Spark query to remove duplicates based on the order_id before inserting the data into Snowflake.",
-    "summary": "Design ETL sales pipeline",
+    "summary": " Design ETL sales pipeline",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "United States",
@@ -2465,7 +2465,7 @@
   },
   {
     "text": "You have a scenario where your database performance is degrading. What would be your approach at database tier and at sever level? How would you approach this problem in solving this?",
-    "summary": "Database performance degrade",
+    "summary": " Database performance degrade",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "United States",
@@ -2476,7 +2476,7 @@
   },
   {
     "text": "Write query to Swap the names of students in pairs such that students with odd id get the name of the next id, and students with even id get the name of the previous id.\n\nGiven Student Table\n\nid\t\tname\n1\t\ta\n2\t\tb\n3\t\tc\n4\t\td\n\nExpected output\nid \tname\n1\tb\n2\ta\n3\td\n4\tc",
-    "summary": "Swap student names",
+    "summary": " Swap student names",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2487,7 +2487,7 @@
   },
   {
     "text": "Given two teams. Write SQL Query to find the number of match played between different teams.\nSample Dataset\n\nteam1\tteam2\na\tb\na\tc\na\td\nb \tc",
-    "summary": "Matches Played",
+    "summary": " Matches Played",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2497,8 +2497,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Given Device Table as below:\n\nDEVICE_ID\tHOST_ID\t\tPAIRING_TIME\nBT1\t\tTV1\t\t3PM\nBT1\t\tMob1\t\t9AM\nBT1\t\tLP1\t\t6PM\nUSB1\t\tMob1\t\t12PM\n\nWrite sql query to return\nDEVICE_ID\tFIRST_PAIRED_HOST\tFIRST_PAIRED_TIME\tLATEST_PAIRED_HOST\tLATEST_PAIRED_TIME",
-    "summary": "Bluetooth paired devices",
+    "text": "Given Device Table as below:\n\nDEVICE_ID\tHOST_ID\t\tPAIRING_TIME\nBT1\t\tTV1\t\t3PM\nBT1\t\tMob1\t\t9AM\nBT1\t\tLP1\t\t6PM\nUSB1\t\tMob1\t\t12PM\n\nWrite sql query to return\nDEVICE_ID\tFIRST_PAIRED_HOST\tFIRST_PAIRED_TIME\tLATEST_PAIRED_HOST\tLATEST_PAIRED_TIME\n",
+    "summary": " Bluetooth paired devices",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2509,7 +2509,7 @@
   },
   {
     "text": "Given Sales Table with Columns:\t\t\t\nitem\tcategory\tyear\tqty_sold\tprice_per_unit\n\nWrite sql query to return\ncategory, year, year_growth\n\nGiven \nrevenue = qty_sold * price_per_unit",
-    "summary": "Growth on year basis",
+    "summary": " Growth on year basis",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2519,8 +2519,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Given two tables as below\nA\t\tB\nID\t\tID\n\n1\t\t1\n1\t\t1\n1\t\t1\n1\t\t2\n1\t\t3\n1\t\t4\n\nTell me the number of count of all joins (inner, left, outer, full outer)",
-    "summary": "SQL Joins",
+    "text": "Given two tables as below\nA\t\tB\nID\t\tID\n\n1\t\t1\n1\t\t1\n1\t\t1\n1\t\t2\n1\t\t3\n1\t\t4\n\nTell me the number of count of all joins (inner, left, outer, full outer) ",
+    "summary": " SQL Joins",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2530,8 +2530,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "1. Different Types of Join Strategies in Spark\n2. How to optimize a spark job?",
-    "summary": "Spark DE",
+    "text": "1. Different Types of Join Strategies in Spark\n2. How to optimize a spark job?\n",
+    "summary": " Spark DE",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
@@ -2542,7 +2542,7 @@
   },
   {
     "text": "SQL Question\nGiven the reviews table, write a query to retrieve the average star rating for each product, grouped by month. The output should display the month as a numerical value, product ID, and average star rating rounded to two decimal places. Sort the output first by month and then by product ID.\n\nreviews table - review_id, user_id, product_id, review_date, stars\nWas also asked to write the solution in Pyspark as well.",
-    "summary": "Average product rating",
+    "summary": " Average product rating",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2553,7 +2553,7 @@
   },
   {
     "text": "You are given a table with employee salary data recorded at different quarters. However, some salary values are missing (NULL or empty).\nYour task is to write an SQL query that fills the missing salary values by carrying forward the last known salary from the previous quarter for each id.\n\nAttached the sample input and output.",
-    "summary": "Last known salary",
+    "summary": " Last known salary",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2564,7 +2564,7 @@
   },
   {
     "text": "You are given a table containing id and cost values. Your task is to compute the running total (cumulative sum) of cost for each id.\n\nAdditionally, analyze the behavior of NULL values in the id column when using window functions with PARTITION BY id.\n\nid cost\n1 10\n2 20\n2 30\nnull 10\n3 20\n3 30",
-    "summary": "cumulative sum of product",
+    "summary": "cumulative sum of product ",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2575,7 +2575,7 @@
   },
   {
     "text": "Table Routes\nStops\n1\n2\n3\n6\n8\n9\n\n\nWrite an SQL query to identify the continuous delivery segments where the driver delivered without skipping a stop. The output should display the start and end stops of each continuous sequence.\n\noutput\nstart         end\n1               3\n8               9",
-    "summary": "Driver package delivery",
+    "summary": " Driver package delivery",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2586,7 +2586,7 @@
   },
   {
     "text": "How can you efficiently join two large tables while optimizing performance?",
-    "summary": "Spark optimization",
+    "summary": "Spark optimization ",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -2597,7 +2597,7 @@
   },
   {
     "text": "Write python/pyspark code to ingest the data(20GB) which has integer data. Load the data into another source in ascending format",
-    "summary": "Data load in ascending order",
+    "summary": " Data load in ascending order",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2608,7 +2608,7 @@
   },
   {
     "text": "games -\n+---------------------+---------+---------+----------+------------+\n| tstamp              | user_id | game_id | win_flag | points_won |\n+---------------------+---------+---------+----------+------------+\n| 2024-08-01 00:00:01 |    1000 |       1 |        1 |         50 |\n| 2024-08-02 11:01:00 |    1001 |       2 |        0 |          0 |\n| 2024-08-03 12:53:00 |    1003 |       3 |        1 |         30 |\n| 2024-08-03 14:53:01 |    1000 |       4 |        0 |          0 |\n| 2024-08-03 13:51:01 |    1001 |       5 |        0 |          0 |\n| 2024-08-03 00:53:01 |    1005 |       7 |        0 |          0 |\n| 2024-08-03 00:53:01 |    1006 |       8 |        0 |          0 |\n| 2024-08-03 12:53:00 |    1003 |       9 |        1 |         10 |\n| 2024-08-02 15:01:00 |    1001 |      10 |        1 |         20 |\n+---------------------+---------+---------+----------+------------+\n\n\na) Daily total no. of games played\n\nExpected output - \n+------------+-------------+\n| dt         | total_games |\n+------------+-------------+\n| 2024-08-01 |           1 |\n| 2024-08-02 |           2 |\n| 2024-08-03 |           6 |\n+------------+-------------+",
-    "summary": "Total games played",
+    "summary": " Total games played",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2618,8 +2618,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "games -\n+---------------------+---------+---------+----------+------------+\n| tstamp              | user_id | game_id | win_flag | points_won |\n+---------------------+---------+---------+----------+------------+\n| 2024-08-01 00:00:01 |    1000 |       1 |        1 |         50 |\n| 2024-08-02 11:01:00 |    1001 |       2 |        0 |          0 |\n| 2024-08-03 12:53:00 |    1003 |       3 |        1 |         30 |\n| 2024-08-03 14:53:01 |    1000 |       4 |        0 |          0 |\n| 2024-08-03 13:51:01 |    1001 |       5 |        0 |          0 |\n| 2024-08-03 00:53:01 |    1005 |       7 |        0 |          0 |\n| 2024-08-03 00:53:01 |    1006 |       8 |        0 |          0 |\n| 2024-08-03 12:53:00 |    1003 |       9 |        1 |         10 |\n| 2024-08-02 15:01:00 |    1001 |      10 |        1 |         20 |\n+---------------------+---------+---------+----------+------------+\n\n\nb) Top 3 users having highest win ratio\n\nExpected output - \n+---------+-----------+\n| user_id | win_ratio |\n+---------+-----------+\n|    1003 |    1.0000 |\n|    1000 |    0.5000 |\n|    1001 |    0.3333 |\n+---------+-----------+",
-    "summary": "Highest win ratio",
+    "text": "\ngames -\n+---------------------+---------+---------+----------+------------+\n| tstamp              | user_id | game_id | win_flag | points_won |\n+---------------------+---------+---------+----------+------------+\n| 2024-08-01 00:00:01 |    1000 |       1 |        1 |         50 |\n| 2024-08-02 11:01:00 |    1001 |       2 |        0 |          0 |\n| 2024-08-03 12:53:00 |    1003 |       3 |        1 |         30 |\n| 2024-08-03 14:53:01 |    1000 |       4 |        0 |          0 |\n| 2024-08-03 13:51:01 |    1001 |       5 |        0 |          0 |\n| 2024-08-03 00:53:01 |    1005 |       7 |        0 |          0 |\n| 2024-08-03 00:53:01 |    1006 |       8 |        0 |          0 |\n| 2024-08-03 12:53:00 |    1003 |       9 |        1 |         10 |\n| 2024-08-02 15:01:00 |    1001 |      10 |        1 |         20 |\n+---------------------+---------+---------+----------+------------+\n\n\nb) Top 3 users having highest win ratio\n\nExpected output - \n+---------+-----------+\n| user_id | win_ratio |\n+---------+-----------+\n|    1003 |    1.0000 |\n|    1000 |    0.5000 |\n|    1001 |    0.3333 |\n+---------+-----------+\n\n",
+    "summary": "Highest win ratio ",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2630,7 +2630,7 @@
   },
   {
     "text": "games -\n+---------------------+---------+---------+----------+------------+\n| tstamp              | user_id | game_id | win_flag | points_won |\n+---------------------+---------+---------+----------+------------+\n| 2024-08-01 00:00:01 |    1000 |       1 |        1 |         50 |\n| 2024-08-02 11:01:00 |    1001 |       2 |        0 |          0 |\n| 2024-08-03 12:53:00 |    1003 |       3 |        1 |         30 |\n| 2024-08-03 14:53:01 |    1000 |       4 |        0 |          0 |\n| 2024-08-03 13:51:01 |    1001 |       5 |        0 |          0 |\n| 2024-08-03 00:53:01 |    1005 |       7 |        0 |          0 |\n| 2024-08-03 00:53:01 |    1006 |       8 |        0 |          0 |\n| 2024-08-03 12:53:00 |    1003 |       9 |        1 |         10 |\n| 2024-08-02 15:01:00 |    1001 |      10 |        1 |         20 |\n+---------------------+---------+---------+----------+------------+\n\n\nc) Leaderboard based on total points won, \nin case of tie consider total number of games played",
-    "summary": "Players leaderboard",
+    "summary": " Players leaderboard",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2641,7 +2641,7 @@
   },
   {
     "text": "find the players in olympic table who has won only gold medal and not any other medal in sql ?",
-    "summary": "Olympic players with gold medals",
+    "summary": " Olympic players with gold medals",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "United Kingdom",
@@ -2652,7 +2652,7 @@
   },
   {
     "text": "explain adaptive query execution and what its befits and elaborate in detail in spark ?",
-    "summary": "Adaptive query execution",
+    "summary": " Adaptive query execution",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "United Kingdom",
@@ -2662,8 +2662,8 @@
     "role": "Senior Data Engineer"
   },
   {
-    "text": "Spark and Databricks Interview Questions - Fractal Interview\n\n1. What is the difference between Spark's DataFrame and RDD? When should you use one over the other?\n2. Explain how Spark handles data shuffling. What are some ways to optimize shuffle performance?\n3. How does the Catalyst Optimizer improve query performance in Spark?\n4. In Databricks, how would you efficiently process a large dataset stored in Delta Lake with partitioning and Z-order indexing?\n5. How does Adaptive Query Execution (AQE) in Spark 3 improve query performance? Provide a real-world use case where AQE can be beneficial.",
-    "summary": "spark and databricks Theory",
+    "text": "Spark and Databricks Interview Questions - Fractal Interview\n\n1. What is the difference between Spark's DataFrame and RDD? When should you use one over the other?\n2. Explain how Spark handles data shuffling. What are some ways to optimize shuffle performance?\n3. How does the Catalyst Optimizer improve query performance in Spark?\n4. In Databricks, how would you efficiently process a large dataset stored in Delta Lake with partitioning and Z-order indexing?\n5. How does Adaptive Query Execution (AQE) in Spark 3 improve query performance? Provide a real-world use case where AQE can be beneficial.\n",
+    "summary": "spark and databricks Theory ",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
@@ -2673,8 +2673,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "1. Your database contains millions of records, and a report query is running slowly. How would you optimize it?\n2. A banking application needs to track customer transactions in real-time. How would you design the SQL queries and database schema?\n3. You need to migrate a large table from one database to another without downtime. How would you approach it?\n4. In a retail database, how would you identify customers who haven’t made a purchase in the last 12 months?\n5. How would you implement Slowly Changing Dimensions (SCD) in SQL for a data warehouse environment?",
-    "summary": "DE scenario",
+    "text": "1. Your database contains millions of records, and a report query is running slowly. How would you optimize it?\n2. A banking application needs to track customer transactions in real-time. How would you design the SQL queries and database schema?\n3. You need to migrate a large table from one database to another without downtime. How would you approach it?\n4. In a retail database, how would you identify customers who haven’t made a purchase in the last 12 months?\n5. How would you implement Slowly Changing Dimensions (SCD) in SQL for a data warehouse environment?\n",
+    "summary": " DE scenario",
     "difficulty": "Hard",
     "category": "scenario based",
     "country": "India",
@@ -2684,8 +2684,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Find the Second Highest Salary from an Employee Table.\n\nTable Creation:\n\nCREATE TABLE Employee (\n    id INT PRIMARY KEY,\n    name VARCHAR(50),\n    salary INT\n);\n\nSample Input Data:\n\nINSERT INTO Employee (id, name, salary) VALUES\n(1, 'Alice', 90000),\n(2, 'Bob', 85000),\n(3, 'Charlie', 87000),\n(4, 'David', 92000),\n(5, 'Eve', 95000);\n\n\nExpected Output:\n\n| Second_Highest_Salary  |\n|---------------------------|\n| 92000                            |",
-    "summary": "Second highest salary",
+    "text": "Find the Second Highest Salary from an Employee Table.\n\nTable Creation:\n\nCREATE TABLE Employee (\n    id INT PRIMARY KEY,\n    name VARCHAR(50),\n    salary INT\n);\n\nSample Input Data:\n\nINSERT INTO Employee (id, name, salary) VALUES\n(1, 'Alice', 90000),\n(2, 'Bob', 85000),\n(3, 'Charlie', 87000),\n(4, 'David', 92000),\n(5, 'Eve', 95000);\n\n\nExpected Output:\n\n| Second_Highest_Salary  |\n|---------------------------|\n| 92000                            |         \n",
+    "summary": "Second highest salary ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2695,8 +2695,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Find Employees Who Earn More Than Their Manager\n\nCREATE TABLE Employee (\n    id INT PRIMARY KEY,\n    name VARCHAR(50),\n    salary INT,\n    manager_id INT\n);\n\nINSERT INTO Employee (id, name, salary, manager_id) VALUES\n(1, 'Alice', 90000, 3),\n(2, 'Bob', 85000, 3),\n(3, 'Charlie', 87000, NULL),\n(4, 'David', 95000, 3),\n(5, 'Eve', 98000, 4);\n\nExpected Output:\n\n| name  | salary |\n|-------|--------|\n| David | 95000  |\n| Eve   | 98000  |",
-    "summary": "Employees earn more than manager",
+    "text": "Find Employees Who Earn More Than Their Manager\n\nCREATE TABLE Employee (\n    id INT PRIMARY KEY,\n    name VARCHAR(50),\n    salary INT,\n    manager_id INT\n);\n\nINSERT INTO Employee (id, name, salary, manager_id) VALUES\n(1, 'Alice', 90000, 3),\n(2, 'Bob', 85000, 3),\n(3, 'Charlie', 87000, NULL),\n(4, 'David', 95000, 3),\n(5, 'Eve', 98000, 4);\n\nExpected Output:\n\n| name  | salary |\n|-------|--------|\n| David | 95000  |\n| Eve   | 98000  |\n",
+    "summary": " Employees earn more than manager",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2707,7 +2707,7 @@
   },
   {
     "text": "1.What is normalization, and how do you perform normalization up to the 3rd Normal Form (3NF)?\n2.What is the difference between primary keys and foreign keys in relational databases?\n3. How would you design a database schema for an e-commerce system to store product, order, and customer information?",
-    "summary": "DE theory",
+    "summary": " DE theory",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
@@ -2718,7 +2718,7 @@
   },
   {
     "text": "1.You need to process a massive log file in Hadoop, where each line represents a user interaction. How would you structure this job to run efficiently on a Hadoop cluster?\n2.Describe how the Hadoop Distributed File System (HDFS) handles data replication and fault tolerance ?\n3.You have a large dataset containing user data and their transactions. How would you process and analyze this dataset in Spark using Data Frames? What operations would you use?",
-    "summary": "DE scenario",
+    "summary": " DE scenario",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",
@@ -2728,7 +2728,7 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "Find the Third Highest Salary from an Employee Table\n\nTable Creation:\nCREATE TABLE Employee (\n    id INT PRIMARY KEY,\n    name VARCHAR(50),\n    salary INT\n);\n\nSample Input Data:\n\nINSERT INTO Employee (id, name, salary) VALUES (1, 'Avani', 90000),\n(2, 'Rohan', 85000),(3, 'Chaitanya', 87000), (4, 'Dheeraj', 93000),(5, 'Eesha', 95000),\n(7, 'Gaurav', 80000),(9, 'Ishita', 75000),(10, 'Karan', 98000),(12, 'Liam', 70000);\n\nExpected Output:\n\nThird Highest Salary \n\n| Name  |  Salary                 |\n|----------------------------|\n| Dheeraj|     93000            |",
+    "text": "Find the Third Highest Salary from an Employee Table\n\nTable Creation:\nCREATE TABLE Employee (\n    id INT PRIMARY KEY,\n    name VARCHAR(50),\n    salary INT\n);\n\nSample Input Data:\n\nINSERT INTO Employee (id, name, salary) VALUES (1, 'Avani', 90000),\n(2, 'Rohan', 85000),(3, 'Chaitanya', 87000), (4, 'Dheeraj', 93000),(5, 'Eesha', 95000),\n(7, 'Gaurav', 80000),(9, 'Ishita', 75000),(10, 'Karan', 98000),(12, 'Liam', 70000);\n\nExpected Output:\n\nThird Highest Salary \n\n| Name  |  Salary                 |\n|----------------------------|\n| Dheeraj|     93000            | \n",
     "summary": "3rd highest salary",
     "difficulty": "Medium",
     "category": "problem solving",
@@ -2740,7 +2740,7 @@
   },
   {
     "text": "Write a query to find all the employees who draw more salary than their respective department's average salary\n\nId     Name          Dept ID   Dept Name   Salary\n1      Alex             02             Finance           20000\n2      Bob              01             Marketing      17500\n3     Carlson        02             Finance            28000\n4     David            03             HR                     15000\n5     Elizabeth     02             Finance            22000\n6     Felix              01             Marketing       30000\n7     Griffith         01             Marketing       26000\n8    Harley            03            HR                     19000\n9    Jaden            03             HR                     15000",
-    "summary": "Employees drawing more salary",
+    "summary": " Employees drawing more salary",
     "difficulty": "Easy",
     "category": "problem solving",
     "country": "India",
@@ -2751,7 +2751,7 @@
   },
   {
     "text": "explain about wildcards in bigquery",
-    "summary": "wildcards in bigquery",
+    "summary": " wildcards in bigquery",
     "difficulty": "Medium",
     "category": "theoretical",
     "country": "India",
@@ -2761,8 +2761,8 @@
     "role": "Data Engineer-2"
   },
   {
-    "text": "sql question on populationstatistics table\nwhere we have population and we have to partition by city into male and female population under age 30 in bq (table not provided) we have to assume the data (city,age,gender,population are given as columns)",
-    "summary": "Population Statistics",
+    "text": "sql question on populationstatistics table\nwhere we have population and we have to partition by city into male and female population under age 30 in bq (table not provided) we have to assume the data (city,age,gender,population are given as columns)\n",
+    "summary": " Population Statistics ",
     "difficulty": "Medium",
     "category": "problem solving",
     "country": "India",
@@ -2773,7 +2773,7 @@
   },
   {
     "text": "Can we partition by string in bigquery?",
-    "summary": "Parition by string",
+    "summary": "Parition by string ",
     "difficulty": "Medium",
     "category": "scenario based",
     "country": "India",

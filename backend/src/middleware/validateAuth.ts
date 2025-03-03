@@ -1,11 +1,11 @@
 import { NextFunction, Request, Response } from "express";
 import { verifyToken } from "../utils/jwt";
-import mongoose from "mongoose";
+import { Schema } from "mongoose";
 
 declare global {
   namespace Express {
     interface Request {
-      userId: mongoose.Types.ObjectId;
+      userId: Schema.Types.ObjectId;
     }
   }
 }

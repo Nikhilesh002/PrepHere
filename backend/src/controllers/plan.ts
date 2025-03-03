@@ -1,4 +1,7 @@
-import { IQuestionareDoc, questionareModel } from "../models/questionare";
+import {
+  IQuestionare,
+  questionareModel,
+} from "../models/questionare";
 import { logger } from "../utils/logger";
 import { Response, Request } from "express";
 import { planModel } from "../models/plan";
@@ -8,24 +11,23 @@ import { makeRoadmap } from "../utils/plan/makeRoadmap";
 
 export const createPlan = async (req: Request, res: Response): Promise<any> => {
   try {
-    const questionare: IQuestionareDoc = req.body;
+    const questionare: any = req.body;
     const userId = req.userId;
 
-    console.log(questionare);
-    console.log(userId);
-
     questionare.userId = userId;
-    questionare.planId = userId;
+    questionare.planId = null;
 
     // tried to just create object to get questionare._id, but not working
     // so now saving in db
-    // -> no u can use updateOne 
+    // -> no u can use updateOne
+    // all wrong, mistook and used Schema.Types.ObjectId
 
+    // now create questionare
     const newQuestionare = new questionareModel({
-      ...questionare,
+      ...(questionare as IQuestionare),
     });
 
-    logger.info("Questionare created");
+    console.log(questionare);
 
     // now create plan
     const newPlan = new planModel({
@@ -33,23 +35,28 @@ export const createPlan = async (req: Request, res: Response): Promise<any> => {
       questionareId: newQuestionare._id,
       slug: questionare.slug,
       idxs: [],
+      roadmap: "",
     });
 
-    newQuestionare.updateOne({ planId: newPlan._id });
+    // store newPlan._id and save newQuestionare
+    newQuestionare.planId = newPlan._id;
     await newQuestionare.save();
 
     // make plan acc to questionare
     const createdRoadMap = await makeRoadmap(questionare);
     console.log(createdRoadMap);
+    newPlan.roadmap = createdRoadMap;
 
     // make questions acc to questionare
     const { idxs, questions } = await makeQuestions(questionare);
 
     newPlan.idxs = idxs;
-    newPlan.save();
+    await newPlan.save();
 
-    newQuestionare.planId = {};
     await newQuestionare.save();
+
+    console.log(newPlan)
+    console.log(newQuestionare)
 
     return res.status(201).json({
       success: true,

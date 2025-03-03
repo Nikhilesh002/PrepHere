@@ -1,10 +1,11 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 export interface IPlan {
-  userId: mongoose.Types.ObjectId;
-  questionareId: mongoose.Types.ObjectId;
+  userId: Schema.Types.ObjectId;
+  questionareId: Schema.Types.ObjectId;
   slug: string;
   idxs: number[];
+  roadmap: string;
 }
 
 export interface IPlanDoc extends IPlan, mongoose.Document {}
@@ -12,19 +13,19 @@ export interface IPlanDoc extends IPlan, mongoose.Document {}
 const planSchema = new mongoose.Schema(
   {
     userId: {
-      type: mongoose.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       refs: "user",
       required: true,
-      unique: true,
     },
     questionareId: {
-      type: mongoose.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       refs: "questionare",
       required: true,
       unique: true,
     },
     slug: { type: String, required: true, unique: true },
     idxs: { type: [Number], required: true },
+    roadmap: { type: String, required: true },
     // TODO add req fields
   },
   {
