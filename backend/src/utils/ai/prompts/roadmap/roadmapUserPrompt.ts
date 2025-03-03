@@ -40,10 +40,14 @@ Week 7+: Specialized Patterns
 - For CTC >30L: Includes "Cost-Based Optimization" and "Cloud SQL"
 - When time <20 hours: Merges related topics into intensive sessions
 - For ETL Roles: Emphasizes "Incremental Loads" and "CDC Patterns"
+- In any case, ensure each week has at least 3 topics
 
-#Format response as JSON only: {"roadmap": [[week1_topics], [week2_topics], ...]}
+# Format response as JSON only: {"roadmap": [[week1_topics], [week2_topics], ...]}
+# Never include any character that makes the response invalid JSON, such as single quotes, double quotes or backslashes.
+# In any case, ensure the output is **JSON**
 
-** Example output: **
+# Example output: **Strictly** follow this format:
+(3 backticks)json
 {
   "roadmap": [
     ["Relational Database Basics", "SQL Syntax Fundamentals", "Data Types & Constraints"],
@@ -55,6 +59,7 @@ Week 7+: Specialized Patterns
     ["Star Schema Optimization", "Materialized Views", "Company-Specific Patterns"]
   ]
 }
+(3 backticks)
   `;
 
   return prompt;

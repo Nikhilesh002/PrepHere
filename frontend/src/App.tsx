@@ -7,6 +7,8 @@ import NavBar from "./components/custom/NavBar";
 import Home from "./pages/Home";
 import NotFound from "./pages/Not-Found";
 import Questinaire from "./pages/Questinaire";
+import Plans from "./pages/Plans";
+import Plan from "./pages/Plan";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
 
           <Route path="/questionaire" element={<Questinaire />} />
+          <Route path="/plan/:slug" element={<Plan />} />
+          <Route path="/plans" element={<Plans />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

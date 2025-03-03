@@ -51,7 +51,7 @@ const askOllama = async (
         messages: makeMessages(prompt, aiMessage),
         stream: false,
         top_p: 1,
-        temperature: 0,
+        temperature: 0.2,
         max_tokens: 1024,
         stop: null,
       }),
@@ -68,9 +68,20 @@ const askOllama = async (
   }
 };
 
-export const askLlm = (prompt: string, aiMessage: string): Promise<string> => {
-  // if (configs.nodeEnv === "production") {
-  //   return askGroq(prompt, aiMessage);
-  // }
-  return askOllama(prompt, aiMessage);
+export const askLlm = async (
+  prompt: string,
+  aiMessage: string
+): Promise<string> => {
+  let aiJsonRes = "";
+  if (configs.nodeEnv === "production") {
+    aiJsonRes = await askGroq(prompt, aiMessage);
+  } else {
+    aiJsonRes = await askOllama(prompt, aiMessage);
+  }
+
+  if(aiJsonRes.includes("```json")) {
+    aiJsonRes = aiJsonRes.split("```json")[1].split("```")[0];
+  }
+
+  return aiJsonRes;
 };

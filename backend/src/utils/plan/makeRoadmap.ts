@@ -11,6 +11,7 @@ export const makeRoadmap = async (questionare: IQuestionare) => {
   return formatData(aiRes);
 };
 
-const formatData = (data: string) => {
-  return data;
+const formatData = (data: any) => {
+  const jsObj = JSON.parse(data);
+  return JSON.stringify(jsObj.roadmap);
 };

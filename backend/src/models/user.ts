@@ -15,26 +15,20 @@ const userSchema = new mongoose.Schema(
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     email: { type: String, required: true, unique: true },
-    planIds: [
-      {
-        type: Schema.Types.ObjectId,
-        refs: "plan",
-        required: true,
-        unique: true,
-      },
-    ],
-    questionareIds: [
-      {
-        type: Schema.Types.ObjectId,
-        refs: "questionare",
-        required: true,
-        unique: true,
-      },
-    ],
+    planIds: {
+      type: [Schema.Types.ObjectId],
+      ref: "Plan",
+      default: [],
+    },
+    questionareIds: {
+      type: [Schema.Types.ObjectId],
+      ref: "Questionare",
+      default: [],
+    },
   },
   {
     timestamps: true,
   }
 );
 
-export const userModel = mongoose.model("user", userSchema);
+export const userModel = mongoose.model("User", userSchema);

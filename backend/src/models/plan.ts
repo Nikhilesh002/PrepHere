@@ -14,14 +14,11 @@ const planSchema = new mongoose.Schema(
   {
     userId: {
       type: Schema.Types.ObjectId,
-      refs: "user",
-      required: true,
+      ref: "User",
     },
     questionareId: {
       type: Schema.Types.ObjectId,
-      refs: "questionare",
-      required: true,
-      unique: true,
+      ref: "Questionare",
     },
     slug: { type: String, required: true, unique: true },
     idxs: { type: [Number], required: true },
@@ -33,4 +30,6 @@ const planSchema = new mongoose.Schema(
   }
 );
 
-export const planModel = mongoose.model("plan", planSchema);
+planSchema.index({ userId: 1, questionareId: 1 });
+
+export const planModel = mongoose.model("Plan", planSchema);

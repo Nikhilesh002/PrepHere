@@ -1,13 +1,12 @@
-import {
-  IQuestionare,
-  questionareModel,
-} from "../models/questionare";
+import { IQuestionare, questionareModel } from "../models/questionare";
 import { logger } from "../utils/logger";
 import { Response, Request } from "express";
 import { planModel } from "../models/plan";
 import { makeQuestions } from "../utils/questions/makeQuestions";
 import { getIdxQuestions } from "../utils/questions/getIdxQuestions";
 import { makeRoadmap } from "../utils/plan/makeRoadmap";
+import { strict } from "assert";
+import { connectDb } from "../configs/db";
 
 export const createPlan = async (req: Request, res: Response): Promise<any> => {
   try {
@@ -55,8 +54,8 @@ export const createPlan = async (req: Request, res: Response): Promise<any> => {
 
     await newQuestionare.save();
 
-    console.log(newPlan)
-    console.log(newQuestionare)
+    console.log(newPlan);
+    console.log(newQuestionare);
 
     return res.status(201).json({
       success: true,
@@ -79,7 +78,8 @@ export const getPlans = async (req: Request, res: Response): Promise<any> => {
 
     const plans = await planModel
       .find({ userId: userId })
-      .populate("questionare");
+      .populate("Questionares")
+      .exec();
 
     return res.status(200).json({
       success: true,

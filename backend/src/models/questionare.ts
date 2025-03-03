@@ -22,8 +22,7 @@ const questionareSchema = new mongoose.Schema(
   {
     userId: {
       type: Schema.Types.ObjectId,
-      refs: "user",
-      required: true,
+      ref: "User",
     },
     slug: { type: String, required: true, unique: true },
     difficulty: { type: String, required: true },
@@ -36,9 +35,7 @@ const questionareSchema = new mongoose.Schema(
     challenges: { type: String, required: true },
     planId: {
       type: Schema.Types.ObjectId,
-      refs: "plan",
-      required: true,
-      unique: true,
+      ref: "Plan",
     },
     noOfWeeks: { type: Number, required: true },
     noOfHoursPerWeek: { type: Number, required: true },
@@ -48,7 +45,9 @@ const questionareSchema = new mongoose.Schema(
   }
 );
 
+questionareSchema.index({ userId: 1, planId: 1 });
+
 export const questionareModel = mongoose.model(
-  "questionare",
+  "Questionare",
   questionareSchema
 );
