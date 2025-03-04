@@ -1,6 +1,6 @@
 import { axiosWithToken } from "@/lib/axiosWithToken";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useCallback, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -15,6 +15,15 @@ function Questions() {
   const { slug } = useParams();
 
   const [plan, setPlan] = useState<any>();
+
+  const navigate = useNavigate();
+
+  const handleClick = useCallback(
+    (idx: number) => {
+      navigate(`./${idx}`);
+    },
+    [navigate]
+  );
 
   useEffect(() => {
     (async () => {
@@ -33,11 +42,16 @@ function Questions() {
       </h1>
       {/* all questions in this plan */}
       <div className="w-full px-5 sm:px-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
-        {plan &&  plan.questions &&
+        {plan &&
+          plan.questions &&
           plan.questions.length !== 0 &&
-          plan.questions.map((question, idx) => {
+          plan.questions.map((question: any, idx: number) => {
             return (
-              <Card key={idx} className="shadow shadow-gray-600">
+              <Card
+                onClick={() => handleClick(idx)}
+                key={idx}
+                className="shadow shadow-gray-600"
+              >
                 <CardHeader>
                   <CardTitle className="text-blue-500">
                     Question {idx + 1}
@@ -48,13 +62,53 @@ function Questions() {
                   <CardDescription>{question.summary}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex space-x-3 flex-wrap space-y-1">
-                  <div className={`px-2 py-0.5 text-black rounded-sm ${colorMap.difficulty[question.difficulty]}`}>{question.difficulty}</div>
-                  <div className={`px-2 py-0.5 text-black rounded-sm ${colorMap.category[question.category]}`}>{makeFirstLetterUp(question.category)}</div>
-                  <div className={`px-2 py-0.5 text-black rounded-sm ${colorMap.country[question.country]}`}>{question.country}</div>
-                  <div className={`px-2 py-0.5 text-black rounded-sm ${colorMap.ctc[question.ctc]}`}>{question.ctc}</div>
-                  <div className={`px-2 py-0.5 text-black rounded-sm ${colorMap.companyName}`}>{question.companyName}</div>
-                  <div className={`px-2 py-0.5 text-black rounded-sm ${colorMap.yoe[question.yoe]}`}>{question.yoe} YOE</div>
-                  <div className={`px-2 py-0.5 text-black rounded-sm ${colorMap.role[question.role]}`}>{question.role}</div>
+                  <div
+                    className={`px-2 py-0.5 text-black rounded-sm ${
+                      colorMap.difficulty[question.difficulty]
+                    }`}
+                  >
+                    {question.difficulty}
+                  </div>
+                  <div
+                    className={`px-2 py-0.5 text-black rounded-sm ${
+                      colorMap.category[question.category]
+                    }`}
+                  >
+                    {makeFirstLetterUp(question.category)}
+                  </div>
+                  <div
+                    className={`px-2 py-0.5 text-black rounded-sm ${
+                      colorMap.country[question.country]
+                    }`}
+                  >
+                    {question.country}
+                  </div>
+                  <div
+                    className={`px-2 py-0.5 text-black rounded-sm ${
+                      colorMap.ctc[question.ctc]
+                    }`}
+                  >
+                    {question.ctc}
+                  </div>
+                  <div
+                    className={`px-2 py-0.5 text-black rounded-sm ${colorMap.companyName}`}
+                  >
+                    {question.companyName}
+                  </div>
+                  <div
+                    className={`px-2 py-0.5 text-black rounded-sm ${
+                      colorMap.yoe[question.yoe]
+                    }`}
+                  >
+                    {question.yoe} YOE
+                  </div>
+                  <div
+                    className={`px-2 py-0.5 text-black rounded-sm ${
+                      colorMap.role[question.role]
+                    }`}
+                  >
+                    {question.role}
+                  </div>
                 </CardContent>
               </Card>
             );

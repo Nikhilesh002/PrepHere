@@ -16,6 +16,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { useNavigate } from "react-router-dom";
 import { makeFirstLetterUp } from "@/lib/formatFuncs";
+import { Slider } from "@/components/ui/slider";
 
 function Questinaire() {
   const userData = useSelector((state: RootState) => state.user);
@@ -33,7 +34,7 @@ function Questinaire() {
       role: "",
       challenges: "",
       noOfWeeks: 3,
-      noOfHoursPerWeek: 4,
+      noOfHoursPerWeek: 20,
     };
   }, []);
 
@@ -174,16 +175,21 @@ function Questinaire() {
                 <Label htmlFor="noOfWeeks">
                   No of Weeks you want to prepare
                 </Label>
-                <Input
-                  id="noOfWeeks"
-                  type="number"
-                  min={1}
-                  max={10}
-                  value={formData.noOfWeeks}
-                  onChange={(e) =>
-                    setFormData({ ...formData, noOfWeeks: +e.target.value })
-                  }
-                />
+                <div className="flex justify-between mt-3">
+                  <Slider
+                    className="me-2"
+                    id="noOfWeeks"
+                    value={[formData.noOfWeeks]}
+                    onValueChange={(x) =>
+                      setFormData({ ...formData, noOfWeeks: x[0] })
+                    }
+                    defaultValue={[formData.noOfWeeks]}
+                    max={15}
+                    min={1}
+                    step={1}
+                  />
+                  <p className="font-semibold text-lg">{formData.noOfWeeks}</p>
+                </div>
               </div>
 
               {/* no of hours a week */}
@@ -191,19 +197,26 @@ function Questinaire() {
                 <Label htmlFor="noOfHoursPerWeek">
                   No of hours you can spend a Weeks
                 </Label>
-                <Input
-                  id="noOfHoursPerWeek"
-                  type="number"
-                  min={1}
-                  max={30}
-                  value={formData.noOfHoursPerWeek}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      noOfHoursPerWeek: +e.target.value,
-                    })
-                  }
-                />
+                <div className="flex justify-between mt-3">
+                  <Slider
+                    className=" me-2"
+                    id="noOfHoursPerWeek"
+                    value={[formData.noOfHoursPerWeek]}
+                    onValueChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        noOfHoursPerWeek: e[0],
+                      })
+                    }
+                    defaultValue={[formData.noOfHoursPerWeek]}
+                    max={40}
+                    min={8}
+                    step={2}
+                  />
+                  <p className="font-semibold text-lg">
+                    {formData.noOfHoursPerWeek}
+                  </p>
+                </div>
               </div>
             </div>
 

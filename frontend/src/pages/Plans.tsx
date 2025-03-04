@@ -52,7 +52,9 @@ function Plans() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p>{plan.roadmap.slice(0, 70)}</p>
+                  <p className="text-wrap text-center">
+                    {plan.roadmap[0].toString().slice(0, 200)}...
+                  </p>
                 </CardContent>
               </Card>
             );

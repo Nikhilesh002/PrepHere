@@ -22,10 +22,9 @@ const planSchema = new mongoose.Schema(
       ref: "Questionare",
     },
     slug: { type: String, required: true, unique: true },
-    idxs: { type: [Number], required: true },
+    idxs: { type: [Number], required: true }, // TODO rename  to queIdxs & add queStatus
     roadmap: { type: Schema.Types.Mixed, required: true },
     roadmapStatus: { type: Schema.Types.Mixed, required: true },
-    // TODO add req fields
   },
   {
     timestamps: true,

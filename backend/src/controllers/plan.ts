@@ -93,7 +93,7 @@ export const getPlan = async (req: Request, res: Response): Promise<any> => {
   try {
     const { slug } = req.params;
 
-    const plan = await planModel.findOne({ slug }).select("roadmap createdAt -_id");
+    const plan = await planModel.findOne({ slug }).select("roadmap roadmapStatus createdAt -_id");
 
     if (!plan) {
       return res.status(404).json({

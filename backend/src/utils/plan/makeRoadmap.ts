@@ -10,7 +10,9 @@ export const makeRoadmap = async (
   const prompt = makeRoadmapUserPrompt(questionare);
   const aiRes = await askLlm(prompt, roadmapAIMessage);
 
-  const roadmap = JSON.parse(aiRes);
+  const {roadmap} = JSON.parse(aiRes);
+
+  console.log({ roadmap });
 
   return {
     roadmap,
