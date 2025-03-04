@@ -3,16 +3,23 @@ import { askLlm } from "../ai/llm";
 import { roadmapAIMessage } from "../ai/prompts/roadmap/roadmapAIMessage";
 import { makeRoadmapUserPrompt } from "../ai/prompts/roadmap/roadmapUserPrompt";
 
-export const makeRoadmap = async (questionare: IQuestionare) => {
+export const makeRoadmap = async (
+  questionare: IQuestionare
+): Promise<{ roadmap: string[][]; roadmapStatus: number[][] }> => {
   // ask AI to prepare a custom plan
   const prompt = makeRoadmapUserPrompt(questionare);
   const aiRes = await askLlm(prompt, roadmapAIMessage);
 
-  return formatData(aiRes);
+  const roadmap = JSON.parse(aiRes);
+
+  return {
+    roadmap,
+    roadmapStatus: makeRoadmapStatus(roadmap),
+  };
 };
 
-const formatData = (data: any) => {
-  const jsObj = JSON.parse(data);
-  console.log({jsObj})
-  return JSON.stringify(jsObj.roadmap);
+const makeRoadmapStatus = (roadmap: string[][]): number[][] => {
+  return roadmap.map((week) => {
+    return week.map(() => 0);
+  });
 };

@@ -43,7 +43,7 @@ const NavBar: React.FC = () => {
     <div className="w-full">
       <nav className="p-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold">PrepHere</h1>
-        <Menubar className="shadow shadow-white">
+        <Menubar className="shadow shadow-gray-600">
           <Link className={`px-3 py-2 `} to="/">
             <MenubarMenu>
               <p

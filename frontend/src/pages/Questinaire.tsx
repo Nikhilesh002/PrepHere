@@ -15,6 +15,7 @@ import { axiosWithToken } from "@/lib/axiosWithToken";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { useNavigate } from "react-router-dom";
+import { makeFirstLetterUp } from "@/lib/formatFuncs";
 
 function Questinaire() {
   const userData = useSelector((state: RootState) => state.user);
@@ -37,10 +38,6 @@ function Questinaire() {
   }, []);
 
   const [formData, setFormData] = useState(initialFormData);
-
-  const makeFirstLetterUp = useCallback((str: string) => {
-    return str[0].toUpperCase() + str.slice(1);
-  }, []);
 
   const makeSlug = useCallback((str: string) => {
     return str
@@ -85,7 +82,7 @@ function Questinaire() {
         toast.success(res.data.msg);
         setFormData(initialFormData);
 
-        console.log(res.data)
+        console.log(res.data);
 
         // navigate to plan page
         navigate(`/plan/${formData.slug}`);
@@ -201,7 +198,10 @@ function Questinaire() {
                   max={30}
                   value={formData.noOfHoursPerWeek}
                   onChange={(e) =>
-                    setFormData({ ...formData, noOfHoursPerWeek: +e.target.value })
+                    setFormData({
+                      ...formData,
+                      noOfHoursPerWeek: +e.target.value,
+                    })
                   }
                 />
               </div>

@@ -30,7 +30,7 @@ export const createPlan = async (req: Request, res: Response): Promise<any> => {
       questionareId: newQuestionare._id,
       slug: questionare.slug,
       idxs: [],
-      roadmap: "",
+      roadmap: [[""]],
     });
 
     // store newPlan._id and save newQuestionare
@@ -38,8 +38,9 @@ export const createPlan = async (req: Request, res: Response): Promise<any> => {
     await newQuestionare.save();
 
     // make plan acc to questionare
-    const createdRoadMap = await makeRoadmap(questionare);
-    newPlan.roadmap = createdRoadMap;
+    const { roadmap, roadmapStatus } = await makeRoadmap(questionare);
+    newPlan.roadmap = roadmap;
+    newPlan.roadmapStatus = roadmapStatus;
 
     // make questions acc to questionare
     const { idxs, questions } = await makeQuestions(questionare);
@@ -70,7 +71,7 @@ export const getPlans = async (req: Request, res: Response): Promise<any> => {
 
     const plans = await planModel
       .find({ userId: userId })
-      .select("slug roadmap createdAt");
+      .select("slug roadmap createdAt -_id");
     // .populate("questionareId")   // the key with ref, if all needed
     // .exec();
 
@@ -92,10 +93,7 @@ export const getPlan = async (req: Request, res: Response): Promise<any> => {
   try {
     const { slug } = req.params;
 
-    const plan = await planModel
-      .findOne({ slug })
-      .select("roadmap createdAt idxs")
-      .populate("questionareId");
+    const plan = await planModel.findOne({ slug }).select("roadmap createdAt -_id");
 
     if (!plan) {
       return res.status(404).json({
@@ -108,10 +106,39 @@ export const getPlan = async (req: Request, res: Response): Promise<any> => {
       success: true,
       msg: "Plan fetched successfully",
       data: plan,
-      questions: getIdxsQues(plan.idxs),
     });
   } catch (error) {
     logger.error("Error getting plan", error);
+    return res.status(500).json({
+      success: false,
+      msg: error,
+    });
+  }
+};
+
+export const getPlanQues = async (
+  req: Request,
+  res: Response
+): Promise<any> => {
+  try {
+    const { slug } = req.params;
+
+    const plan = await planModel.findOne({ slug });
+
+    if (!plan) {
+      return res.status(404).json({
+        success: false,
+        msg: "Plan not found",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      msg: "Plan's Questions fetched successfully",
+      questions: getIdxsQues(plan.idxs),
+    });
+  } catch (error) {
+    logger.error("Error getting plan's questions", error);
     return res.status(500).json({
       success: false,
       msg: error,

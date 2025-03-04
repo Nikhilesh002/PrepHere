@@ -14,13 +14,13 @@
   },
   "ctc": {
     "5L-10L": "bg-teal-300",
-    "10L-20L": "bg-teal-400",
-    "20L-30L": "bg-teal-500",
-    "30L-40L": "bg-teal-600",
-    "40L-50L": "bg-teal-700",
-    "50L-60L": "bg-teal-800",
-    "60L-70L": "bg-teal-900 text-white",
-    "70L-80L": "bg-teal-900 text-white"
+    "10L-20L": "bg-teal-300",
+    "20L-30L": "bg-teal-400",
+    "30L-40L": "bg-teal-400",
+    "40L-50L": "bg-teal-500",
+    "50L-60L": "bg-teal-600",
+    "60L-70L": "bg-teal-700 text-white",
+    "70L-80L": "bg-teal-700 text-white"
   },
   "yoe": {
     "<2": "bg-pink-300",
@@ -36,10 +36,10 @@
     "Senior Data Engineer": "bg-yellow-600",
     "Data Architect": "bg-yellow-700"
   },
-  "companyName": "bg-lime-300",
+  "companyName": "bg-lime-400",
   "difficulty": {
     "Easy": "bg-green-200",
-    "Medium": "bg-yellow-200",
-    "Hard": "bg-red-200"
+    "Medium": "bg-orange-500 ",
+    "Hard": "bg-red-400"
   }
 }

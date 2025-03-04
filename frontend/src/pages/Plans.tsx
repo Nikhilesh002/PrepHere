@@ -38,12 +38,12 @@ function Plans() {
       <div className="w-full px-10 sm:px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 ">
         {allPlans &&
           allPlans.length !== 0 &&
-          allPlans?.map((plan: any) => {
+          allPlans?.map((plan, idx) => {
             return (
               <Card
-                key={plan._id}
+                key={idx}
                 onClick={() => handleClick(plan.slug)}
-                className="w-full h-52 text-center shadow-sm shadow-white"
+                className="w-full h-52 text-center shadow-sm shadow-gray-600"
               >
                 <CardHeader>
                   <CardTitle>{plan.slug}</CardTitle>
@@ -52,7 +52,7 @@ function Plans() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p>{plan.roadmap.slice(0,70)}</p>
+                  <p>{plan.roadmap.slice(0, 70)}</p>
                 </CardContent>
               </Card>
             );

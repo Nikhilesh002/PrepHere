@@ -5,7 +5,8 @@ export interface IPlan {
   questionareId: Schema.Types.ObjectId;
   slug: string;
   idxs: number[];
-  roadmap: string;
+  roadmap: string[][];
+  roadmapStatus: number[][];
 }
 
 export interface IPlanDoc extends IPlan, mongoose.Document {}
@@ -22,7 +23,8 @@ const planSchema = new mongoose.Schema(
     },
     slug: { type: String, required: true, unique: true },
     idxs: { type: [Number], required: true },
-    roadmap: { type: String, required: true },
+    roadmap: { type: Schema.Types.Mixed, required: true },
+    roadmapStatus: { type: Schema.Types.Mixed, required: true },
     // TODO add req fields
   },
   {

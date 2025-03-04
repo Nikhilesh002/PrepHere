@@ -9,6 +9,7 @@ import NotFound from "./pages/Not-Found";
 import Questinaire from "./pages/Questinaire";
 import Plans from "./pages/Plans";
 import Plan from "./pages/Plan";
+import Questions from "./pages/Questions";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
 
           <Route path="/questionaire" element={<Questinaire />} />
           <Route path="/plan/:slug" element={<Plan />} />
+          <Route path="/plan/:slug/questions" element={<Questions />} />
           <Route path="/plans" element={<Plans />} />
 
           <Route path="*" element={<NotFound />} />
