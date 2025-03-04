@@ -28,7 +28,7 @@ const askGroq = async (prompt: string, aiMessage: string): Promise<string> => {
     });
 
     const resp = chatCompletion.choices[0].message.content ?? "Error with AI";
-
+    console.log(resp);
     return resp;
   } catch (error) {
     console.log(error);
@@ -47,7 +47,8 @@ const askOllama = async (
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "deepseek-r1:1.5b",
+        // model: "deepseek-r1:1.5b",
+        model: "llama3.2:3b",
         messages: makeMessages(prompt, aiMessage),
         stream: false,
         top_p: 1,
@@ -57,9 +58,11 @@ const askOllama = async (
       }),
     }).then((res) => res.json());
 
-    const resp =
-      (chatCompletion.message.content as string).split("</think>\n\n")[1] ??
-      "Error with AI";
+    const resp = (chatCompletion.message.content as string) ?? "Error with AI";
+
+    if (resp.includes("</think>")) {
+      return resp.split("</think>")[1];
+    }
 
     return resp;
   } catch (error) {
@@ -79,7 +82,7 @@ export const askLlm = async (
     aiJsonRes = await askOllama(prompt, aiMessage);
   }
 
-  if(aiJsonRes.includes("```json")) {
+  if (aiJsonRes.includes("```json")) {
     aiJsonRes = aiJsonRes.split("```json")[1].split("```")[0];
   }
 

@@ -3,10 +3,8 @@ import { logger } from "../utils/logger";
 import { Response, Request } from "express";
 import { planModel } from "../models/plan";
 import { makeQuestions } from "../utils/questions/makeQuestions";
-import { getIdxQuestions } from "../utils/questions/getIdxQuestions";
+import { getIdxsQues } from "../utils/questions/getIdxQuestions";
 import { makeRoadmap } from "../utils/plan/makeRoadmap";
-import { strict } from "assert";
-import { connectDb } from "../configs/db";
 
 export const createPlan = async (req: Request, res: Response): Promise<any> => {
   try {
@@ -26,8 +24,6 @@ export const createPlan = async (req: Request, res: Response): Promise<any> => {
       ...(questionare as IQuestionare),
     });
 
-    console.log(questionare);
-
     // now create plan
     const newPlan = new planModel({
       userId,
@@ -43,7 +39,6 @@ export const createPlan = async (req: Request, res: Response): Promise<any> => {
 
     // make plan acc to questionare
     const createdRoadMap = await makeRoadmap(questionare);
-    console.log(createdRoadMap);
     newPlan.roadmap = createdRoadMap;
 
     // make questions acc to questionare
@@ -53,9 +48,6 @@ export const createPlan = async (req: Request, res: Response): Promise<any> => {
     await newPlan.save();
 
     await newQuestionare.save();
-
-    console.log(newPlan);
-    console.log(newQuestionare);
 
     return res.status(201).json({
       success: true,
@@ -78,8 +70,9 @@ export const getPlans = async (req: Request, res: Response): Promise<any> => {
 
     const plans = await planModel
       .find({ userId: userId })
-      .populate("Questionares")
-      .exec();
+      .select("slug roadmap createdAt");
+    // .populate("questionareId")   // the key with ref, if all needed
+    // .exec();
 
     return res.status(200).json({
       success: true,
@@ -99,7 +92,10 @@ export const getPlan = async (req: Request, res: Response): Promise<any> => {
   try {
     const { slug } = req.params;
 
-    const plan = await planModel.findOne({ slug }).populate("questionare");
+    const plan = await planModel
+      .findOne({ slug })
+      .select("roadmap createdAt idxs")
+      .populate("questionareId");
 
     if (!plan) {
       return res.status(404).json({
@@ -112,7 +108,7 @@ export const getPlan = async (req: Request, res: Response): Promise<any> => {
       success: true,
       msg: "Plan fetched successfully",
       data: plan,
-      questions: getIdxQuestions(plan.idxs),
+      questions: getIdxsQues(plan.idxs),
     });
   } catch (error) {
     logger.error("Error getting plan", error);

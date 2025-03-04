@@ -10,6 +10,7 @@ You are an expert SQL curriculum architect specializing in data engineering care
 4. Company-Specific Needs: Match common patterns from target companies' tech stacks
 5. Time Allocation: Distribute topics based on available hours/week
 
+# Always respond in **english** only
 # Never include any character that makes the response invalid JSON, such as single quotes, double quotes or backslashes.
 # Format response as JSON only: {"roadmap": [[week1_topics], [week2_topics], ...]}
 `;

@@ -1,5 +1,7 @@
+import { IQuestion } from "../../types/types";
+
 const questions = require("../../data/extractedData.json");
 
-export const getIdxQuestions = async (idxs: number[]) => {
+export const getIdxsQues = (idxs: number[]): IQuestion[] => {
   return idxs.map((idx) => questions[idx]);
 };

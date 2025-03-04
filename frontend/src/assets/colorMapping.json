@@ -1,0 +1,45 @@
+{
+  "category": {
+    "problem solving": "bg-blue-300",
+    "project based": "bg-green-300",
+    "scenario based": "bg-yellow-300",
+    "theoretical": "bg-purple-300"
+  },
+  "country": {
+    "India": "bg-red-400",
+    "Canada": "bg-blue-400",
+    "Czech Republic": "bg-green-400",
+    "United Kingdom": "bg-gray-400",
+    "United States": "bg-indigo-400"
+  },
+  "ctc": {
+    "5L-10L": "bg-teal-300",
+    "10L-20L": "bg-teal-400",
+    "20L-30L": "bg-teal-500",
+    "30L-40L": "bg-teal-600",
+    "40L-50L": "bg-teal-700",
+    "50L-60L": "bg-teal-800",
+    "60L-70L": "bg-teal-900 text-white",
+    "70L-80L": "bg-teal-900 text-white"
+  },
+  "yoe": {
+    "<2": "bg-pink-300",
+    "2-5": "bg-pink-400",
+    "5-8": "bg-pink-500",
+    "8-12": "bg-pink-600",
+    "12-15": "bg-pink-700"
+  },
+  "role": {
+    "Data Engineer-1": "bg-yellow-300",
+    "Data Engineer-2": "bg-yellow-400",
+    "Lead Data Engineer": "bg-yellow-500",
+    "Senior Data Engineer": "bg-yellow-600",
+    "Data Architect": "bg-yellow-700"
+  },
+  "companyName": "bg-lime-300",
+  "difficulty": {
+    "Easy": "bg-green-200",
+    "Medium": "bg-yellow-200",
+    "Hard": "bg-red-200"
+  }
+}
