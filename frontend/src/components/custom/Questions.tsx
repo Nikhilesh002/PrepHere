@@ -1,6 +1,5 @@
-import { axiosWithToken } from "@/lib/axiosWithToken";
-import { useCallback, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -10,46 +9,49 @@ import {
 } from "@/components/ui/card";
 import colorMap from "@/assets/colorMapping.json";
 import { makeFirstLetterUp } from "@/lib/formatFuncs";
-import { IPlanQues, IQuestion } from "@/lib/types";
+import { IQuestion } from "@/lib/types";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
-
-
-function Questions() {
-  const { slug } = useParams();
-
-  const [plan, setPlan] = useState<IPlanQues>();
-
+function Questions({
+  questions,
+  queIdxs,
+  slug,
+}: {
+  questions: IQuestion[];
+  queIdxs: number[];
+  slug: string;
+}) {
   const navigate = useNavigate();
 
   const handleClick = useCallback(
     (idx: number) => {
-      if (!plan) return;
-      navigate(`/question/${plan.queIdxs[idx]}`);
+      if (!questions) return;
+      if (queIdxs.length === 0) navigate(`/question/${idx}`);
+      else navigate(`/question/${queIdxs[idx]}`);
     },
-    [navigate, plan]
+    [navigate, questions, queIdxs]
   );
-
-  useEffect(() => {
-    (async () => {
-      const res = await axiosWithToken.get(
-        `${import.meta.env.VITE_API_URL}/plan/${slug}/questions`
-      );
-      console.log(res.data);
-      setPlan(res.data);
-    })();
-  }, [slug]);
 
   return (
     <div>
-      <h1 className="text-2xl text-center font-bold mt-8 mb-5">
-        Your Plan: {slug}
-      </h1>
+      {slug !== "" && (
+        <h1 className="text-2xl text-center font-bold mt-8 mb-5">
+          Your Plan: {slug}
+        </h1>
+      )}
       {/* all questions in this plan */}
       <div className="w-full px-5 sm:px-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
-        {plan &&
-          plan.questions &&
-          plan.questions.length !== 0 &&
-          plan.questions.map((question : IQuestion, idx: number) => {
+        {questions &&
+          questions.length !== 0 &&
+          questions.map((question: IQuestion, idx: number) => {
             return (
               <Card
                 onClick={() => handleClick(idx)}
@@ -68,21 +70,27 @@ function Questions() {
                 <CardContent className="flex space-x-3 flex-wrap space-y-1">
                   <div
                     className={`px-2 py-0.5 text-black rounded-sm ${
-                      colorMap.difficulty[question.difficulty as keyof typeof colorMap.difficulty]
+                      colorMap.difficulty[
+                        question.difficulty as keyof typeof colorMap.difficulty
+                      ]
                     }`}
                   >
                     {question.difficulty}
                   </div>
                   <div
                     className={`px-2 py-0.5 text-black rounded-sm ${
-                      colorMap.category[question.category as keyof typeof colorMap.category]
+                      colorMap.category[
+                        question.category as keyof typeof colorMap.category
+                      ]
                     }`}
                   >
                     {makeFirstLetterUp(question.category)}
                   </div>
                   <div
                     className={`px-2 py-0.5 text-black rounded-sm ${
-                      colorMap.country[question.country as keyof typeof colorMap.country]
+                      colorMap.country[
+                        question.country as keyof typeof colorMap.country
+                      ]
                     }`}
                   >
                     {question.country}
@@ -117,6 +125,25 @@ function Questions() {
               </Card>
             );
           })}
+      </div>
+      // TODO
+      <div className="">
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious href="#" />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext href="#" />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
       </div>
     </div>
   );

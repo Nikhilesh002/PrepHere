@@ -9,8 +9,9 @@ import NotFound from "./pages/Not-Found";
 import Questinaire from "./pages/Questinaire";
 import Plans from "./pages/Plans";
 import Plan from "./pages/Plan";
-import Questions from "./pages/Questions";
+import PlanQuestions from "./pages/PlanQuestions";
 import Question from "./pages/Question";
+import AllQuestions from "./pages/AllQuestions";
 
 function App() {
   return (
@@ -23,10 +24,12 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
 
+          <Route path="/questions" element={<AllQuestions />} />
+
           <Route path="/questionare" element={<Questinaire />} />
           <Route path="/question/:idx" element={<Question />} />
           <Route path="/plan/:slug" element={<Plan />} />
-          <Route path="/plan/:slug/questions" element={<Questions />} />
+          <Route path="/plan/:slug/questions" element={<PlanQuestions />} />
           <Route path="/plans" element={<Plans />} />
 
           <Route path="*" element={<NotFound />} />

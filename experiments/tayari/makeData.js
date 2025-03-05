@@ -23,16 +23,16 @@ questions.forEach((question) => {
   if(question){
     const temp={}
 
-    temp.text = question.text;
-    temp.summary = question.summary;
-    temp.difficulty = question.difficulty;
-    temp.category = question.category;
+    temp.text = question.text.trim();
+    temp.summary = question.summary.trim();
+    temp.difficulty = question.difficulty.trim();
+    temp.category = question.category.trim();
 
-    temp.country = question.submissionId.country;
-    temp.ctc = question.submissionId.ctc;
-    temp.companyName = question.submissionId.companyName;
-    temp.yoe = question.submissionId.yoe;
-    temp.role = question.submissionId.role;
+    temp.country = question.submissionId.country.trim();
+    temp.ctc = question.submissionId.ctc.trim();
+    temp.companyName = question.submissionId.companyName.trim();
+    temp.yoe = question.submissionId.yoe.trim();
+    temp.role = question.submissionId.role.trim();
 
     processedData.push(temp)
   }
@@ -41,6 +41,6 @@ questions.forEach((question) => {
 console.log(processedData.length)
 
 fs.writeFileSync(
-  "./tayari/processedData.json",
+  "./tayari/allQuestions.json",
   JSON.stringify(processedData, null, 2)
 );

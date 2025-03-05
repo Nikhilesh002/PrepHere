@@ -37,3 +37,21 @@ export const getQuestion = async (
     });
   }
 };
+
+export const getAllQuestions = async (
+  req: Request,
+  res: Response
+): Promise<any> => {
+  try {
+    res.status(200).json({
+      success: true,
+      msg: "Questions fetched successfully",
+      questions: require("../data/allQuestions.json"),
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      msg: error,
+    });
+  }
+};

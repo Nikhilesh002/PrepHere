@@ -1,10 +1,12 @@
 import { Router } from "express";
-import { validateAuth } from "../middleware/validateAuth";
-import { getQuestion } from "../controllers/question";
+// import { validateAuth } from "../middleware/validateAuth";
+import { getAllQuestions, getQuestion } from "../controllers/question";
 
 const questionRouter = Router();
-questionRouter.use(validateAuth);
 
+questionRouter.get("/", getAllQuestions);
 questionRouter.get("/:idx", getQuestion);
+
+// questionRouter.use(validateAuth);
 
 export default questionRouter;

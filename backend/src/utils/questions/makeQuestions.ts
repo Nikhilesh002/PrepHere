@@ -1,7 +1,7 @@
 import { IQuestionare } from "../../models/questionare";
 import { IQuestion } from "../../types/types";
 
-const questions = require("../../data/extractedData.json");
+const questions = require("../../data/sqlQuestions.json");
 
 export const makeQuestions = async (cnt: number, questionare: IQuestionare) => {
   const customQuestions: IQuestion[] = [];

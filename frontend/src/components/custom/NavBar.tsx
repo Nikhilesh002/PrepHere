@@ -55,6 +55,17 @@ const NavBar: React.FC = () => {
               </p>
             </MenubarMenu>
           </Link>
+          <Link className={`px-3 py-2 `} to="/questions">
+            <MenubarMenu>
+              <p
+                className={`transition-colors duration-300 ease-in-out rounded px-3 py-0.5 ${isActive(
+                  "/questions"
+                )}`}
+              >
+                Questions
+              </p>
+            </MenubarMenu>
+          </Link>
           <Link className={`px-3 py-2 `} to="/questionare">
             <MenubarMenu>
               <p
