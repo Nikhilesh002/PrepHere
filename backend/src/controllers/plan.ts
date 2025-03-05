@@ -3,8 +3,8 @@ import { logger } from "../utils/logger";
 import { Response, Request } from "express";
 import { planModel } from "../models/plan";
 import { makeQuestions } from "../utils/questions/makeQuestions";
-import { getIdxsQues } from "../utils/questions/getIdxQuestions";
 import { makeRoadmap } from "../utils/plan/makeRoadmap";
+import { getIdxsQues } from "../utils/questions/getIdxQuestions";
 
 export const createPlan = async (req: Request, res: Response): Promise<any> => {
   try {
@@ -29,7 +29,7 @@ export const createPlan = async (req: Request, res: Response): Promise<any> => {
       userId,
       questionareId: newQuestionare._id,
       slug: questionare.slug,
-      idxs: [],
+      queIdxs: [],
       roadmap: [[""]],
     });
 
@@ -43,9 +43,13 @@ export const createPlan = async (req: Request, res: Response): Promise<any> => {
     newPlan.roadmapStatus = roadmapStatus;
 
     // make questions acc to questionare
-    const { idxs, questions } = await makeQuestions(questionare);
+    const { queIdxs, questions } = await makeQuestions(
+      questionare.cnt,
+      questionare
+    );
 
-    newPlan.idxs = idxs;
+    newPlan.queIdxs = queIdxs;
+    newPlan.queStatus = new Array(queIdxs.length).fill(0);
     await newPlan.save();
 
     await newQuestionare.save();
@@ -93,7 +97,9 @@ export const getPlan = async (req: Request, res: Response): Promise<any> => {
   try {
     const { slug } = req.params;
 
-    const plan = await planModel.findOne({ slug }).select("roadmap roadmapStatus createdAt -_id");
+    const plan = await planModel
+      .findOne({ slug })
+      .select("roadmap roadmapStatus createdAt -_id");
 
     if (!plan) {
       return res.status(404).json({
@@ -123,7 +129,7 @@ export const getPlanQues = async (
   try {
     const { slug } = req.params;
 
-    const plan = await planModel.findOne({ slug });
+    const plan = await planModel.findOne({ slug }).select("queIdxs queStatus");
 
     if (!plan) {
       return res.status(404).json({
@@ -135,7 +141,9 @@ export const getPlanQues = async (
     return res.status(200).json({
       success: true,
       msg: "Plan's Questions fetched successfully",
-      questions: getIdxsQues(plan.idxs),
+      questions: getIdxsQues(plan.queIdxs),
+      queStatus: plan.queStatus,
+      queIdxs: plan.queIdxs,
     });
   } catch (error) {
     logger.error("Error getting plan's questions", error);

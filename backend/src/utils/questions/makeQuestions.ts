@@ -3,7 +3,7 @@ import { IQuestion } from "../../types/types";
 
 const questions = require("../../data/extractedData.json");
 
-export const makeQuestions = async (questionare: IQuestionare) => {
+export const makeQuestions = async (cnt: number, questionare: IQuestionare) => {
   const customQuestions: IQuestion[] = [];
 
   // for now using idx, as static data, but in fut u need to use some hashe set
@@ -17,7 +17,6 @@ export const makeQuestions = async (questionare: IQuestionare) => {
       question.country === questionare.country &&
       question.ctc === questionare.ctc &&
       question.companyName === questionare.companyName &&
-      question.yoe === questionare.yoe &&
       question.role === questionare.role
     ) {
       filteredQueIdxs.add(idx);
@@ -27,7 +26,7 @@ export const makeQuestions = async (questionare: IQuestionare) => {
   });
 
   // for now randomly pick questions
-  if (filteredQueIdxs.size <= 25) {
+  if (filteredQueIdxs.size <= cnt) {
     // directly add filtered qs
     for (let idx in filteredQueIdxs) {
       customQuestions.push(questions[idx]);
@@ -35,15 +34,15 @@ export const makeQuestions = async (questionare: IQuestionare) => {
 
     // compensate from rem qs
     return {
-      idxs: [
+      queIdxs: [
         ...filteredQueIdxs,
-        ...getRandIdxs(25 - filteredQueIdxs.size, remQueIdxs, customQuestions),
+        ...getRandIdxs(cnt - filteredQueIdxs.size, remQueIdxs, customQuestions),
       ],
       questions: customQuestions,
     };
   } else {
     return {
-      idxs: getRandIdxs(25, filteredQueIdxs, customQuestions),
+      queIdxs: getRandIdxs(cnt, filteredQueIdxs, customQuestions),
       questions: customQuestions,
     };
   }

@@ -36,7 +36,6 @@ function main() {
   const isSql = (text) => {
     if (
       text.includes("sql") ||
-      text.includes("pyspark") ||
       text.includes("databricks") ||
       text.includes("oracle") ||
       text.includes("postgres") ||
@@ -45,9 +44,8 @@ function main() {
       text.includes("database") ||
       text.includes("table") ||
       text.includes("join") ||
-      text.includes("-+-") ||
+      text.includes("--+--") ||
       text.includes("transaction") ||
-      text.includes("insert into") ||
       text.includes("update") ||
       text.includes("insert") ||
       text.includes("delete")
@@ -69,6 +67,7 @@ function main() {
       temp.companyName = question.submissionId.companyName.trim();
       temp.yoe = question.submissionId.yoe.trim();
       temp.role = question.submissionId.role.trim();
+      // temp.verificationImages = question.submissionId.verificationImages;
 
       extractedData.push(temp);
     }

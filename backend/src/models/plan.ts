@@ -4,7 +4,7 @@ export interface IPlan {
   userId: Schema.Types.ObjectId;
   questionareId: Schema.Types.ObjectId;
   slug: string;
-  idxs: number[];
+  queIdxs: number[];
   roadmap: string[][];
   roadmapStatus: number[][];
 }
@@ -22,7 +22,8 @@ const planSchema = new mongoose.Schema(
       ref: "Questionare",
     },
     slug: { type: String, required: true, unique: true },
-    idxs: { type: [Number], required: true }, // TODO rename  to queIdxs & add queStatus
+    queIdxs: { type: [Number], required: true },
+    queStatus: { type: [Number], required: true },
     roadmap: { type: Schema.Types.Mixed, required: true },
     roadmapStatus: { type: Schema.Types.Mixed, required: true },
   },

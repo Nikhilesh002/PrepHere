@@ -2,6 +2,6 @@ import { IQuestion } from "../../types/types";
 
 const questions = require("../../data/extractedData.json");
 
-export const getIdxsQues = (idxs: number[]): IQuestion[] => {
-  return idxs.map((idx) => questions[idx]);
+export const getIdxsQues = (queIdxs: number[]): IQuestion[] => {
+  return queIdxs.map((idx) => questions[idx]);
 };

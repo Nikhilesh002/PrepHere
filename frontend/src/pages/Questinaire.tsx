@@ -153,7 +153,7 @@ function Questinaire() {
                                 formData[key as keyof typeof formData] ===
                                 upValue
                               }
-                              onCheckedChange={(e) =>
+                              onCheckedChange={() =>
                                 setFormData({
                                   ...formData,
                                   [key]: upValue,

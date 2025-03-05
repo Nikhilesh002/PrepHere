@@ -10,19 +10,23 @@ import {
 } from "@/components/ui/card";
 import colorMap from "@/assets/colorMapping.json";
 import { makeFirstLetterUp } from "@/lib/formatFuncs";
+import { IPlanQues, IQuestion } from "@/lib/types";
+
+
 
 function Questions() {
   const { slug } = useParams();
 
-  const [plan, setPlan] = useState<any>();
+  const [plan, setPlan] = useState<IPlanQues>();
 
   const navigate = useNavigate();
 
   const handleClick = useCallback(
     (idx: number) => {
-      navigate(`./${idx}`);
+      if (!plan) return;
+      navigate(`/question/${plan.queIdxs[idx]}`);
     },
-    [navigate]
+    [navigate, plan]
   );
 
   useEffect(() => {
@@ -45,7 +49,7 @@ function Questions() {
         {plan &&
           plan.questions &&
           plan.questions.length !== 0 &&
-          plan.questions.map((question: any, idx: number) => {
+          plan.questions.map((question : IQuestion, idx: number) => {
             return (
               <Card
                 onClick={() => handleClick(idx)}
@@ -64,28 +68,28 @@ function Questions() {
                 <CardContent className="flex space-x-3 flex-wrap space-y-1">
                   <div
                     className={`px-2 py-0.5 text-black rounded-sm ${
-                      colorMap.difficulty[question.difficulty]
+                      colorMap.difficulty[question.difficulty as keyof typeof colorMap.difficulty]
                     }`}
                   >
                     {question.difficulty}
                   </div>
                   <div
                     className={`px-2 py-0.5 text-black rounded-sm ${
-                      colorMap.category[question.category]
+                      colorMap.category[question.category as keyof typeof colorMap.category]
                     }`}
                   >
                     {makeFirstLetterUp(question.category)}
                   </div>
                   <div
                     className={`px-2 py-0.5 text-black rounded-sm ${
-                      colorMap.country[question.country]
+                      colorMap.country[question.country as keyof typeof colorMap.country]
                     }`}
                   >
                     {question.country}
                   </div>
                   <div
                     className={`px-2 py-0.5 text-black rounded-sm ${
-                      colorMap.ctc[question.ctc]
+                      colorMap.ctc[question.ctc as keyof typeof colorMap.ctc]
                     }`}
                   >
                     {question.ctc}
@@ -97,14 +101,14 @@ function Questions() {
                   </div>
                   <div
                     className={`px-2 py-0.5 text-black rounded-sm ${
-                      colorMap.yoe[question.yoe]
+                      colorMap.yoe[question.yoe as keyof typeof colorMap.yoe]
                     }`}
                   >
                     {question.yoe} YOE
                   </div>
                   <div
                     className={`px-2 py-0.5 text-black rounded-sm ${
-                      colorMap.role[question.role]
+                      colorMap.role[question.role as keyof typeof colorMap.role]
                     }`}
                   >
                     {question.role}

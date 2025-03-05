@@ -14,6 +14,7 @@ export interface IQuestionare {
   planId: Schema.Types.ObjectId;
   noOfWeeks: number;
   noOfHoursPerWeek: number;
+  cnt: number;
 }
 
 export interface IQuestionareDoc extends IQuestionare, mongoose.Document {}
@@ -39,6 +40,7 @@ const questionareSchema = new mongoose.Schema(
     },
     noOfWeeks: { type: Number, required: true },
     noOfHoursPerWeek: { type: Number, required: true },
+    cnt: { type: Number, required: true },
   },
   {
     timestamps: true,
