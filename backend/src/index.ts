@@ -1,12 +1,9 @@
-import dotenv from "dotenv";
-import express, { Express, NextFunction, Request, Response } from "express";
+import express, { Express, Request, Response } from "express";
 import router from "./routes/index";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { connectDb } from "./configs/db";
 import { configs } from "./configs";
-
-dotenv.config();
 
 connectDb();
 

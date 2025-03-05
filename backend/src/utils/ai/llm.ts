@@ -24,8 +24,8 @@ const askGroq = async (prompt: string, aiMessage: string): Promise<string> => {
   try {
     const chatCompletion = await client.chat.completions.create({
       messages: makeMessages(prompt, aiMessage) as ChatCompletionMessage[],
-      // model: "gemma2-9b-it",
-      model: "llama3-70b-8192",
+      model: "gemma2-9b-it",
+      // model: "llama3-70b-8192",
     });
 
     const resp = chatCompletion.choices[0].message.content ?? "Error with AI";
@@ -77,7 +77,7 @@ export const askLlm = async (
   aiMessage: string
 ): Promise<string> => {
   let aiJsonRes = "";
-  if (configs.nodeEnv !== "production") {
+  if (configs.nodeEnv === "production") {
     aiJsonRes = await askGroq(prompt, aiMessage);
   } else {
     aiJsonRes = await askOllama(prompt, aiMessage);

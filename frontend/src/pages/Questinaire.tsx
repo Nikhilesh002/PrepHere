@@ -35,6 +35,23 @@ function Questinaire() {
       challenges: "",
       noOfWeeks: 3,
       noOfHoursPerWeek: 20,
+      cnt: 25,
+    };
+  }, []);
+
+  const myLabels = useMemo(() => {
+    return {
+      difficulty: "Difficulty",
+      category: "Focus Areas",
+      country: "Country",
+      ctc: "Current CTC",
+      companyName: "Company Name",
+      yoe: "Years of Experience",
+      role: "Role",
+      challenges: "Challenges",
+      noOfWeeks: "Study Commitment (Weeks)",
+      noOfHoursPerWeek: "Study Commitment (Hours/Week)",
+      cnt: "No of Questions",
     };
   }, []);
 
@@ -59,7 +76,6 @@ function Questinaire() {
   const handleSubmit = useCallback(
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      console.log(formData);
 
       if (!userData.user) {
         toast.error("Please login to continue");
@@ -72,6 +88,7 @@ function Questinaire() {
       }
 
       formData.slug = makeSlug(formData.slug); // it wii br in url
+      console.log(formData)
 
       // send to db
       const res = await axiosWithToken.post(
@@ -134,7 +151,8 @@ function Questinaire() {
                     className="grid w-full max-w-sm items-center gap-1.5"
                   >
                     <label className="text-sm font-semibold">
-                      {makeFirstLetterUp(key)}
+                      {myLabels[key as keyof typeof myLabels]}
+                      <span className="text-red-400">*</span>
                     </label>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
@@ -169,70 +187,106 @@ function Questinaire() {
                   </div>
                 );
               })}
-
-              {/* no of weeks */}
-              <div className="w-full max-w-sm items-center gap-1.5">
-                <Label htmlFor="noOfWeeks">
-                  No of Weeks you want to prepare
-                </Label>
-                <div className="flex justify-between mt-3">
-                  <Slider
-                    className="me-2"
-                    id="noOfWeeks"
-                    value={[formData.noOfWeeks]}
-                    onValueChange={(x) =>
-                      setFormData({ ...formData, noOfWeeks: x[0] })
-                    }
-                    defaultValue={[formData.noOfWeeks]}
-                    max={15}
-                    min={1}
-                    step={1}
-                  />
-                  <p className="font-semibold text-lg">{formData.noOfWeeks}</p>
-                </div>
-              </div>
-
-              {/* no of hours a week */}
-              <div className="w-full max-w-sm items-center gap-1.5">
-                <Label htmlFor="noOfHoursPerWeek">
-                  No of hours you can spend a Weeks
-                </Label>
-                <div className="flex justify-between mt-3">
-                  <Slider
-                    className=" me-2"
-                    id="noOfHoursPerWeek"
-                    value={[formData.noOfHoursPerWeek]}
-                    onValueChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        noOfHoursPerWeek: e[0],
-                      })
-                    }
-                    defaultValue={[formData.noOfHoursPerWeek]}
-                    max={40}
-                    min={8}
-                    step={2}
-                  />
-                  <p className="font-semibold text-lg">
-                    {formData.noOfHoursPerWeek}
-                  </p>
-                </div>
-              </div>
             </div>
 
-            <div className=" flex flex-col justify-center items-center gap-1.5">
-              <Label htmlFor="challenges">Main Challenges</Label>
-              <Textarea
-                className="max-w-sm"
-                rows={8}
-                maxLength={2000}
-                value={formData.challenges}
-                onChange={(e) =>
-                  setFormData({ ...formData, challenges: e.target.value })
-                }
-                id="challenges"
-                placeholder="Briefly describe your main challenges you face when you prepare for SQL interviews"
-              />
+            <div className="flex flex-wrap">
+              <div className="w-1/2 pe-2">
+                {/* no of questions */}
+                <div className="w-full max-w-sm items-center gap-1.5">
+                  <Label htmlFor="cnt">
+                    No of Questions
+                    <span className="text-red-400">*</span>
+                  </Label>
+                  <div className="flex justify-between mt-3">
+                    <Slider
+                      className="me-2"
+                      id="cnt"
+                      value={[formData.cnt]}
+                      onValueChange={(x) =>
+                        setFormData({ ...formData, cnt: x[0] })
+                      }
+                      defaultValue={[formData.cnt]}
+                      max={100}
+                      min={25}
+                      step={5}
+                    />
+                    <p className="font-semibold text-lg">{formData.cnt}</p>
+                  </div>
+                </div>
+
+                {/* no of weeks */}
+                <div className="w-full max-w-sm items-center gap-1.5">
+                  <Label htmlFor="noOfWeeks">
+                    No of Weeks you want to prepare
+                    <span className="text-red-400">*</span>
+                  </Label>
+                  <div className="flex justify-between mt-3">
+                    <Slider
+                      className="me-2"
+                      id="noOfWeeks"
+                      value={[formData.noOfWeeks]}
+                      onValueChange={(x) =>
+                        setFormData({ ...formData, noOfWeeks: x[0] })
+                      }
+                      defaultValue={[formData.noOfWeeks]}
+                      max={15}
+                      min={1}
+                      step={1}
+                    />
+                    <p className="font-semibold text-lg">
+                      {formData.noOfWeeks}
+                    </p>
+                  </div>
+                </div>
+
+                {/* no of hours a week */}
+                <div className="w-full max-w-sm items-center gap-1.5">
+                  <Label htmlFor="noOfHoursPerWeek">
+                    No of hours you can spend a Weeks
+                    <span className="text-red-400">*</span>
+                  </Label>
+                  <div className="flex justify-between mt-3">
+                    <Slider
+                      className=" me-2"
+                      id="noOfHoursPerWeek"
+                      value={[formData.noOfHoursPerWeek]}
+                      onValueChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          noOfHoursPerWeek: e[0],
+                        })
+                      }
+                      defaultValue={[formData.noOfHoursPerWeek]}
+                      max={40}
+                      min={8}
+                      step={2}
+                    />
+                    <p className="font-semibold text-lg">
+                      {formData.noOfHoursPerWeek}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="w-1/2 ps-2">
+                <div className=" flex flex-col justify-center items-center gap-1.5">
+                  <Label htmlFor="challenges">
+                    Strengths and Weaknesses
+                    <span className="text-red-400">*</span>
+                  </Label>
+                  <Textarea
+                    className="max-w-sm h-32"
+                    rows={8}
+                    maxLength={2000}
+                    value={formData.challenges}
+                    onChange={(e) =>
+                      setFormData({ ...formData, challenges: e.target.value })
+                    }
+                    id="challenges"
+                    placeholder="Briefly describe your strengthes and weaknesses you want to improve in this plan"
+                  />
+                </div>
+              </div>
             </div>
 
             <div className="flex justify-center pt-5">

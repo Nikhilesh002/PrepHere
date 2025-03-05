@@ -1,66 +1,62 @@
 import { IQuestionare } from "../../../../models/questionare";
 
 export const makeRoadmapUserPrompt = (questionare: IQuestionare): string => {
-  // create prompt
   const prompt = `
-# Create a SQL roadmap for a ${questionare.yoe} Data Engineer targeting ${questionare.companyName} in ${questionare.country} with ${questionare.challenges} challenges. Parameters:
-- Current CTC: ${questionare.ctc}
-- Preferred Difficulty: ${questionare.difficulty}
-- Study Commitment: ${questionare.noOfWeeks} weeks x ${questionare.noOfHoursPerWeek} hours/week
-- Focus Areas: ${questionare.category}
-- Role Context: ${questionare.role}
+# SQL Preparation Kit Roadmap Request
 
-## Prioritize these DE-specific topics in order:
-1. Data Modeling Patterns
-2. Query Optimization
-3. ETL Pipeline SQL
-4. Partitioning/Indexing
-5. Window Functions
-6. Execution Plans
+You are an expert in SQL and Data Engineering. Based on the candidate’s preferences and background provided below, generate a customized SQL preparation kit roadmap. The roadmap must focus exclusively on SQL queries and cover topics from fundamentals to advanced techniques, while addressing both strengths and areas for improvement as indicated in the "challenges" field.
 
-## Follow this progression framework:
-Week 1-2: Fundamentals & Syntax
-Week 3-4: Complex Operations
-Week 5-6: Performance Tuning
-Week 7+: Specialized Patterns
+Candidate Details:
+- **Experience Level**: ${questionare.yoe} Data Engineer
+- **Target Company**: ${questionare.companyName}
+- **Strengths and Areas for Improvement**: ${questionare.challenges}
+- **Preferred Difficulty**: ${questionare.difficulty}
+- **Study Commitment**: ${questionare.noOfWeeks} weeks, ${questionare.noOfHoursPerWeek} hours per week
+- **Focus Area**: SQL queries
+- **Role Context**: ${questionare.role}
+- **Target Market Standards**: ${questionare.country}
 
-## Include these essential topics at appropriate stages, according to their experience and complexity:
-- Star Schema Design
-- CTE vs Temp Tables
-- Query Profiling
-- Bulk Operations
-- Index Selection
-- Partition Pruning
-- Query Caching
-- Query Logging
-- Query Profiling
+Instructions:
+1. Create a weekly roadmap that progresses logically from basic to advanced SQL topics.
+2. Tailor the content to match the candidate's experience, study commitment, and the market standards of the target country.
+3. Integrate the candidate’s strengths and weaknesses (provided as a single string) to emphasize areas that need improvement while reinforcing existing skills.
+4. **Output the complete roadmap in valid JSON format only**, strictly following this structure:
+{"roadmap": [[week1_topics], [week2_topics], ...]}
 
-## Consider these additional points:
-- For YOE <2: Adds "Database Normalization" and "ACID Properties"
-- For CTC >30L: Includes "Cost-Based Optimization" and "Cloud SQL"
-- When time <20 hours: Merges related topics into intensive sessions
-- For ETL Roles: Emphasizes "Incremental Loads" and "CDC Patterns"
-- In any case, ensure each week has at least 3 topics
+5. Do not include any extraneous text or formatting; ensure that the output is a valid JSON object.
 
-# Format response as JSON only: {"roadmap": [[week1_topics], [week2_topics], ...]}
-# Never include any character that makes the response invalid JSON, such as single quotes, double quotes or backslashes.
-# In any case, ensure the output is **JSON**
+Example Outputs:
 
-# Example output: **Strictly** follow this format:
-(3 backticks)json
+**Example 1: Beginner Roadmap (0-2 years, 6 weeks × 10h/week) with no prior SQL experience**
 {
   "roadmap": [
-    ["Relational Database Basics", "SQL Syntax Fundamentals", "Data Types & Constraints"],
-    ["Single-table Operations", "Basic Joins (Inner/Left)", "Simple Aggregations"],
-    ["Complex Joins (Right/Full/Cross)", "Subqueries", "CTEs"],
-    ["Window Functions", "Query Optimization Basics", "Indexing 101"],
-    ["Execution Plan Analysis", "Partitioning Strategies", "ETL Pattern Implementation"],
-    ["Advanced Indexing", "Query Profiling", "Bulk Operations"],
-    ["Star Schema Optimization", "Materialized Views", "Company-Specific Patterns"]
+    ["Introduction to SQL Syntax and Data Types", "Basic SELECT and FROM statements"],
+    ["Filtering Data with WHERE and ORDER BY", "Simple Aggregate Functions (COUNT, SUM, AVG)"],
+    ["Basic JOIN Operations and Subqueries", "Data Manipulation (INSERT, UPDATE, DELETE)"],
+    ["Hands-on Practice: Writing Simple Queries and Mini Projects"]
   ]
 }
-(3 backticks)
-  `;
 
+**Example 2: Beginner Roadmap emphasizing improvement in JOINs (Weakness: JOINs; Strength: WHERE clauses)**
+{
+  "roadmap": [
+    ["Review of SQL Basics and Data Types", "Introduction to Advanced JOIN Concepts"],
+    ["Filtering Techniques: WHERE, GROUP BY, and HAVING", "Understanding Subqueries"],
+    ["Exploring JOIN Variants: INNER, LEFT, RIGHT, FULL", "Optimizing JOIN Performance"],
+    ["Practice Project: Combining Data from Multiple Tables"]
+  ]
+}
+
+**Example 3: Intermediate Roadmap (2-5 years, 4 weeks × 15h/week)**
+{
+  "roadmap": [
+    ["Advanced SQL Syntax and Best Practices", "Query Optimization Techniques"],
+    ["Complex JOINs, Nested Subqueries, and CTEs", "Indexing and Performance Tuning"],
+    ["Stored Procedures, Triggers, and Advanced Functions", "Transaction Management"],
+    ["Big Data Handling: Partitioning, Sharding, and Advanced Aggregation"],
+    ["Capstone Project: Designing an End-to-End Data Pipeline with Complex Queries"]
+  ]
+}
+`;
   return prompt;
 };
