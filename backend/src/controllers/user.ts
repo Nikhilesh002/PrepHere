@@ -76,7 +76,12 @@ export const userSignIn = async (req: Request, res: Response): Promise<any> => {
     }
 
     // make token and send
-    res.cookie("auth_token", makeToken(user.username, user.id));
+    res.cookie("auth_token", makeToken(user.username, user.id), {
+      httpOnly: true,
+      sameSite: "none",
+      secure: true,
+      maxAge: COOKIE_EXPIRY_DURATION * 1000,
+    });
 
     return res.status(200).json({
       success: true,
