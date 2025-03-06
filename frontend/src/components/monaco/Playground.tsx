@@ -3,17 +3,19 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { LanguageIdEnum } from "monaco-sql-languages";
 
 /** import contribution file */
-import "monaco-sql-languages/esm/languages/mysql/mysql.contribution";
+// import "monaco-sql-languages/esm/languages/mysql/mysql.contribution";
 import "monaco-sql-languages/esm/languages/pgsql/pgsql.contribution";
 
 /** import worker files */
 import EditorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
 import PGSQLWorker from "monaco-sql-languages/esm/languages/pgsql/pgsql.worker?worker";
-import MySQLWorker from "monaco-sql-languages/esm/languages/mysql/mysql.worker?worker";
+// import MySQLWorker from "monaco-sql-languages/esm/languages/mysql/mysql.worker?worker";
 
 import { vsPlusTheme } from "monaco-sql-languages";
 import { Button } from "../ui/button";
-import { PlayIcon } from "lucide-react";
+import { Bot, PlayIcon } from "lucide-react";
+import { axiosWithToken } from "@/lib/axiosWithToken";
+import { Separator } from "../ui/separator";
 
 /** define MonacoEnvironment.getWorker  */
 (globalThis as any).MonacoEnvironment = {
@@ -21,22 +23,25 @@ import { PlayIcon } from "lucide-react";
     if (label === LanguageIdEnum.PG) {
       return new PGSQLWorker();
     }
-    if (label === LanguageIdEnum.MYSQL) {
-      return new MySQLWorker();
-    }
+    // if (label === LanguageIdEnum.MYSQL) {
+    //   return new MySQLWorker();
+    // }
     return new EditorWorker();
   },
 };
 
 const Playground = () => {
   const hostRef = useRef<HTMLDivElement>(null);
-  const editorRef = useRef<monaco.editor.IStandaloneCodeEditor>();
+  const editorRef = useRef<monaco.editor.IStandaloneCodeEditor>(null);
   const [lang, setLang] = useState<string>(LanguageIdEnum.PG);
+
+  const [judgeRes, setJudgeRes] = useState<string>("Coming soon...");
+  const [aiTips, setAiTips] = useState<string>(`Ask AI`);
 
   monaco.editor.defineTheme("sql-dark", vsPlusTheme.darkThemeData);
 
   useEffect(() => {
-    if (hostRef.current && !editorRef.current) {
+    if (hostRef.current && !editorRef?.current) {
       editorRef.current = monaco.editor.create(hostRef.current, {
         language: lang,
         theme: "sql-dark",
@@ -44,59 +49,102 @@ const Playground = () => {
     }
   }, [lang]);
 
-  console.log(editorRef.current?.getModel());
-
   useEffect(() => {
-    const model = editorRef.current?.getModel();
+    const model = editorRef?.current?.getModel();
     if (model && model.getLanguageId() !== lang) {
       monaco.editor.setModelLanguage(model, lang);
 
       setTimeout(() => {
         console.log(
           "language changed, current is: ",
-          editorRef.current?.getModel()?.getLanguageId()
+          editorRef?.current?.getModel()?.getLanguageId()
         );
       }, 200);
     }
   }, [lang]);
 
-	const handleRun = useCallback(()=>{
-		console.log(editorRef.current.getValue())
-	},[])
+  const handleAI = useCallback(async () => {
+    console.log(editorRef?.current?.getValue());
+    const res = await axiosWithToken.post(
+      `${import.meta.env.VITE_API_URL}/ai/pg`,
+      {
+        code: editorRef?.current?.getValue(),
+      }
+    );
+
+    console.log(res.data);
+    setAiTips(res.data.judgeRes);
+  }, []);
+
+  const handleJudge = useCallback(async () => {
+    console.log(editorRef?.current?.getValue());
+    const res = await axiosWithToken.post(
+      `${import.meta.env.VITE_API_URL}/judge/pg`,
+      {
+        code: editorRef?.current?.getValue(),
+      }
+    );
+
+    console.log(res.data);
+    setJudgeRes(res.data.judgeRes);
+  }, []);
 
   return (
-    <div className="w-full  rounded-lg p-3  ">
+    <div className="w-full h-screen rounded-lg p-3  ">
       <div className="flex justify-between items-center text-base w-full ">
         <h2 className="font-semibold">PrepHere SQL Playground</h2>
-        <div className="">
-          <select
-            name="language"
-            value={lang}
-            onChange={(e) => {
-              setLang(e.target.value);
-            }}
-            style={{
-              width: 120,
-              height: 32,
-              fontSize: 16,
-            }}
-          >
-            {/* <option value={LanguageIdEnum.MYSQL}>
+
+        <div className="space-x-2 flex">
+          <div className="">
+            <select
+              name="language"
+              value={lang}
+              onChange={(e) => {
+                setLang(e.target.value);
+              }}
+              style={{
+                width: 120,
+                height: 32,
+                fontSize: 16,
+              }}
+            >
+              {/* <option value={LanguageIdEnum.MYSQL}>
 						{LanguageIdEnum.MYSQL.toLocaleUpperCase()}
 					</option> */}
-            <option value={LanguageIdEnum.PG}>
-              {LanguageIdEnum.PG.toLocaleUpperCase()}
-            </option>
-          </select>
-        </div>
+              <option value={LanguageIdEnum.PG}>
+                {LanguageIdEnum.PG.toLocaleUpperCase()}
+              </option>
+            </select>
+          </div>
 
-        <Button onClick={handleRun}>
-          <PlayIcon />
-        </Button>
+          <Button onClick={handleAI}>
+            <Bot />
+          </Button>
+
+          <Button onClick={handleJudge}>
+            <PlayIcon />
+          </Button>
+        </div>
       </div>
 
-      <div className="w-full h-[90vh] mt-3">
-        <div ref={hostRef} className="w-full h-full" />
+      <div className="overflow-y-auto">
+        <div className="w-full h-[55vh] mt-3">
+          <div ref={hostRef} className="w-full h-full" />
+        </div>
+
+        <Separator />
+
+        <div className="mt-5 px-5 py-2 bg-gray-900 rounded-xl  min-h-20">
+          <p className="font-semibold ">Judge Result:</p>
+          <p>{judgeRes}</p>
+        </div>
+
+        <Separator />
+
+        <div className="mt-5 px-5 py-2 bg-gray-900 rounded-xl  min-h-20">
+          <p className="font-semibold ">Ask AI:</p>
+          <p>{aiTips}</p>
+        </div>
       </div>
     </div>
   );
