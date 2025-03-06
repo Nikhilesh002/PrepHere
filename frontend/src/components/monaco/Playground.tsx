@@ -1,0 +1,105 @@
+import * as monaco from "monaco-editor";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { LanguageIdEnum } from "monaco-sql-languages";
+
+/** import contribution file */
+import "monaco-sql-languages/esm/languages/mysql/mysql.contribution";
+import "monaco-sql-languages/esm/languages/pgsql/pgsql.contribution";
+
+/** import worker files */
+import EditorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
+import PGSQLWorker from "monaco-sql-languages/esm/languages/pgsql/pgsql.worker?worker";
+import MySQLWorker from "monaco-sql-languages/esm/languages/mysql/mysql.worker?worker";
+
+import { vsPlusTheme } from "monaco-sql-languages";
+import { Button } from "../ui/button";
+import { PlayIcon } from "lucide-react";
+
+/** define MonacoEnvironment.getWorker  */
+(globalThis as any).MonacoEnvironment = {
+  getWorker(_: any, label: string) {
+    if (label === LanguageIdEnum.PG) {
+      return new PGSQLWorker();
+    }
+    if (label === LanguageIdEnum.MYSQL) {
+      return new MySQLWorker();
+    }
+    return new EditorWorker();
+  },
+};
+
+const Playground = () => {
+  const hostRef = useRef<HTMLDivElement>(null);
+  const editorRef = useRef<monaco.editor.IStandaloneCodeEditor>();
+  const [lang, setLang] = useState<string>(LanguageIdEnum.PG);
+
+  monaco.editor.defineTheme("sql-dark", vsPlusTheme.darkThemeData);
+
+  useEffect(() => {
+    if (hostRef.current && !editorRef.current) {
+      editorRef.current = monaco.editor.create(hostRef.current, {
+        language: lang,
+        theme: "sql-dark",
+      });
+    }
+  }, [lang]);
+
+  console.log(editorRef.current?.getModel());
+
+  useEffect(() => {
+    const model = editorRef.current?.getModel();
+    if (model && model.getLanguageId() !== lang) {
+      monaco.editor.setModelLanguage(model, lang);
+
+      setTimeout(() => {
+        console.log(
+          "language changed, current is: ",
+          editorRef.current?.getModel()?.getLanguageId()
+        );
+      }, 200);
+    }
+  }, [lang]);
+
+	const handleRun = useCallback(()=>{
+		console.log(editorRef.current.getValue())
+	},[])
+
+  return (
+    <div className="w-full  rounded-lg p-3  ">
+      <div className="flex justify-between items-center text-base w-full ">
+        <h2 className="font-semibold">PrepHere SQL Playground</h2>
+        <div className="">
+          <select
+            name="language"
+            value={lang}
+            onChange={(e) => {
+              setLang(e.target.value);
+            }}
+            style={{
+              width: 120,
+              height: 32,
+              fontSize: 16,
+            }}
+          >
+            {/* <option value={LanguageIdEnum.MYSQL}>
+						{LanguageIdEnum.MYSQL.toLocaleUpperCase()}
+					</option> */}
+            <option value={LanguageIdEnum.PG}>
+              {LanguageIdEnum.PG.toLocaleUpperCase()}
+            </option>
+          </select>
+        </div>
+
+        <Button onClick={handleRun}>
+          <PlayIcon />
+        </Button>
+      </div>
+
+      <div className="w-full h-[90vh] mt-3">
+        <div ref={hostRef} className="w-full h-full" />
+      </div>
+    </div>
+  );
+};
+
+export default Playground;

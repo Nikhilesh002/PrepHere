@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import userReducer from "./slices/userSlice";
+import currPageReducer from "./slices/currPageSlice";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
 // import { getDefaultMiddleware } from "@reduxjs/toolkit";
@@ -11,6 +12,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   user: userReducer,
+  currPage: currPageReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

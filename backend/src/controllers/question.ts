@@ -25,6 +25,8 @@ export const getQuestion = async (
 ): Promise<any> => {
   try {
     const idx = +req.params.idx;
+    console.log({idx})
+    console.log({que:getIdxsQues([idx])[0]})
     res.status(200).json({
       success: true,
       msg: "Question fetched successfully",

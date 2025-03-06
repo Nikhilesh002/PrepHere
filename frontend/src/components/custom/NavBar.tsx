@@ -14,9 +14,7 @@ const NavBar: React.FC = () => {
   const location = useLocation();
   const dispatch = useDispatch<AppDispatch>();
   const userData = useSelector((state: RootState) => state.user);
-  // const [userData, setUserData] = React.useState<UserState["user"] | null>(
-  //   useSelector((state: UserState) => state.user)
-  // );
+
 
   const isActive = (path: string) =>
     location.pathname === path ? "bg-white text-black" : "bg-black text-white";
@@ -73,7 +71,7 @@ const NavBar: React.FC = () => {
                   "/questionare"
                 )}`}
               >
-                Create prep plan
+                Customized SQL Kit
               </p>
             </MenubarMenu>
           </Link>

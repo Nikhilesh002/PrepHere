@@ -32,6 +32,8 @@ function Plans() {
     [navigate]
   );
 
+  // TODO delete a plan
+
   return (
     <div className="w-full">
       <h1 className="text-2xl text-center font-bold mt-8 mb-5">Your Plans</h1>

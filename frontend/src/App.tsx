@@ -12,6 +12,8 @@ import Plan from "./pages/Plan";
 import PlanQuestions from "./pages/PlanQuestions";
 import Question from "./pages/Question";
 import AllQuestions from "./pages/AllQuestions";
+import Playground from "./components/monaco/Playground";
+
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
 
           <Route path="/questions" element={<AllQuestions />} />
+
+          <Route path="/editor" element={<Playground />} />
 
           <Route path="/questionare" element={<Questinaire />} />
           <Route path="/question/:idx" element={<Question />} />

@@ -1,45 +1,45 @@
 {
   "category": {
-    "problem solving": "bg-blue-300",
-    "project based": "bg-green-300",
-    "scenario based": "bg-yellow-300",
-    "theoretical": "bg-purple-300"
+    "problem solving": "bg-blue-200",
+    "project based": "bg-green-200",
+    "scenario based": "bg-yellow-200",
+    "theoretical": "bg-purple-200"
   },
   "country": {
-    "India": "bg-red-400",
-    "Canada": "bg-blue-400",
-    "Czech Republic": "bg-green-400",
-    "United Kingdom": "bg-gray-400",
-    "United States": "bg-indigo-400"
+    "India": "bg-red-300",
+    "Canada": "bg-blue-300",
+    "Czech Republic": "bg-green-300",
+    "United Kingdom": "bg-gray-300",
+    "United States": "bg-indigo-300"
   },
   "ctc": {
-    "5L-10L": "bg-teal-300",
-    "10L-20L": "bg-teal-300",
-    "20L-30L": "bg-teal-400",
-    "30L-40L": "bg-teal-400",
-    "40L-50L": "bg-teal-500",
-    "50L-60L": "bg-teal-600",
-    "60L-70L": "bg-teal-700 text-white",
-    "70L-80L": "bg-teal-700 text-white"
+    "5L-10L": "bg-teal-200",
+    "10L-20L": "bg-teal-200",
+    "20L-30L": "bg-teal-300",
+    "30L-40L": "bg-teal-300",
+    "40L-50L": "bg-teal-400",
+    "50L-60L": "bg-teal-500",
+    "60L-70L": "bg-teal-600 text-white",
+    "70L-80L": "bg-teal-600 text-white"
   },
   "yoe": {
-    "<2": "bg-pink-300",
-    "2-5": "bg-pink-400",
-    "5-8": "bg-pink-500",
-    "8-12": "bg-pink-600",
-    "12-15": "bg-pink-700"
+    "<2": "bg-pink-200",
+    "2-5": "bg-pink-300",
+    "5-8": "bg-pink-400",
+    "8-12": "bg-pink-500",
+    "12-15": "bg-pink-600"
   },
   "role": {
-    "Data Engineer-1": "bg-yellow-300",
-    "Data Engineer-2": "bg-yellow-400",
-    "Lead Data Engineer": "bg-yellow-500",
-    "Senior Data Engineer": "bg-yellow-600",
-    "Data Architect": "bg-yellow-700"
+    "Data Engineer-1": "bg-yellow-200",
+    "Data Engineer-2": "bg-yellow-300",
+    "Lead Data Engineer": "bg-yellow-400",
+    "Senior Data Engineer": "bg-yellow-500",
+    "Data Architect": "bg-yellow-600"
   },
-  "companyName": "bg-lime-400",
+  "companyName": "bg-lime-300",
   "difficulty": {
-    "Easy": "bg-green-200",
-    "Medium": "bg-orange-500 ",
-    "Hard": "bg-red-400"
+    "Easy": "bg-green-100",
+    "Medium": "bg-orange-300 ",
+    "Hard": "bg-red-300"
   }
 }
