@@ -39,7 +39,7 @@ function Questions({
   const currPage = useSelector((state: RootState) => state.currPage.pageNo);
   const dispatch = useDispatch();
 
-  console.log(currPage);
+  console.log({currPage});
 
   const handleClick = useCallback(
     (idx: number) => {
@@ -49,7 +49,7 @@ function Questions({
           state: {
             repo:"all"
           }});
-      else navigate(`/question/${queIdxs[idx]}`,{
+      else navigate(`/question/${queIdxs[(currPage - 1) * QUES_PER_PAGE + idx]}`,{
         state: {
           repo:"sql"
         }

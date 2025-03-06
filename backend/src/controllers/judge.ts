@@ -14,9 +14,10 @@ export const pgJudge = async (req: Request, res: Response): Promise<any> => {
   const codeLines = code.trim().replace(/\s+/g, " ").split(";");
 
   console.log({ code });
+
   return res.status(200).json({
     success: true,
     msg: "PG Judge",
-    judgeRes: "Coming soon...",
-  });
+    judgeRes: `Submitted code: ${code} \n Online judge is coming soon...`,
+    });
 };

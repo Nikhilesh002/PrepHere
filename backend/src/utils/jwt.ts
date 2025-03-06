@@ -2,6 +2,11 @@ import jwt from "jsonwebtoken";
 import { configs } from "../configs";
 import mongoose from "mongoose";
 
+export const COOKIE_EXPIRY_DURATION = 60 * 60 * 24;
+export const cookieExpiry = Math.floor(
+  Date.now() / 1000 + COOKIE_EXPIRY_DURATION
+);
+
 export const makeToken = (
   username: string,
   userId: mongoose.Types.ObjectId
@@ -10,7 +15,7 @@ export const makeToken = (
     {
       username: username,
       userId: userId,
-      exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30,
+      exp: cookieExpiry,
       iat: Math.floor(Date.now() / 1000),
     },
     configs.jwtSecret

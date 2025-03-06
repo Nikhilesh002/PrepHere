@@ -54,6 +54,8 @@ const Playground = () => {
     if (model && model.getLanguageId() !== lang) {
       monaco.editor.setModelLanguage(model, lang);
 
+      editorRef?.current?.setValue("-- Your SQL Query here")
+
       setTimeout(() => {
         console.log(
           "language changed, current is: ",
@@ -102,11 +104,7 @@ const Playground = () => {
               onChange={(e) => {
                 setLang(e.target.value);
               }}
-              style={{
-                width: 120,
-                height: 32,
-                fontSize: 16,
-              }}
+              className="w-full h-full text-base"
             >
               {/* <option value={LanguageIdEnum.MYSQL}>
 						{LanguageIdEnum.MYSQL.toLocaleUpperCase()}

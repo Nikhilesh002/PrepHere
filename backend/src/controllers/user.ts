@@ -1,7 +1,7 @@
 import { IUserDoc, userModel } from "../models/user";
 import { compareHash, createHash } from "../utils/bcryptjs";
 import { logger } from "../utils/logger";
-import { makeToken } from "../utils/jwt";
+import { COOKIE_EXPIRY_DURATION, makeToken } from "../utils/jwt";
 import { Response, Request } from "express";
 
 export const userSignUp = async (req: Request, res: Response): Promise<any> => {
@@ -25,7 +25,12 @@ export const userSignUp = async (req: Request, res: Response): Promise<any> => {
     });
 
     // make token and send
-    res.cookie("auth_token", makeToken(username, user._id));
+    res.cookie("auth_token", makeToken(username, user._id), {
+      httpOnly: true,
+      sameSite: "none",
+      secure: true,
+      maxAge: COOKIE_EXPIRY_DURATION * 1000,
+    });
 
     return res.status(201).json({
       success: true,

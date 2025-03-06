@@ -11,6 +11,8 @@ function Question() {
   const { repo } = useLocation().state || { repo: "all" };
   const [question, setQuestion] = useState<IQuestion>();
 
+  console.log({idx, repo})
+
   useEffect(() => {
     (async () => {
       const res = await axios.get(
@@ -37,18 +39,18 @@ function Question() {
 
             <CardContent>
               <div className="space-y-4">
-                <p
-                  className="text-lg bg-gray-900 p-5 rounded-md"
-                  dangerouslySetInnerHTML={{
-                    __html: question.text
-                      .split("\n")
-                      .join("<br/>")
-                      .split("\t")
-                      .join("&nbsp;&nbsp;&nbsp;&nbsp;"),
-                    // .replaceAll("\n", "<br/>")
-                    // .replaceAll("\t", " "),
-                  }}
-                ></p>
+                <pre
+                  className="text-wrap font-mono bg-gray-900 p-5 rounded-md"
+                  // dangerouslySetInnerHTML={{
+                  //   __html: question.text
+                  //     .split("\n")
+                  //     .join("<br/>")
+                  //     .split("\t")
+                  //     .join("&nbsp;&nbsp;&nbsp;&nbsp;"),
+                  //   // .replaceAll("\n", "<br/>")
+                  //   // .replaceAll("\t", " "),
+                  // }}
+                >{question.text}</pre>
 
                 <div className="space-y-2 w-1/2 px-5 py-4 rounded-md">
                   <p className="font-semibold">More Info: </p>
@@ -79,7 +81,7 @@ function Question() {
           </Card>
         )}
       </div>
-      {repo === "sql" && (
+      {question?.category === "problem solving" && (
         <div className="w-1/2">
           <Playground />
         </div>

@@ -44,7 +44,7 @@ function Questinaire() {
       difficulty: "Difficulty",
       category: "Focus Areas",
       country: "Country",
-      ctc: "Current CTC",
+      ctc: "Targeting CTC",
       companyName: "Company Name",
       yoe: "Years of Experience",
       role: "Role",
@@ -206,7 +206,7 @@ function Questinaire() {
                         setFormData({ ...formData, cnt: x[0] })
                       }
                       defaultValue={[formData.cnt]}
-                      max={100}
+                      max={150}
                       min={25}
                       step={5}
                     />

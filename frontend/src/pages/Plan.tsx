@@ -52,9 +52,7 @@ function Plan() {
   return (
     <div>
       <div className="flex flex-wrap justify-center items-center space-x-8 my-3">
-        <h1 className="text-2xl text-center font-bold">
-          Your Plan: {slug}
-        </h1>
+        <h1 className="text-2xl text-center font-bold">Your Plan: {slug}</h1>
         <Link to={`/plan/${slug}/questions`}>
           <Button className="font-bold ">Customised Questions</Button>
         </Link>
@@ -112,6 +110,9 @@ function Plan() {
                               <Bookmark className="text-orange-400 w-10" />
                             )}
                             {/* TODO notDone bookmark done    0 1 2 => update api */}
+                            {/* 
+                                2 approaches -> rwx  | attribute
+                            */}
                           </div>
                         );
                       })}
