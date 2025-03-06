@@ -9,7 +9,7 @@ export const getQuestions = async (req: Request, res: Response) => {
     res.status(200).json({
       success: true,
       msg: "Questions fetched successfully",
-      data: getIdxsQues(queIdxs),
+      data: getIdxsQues(queIdxs, "all"),
     });
   } catch (error) {
     return res.status(500).json({
@@ -25,12 +25,15 @@ export const getQuestion = async (
 ): Promise<any> => {
   try {
     const idx = +req.params.idx;
-    console.log({idx})
-    console.log({que:getIdxsQues([idx])[0]})
+    const repo = req.params.repo;
+
+    console.log({ idx, repo });
+    console.log({ que: getIdxsQues([idx], repo)[0] });
+
     res.status(200).json({
       success: true,
       msg: "Question fetched successfully",
-      question: getIdxsQues([idx])[0],
+      question: getIdxsQues([idx], repo)[0],
     });
   } catch (error) {
     return res.status(500).json({

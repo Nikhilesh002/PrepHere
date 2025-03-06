@@ -127,7 +127,7 @@ export const getPlanQues = async (
   res: Response
 ): Promise<any> => {
   try {
-    const { slug } = req.params;
+    const { slug, repo } = req.params;
 
     const plan = await planModel.findOne({ slug }).select("queIdxs queStatus");
 
@@ -141,7 +141,7 @@ export const getPlanQues = async (
     return res.status(200).json({
       success: true,
       msg: "Plan's Questions fetched successfully",
-      questions: getIdxsQues(plan.queIdxs),
+      questions: getIdxsQues(plan.queIdxs, "sql"),
       queStatus: plan.queStatus,
       queIdxs: plan.queIdxs,
     });

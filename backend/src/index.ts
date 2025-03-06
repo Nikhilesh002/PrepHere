@@ -9,7 +9,7 @@ connectDb();
 
 const app: Express = express();
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173", credentials: true })); // Middleware for CORS
+app.use(cors({ origin: ["http://localhost:5173","https://prep-here.vercel.app"], credentials: true })); // Middleware for CORS
 app.use(cookieParser());
 
 app.get("/", (req: Request, res: Response) => {

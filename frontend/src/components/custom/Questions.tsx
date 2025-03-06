@@ -45,8 +45,15 @@ function Questions({
     (idx: number) => {
       if (!questions) return;
       if (slug === "")
-        navigate(`/question/${(currPage - 1) * QUES_PER_PAGE + idx}`);
-      else navigate(`/question/${queIdxs[idx]}`);
+        navigate(`/question/${(currPage - 1) * QUES_PER_PAGE + idx}`,{
+          state: {
+            repo:"all"
+          }});
+      else navigate(`/question/${queIdxs[idx]}`,{
+        state: {
+          repo:"sql"
+        }
+      });
     },
     [navigate, questions, queIdxs, currPage, slug]
   );

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"; // Assuming you have ShadCN UI installed
 import { IQuestion } from "@/lib/types";
 import Playground from "@/components/monaco/Playground";
@@ -8,20 +8,21 @@ import axios from "axios";
 function Question() {
   const { idx } = useParams();
 
+  const { repo } = useLocation().state || { repo: "all" };
   const [question, setQuestion] = useState<IQuestion>();
 
   useEffect(() => {
     (async () => {
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/question/${idx}`
+        `${import.meta.env.VITE_API_URL}/question/${repo}/${idx}`
       );
       console.log(res.data);
       setQuestion(res.data.question);
     })();
-  }, [idx]);
+  }, [idx, repo]);
 
   return (
-    <div className="w-full h-screen flex">
+    <div className="w-full h-screen flex justify-center ">
       <div className="w-1/2 px-5 pt-8 text-white overflow-y-auto">
         {question && (
           <Card className="max-w-3xl mx-auto shadow-lg rounded-lg ">
@@ -78,9 +79,11 @@ function Question() {
           </Card>
         )}
       </div>
-      <div className="w-1/2">
-        <Playground />
-      </div>
+      {repo === "sql" && (
+        <div className="w-1/2">
+          <Playground />
+        </div>
+      )}
     </div>
   );
 }

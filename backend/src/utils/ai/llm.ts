@@ -77,11 +77,11 @@ export const askLlm = async (
   aiMessage: string
 ): Promise<string> => {
   let aiJsonRes = "";
-  if (configs.nodeEnv === "production") {
-    aiJsonRes = await askGroq(prompt, aiMessage);
-  } else {
-    aiJsonRes = await askOllama(prompt, aiMessage);
-  }
+  // if (configs.nodeEnv === "production") {
+  aiJsonRes = await askGroq(prompt, aiMessage);
+  // } else {
+  //   aiJsonRes = await askOllama(prompt, aiMessage);
+  // }
 
   if (aiJsonRes.includes("```json")) {
     aiJsonRes = aiJsonRes.split("```json")[1].split("```")[0];

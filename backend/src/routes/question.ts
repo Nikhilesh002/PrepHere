@@ -5,7 +5,7 @@ import { getAllQuestions, getQuestion } from "../controllers/question";
 const questionRouter = Router();
 
 questionRouter.get("/", getAllQuestions);
-questionRouter.get("/:idx", getQuestion);
+questionRouter.get("/:repo/:idx", getQuestion);
 
 // questionRouter.use(validateAuth);
 
