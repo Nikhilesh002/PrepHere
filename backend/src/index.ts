@@ -9,7 +9,25 @@ connectDb();
 
 const app: Express = express();
 app.use(express.json());
-app.use(cors({ origin: ["http://localhost:5173","https://prep-here.vercel.app"], credentials: true })); // Middleware for CORS
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://prep-here.vercel.app"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
+
+// Handle preflight requests
+app.options(
+  "*",
+  cors({
+    origin: ["http://localhost:5173", "https://prep-here.vercel.app"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
 app.use(cookieParser());
 
 app.get("/", (req: Request, res: Response) => {

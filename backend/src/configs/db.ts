@@ -4,8 +4,8 @@ import { configs } from ".";
 export const connectDb = async () => {
   try {
     await mongoose.connect(configs.mongodbUri, {
-      serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 30s
-      maxPoolSize: 10, // Adjust pool size
+      serverSelectionTimeoutMS: 5000,
+      maxPoolSize: 20,
     });
     console.log("Database connected");
   } catch (error) {

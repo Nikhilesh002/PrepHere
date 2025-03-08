@@ -16,6 +16,7 @@ import { Button } from "../ui/button";
 import { Bot, PlayIcon } from "lucide-react";
 import { axiosWithToken } from "@/lib/axiosWithToken";
 import { Separator } from "../ui/separator";
+import toast from "react-hot-toast";
 
 /** define MonacoEnvironment.getWorker  */
 (globalThis as any).MonacoEnvironment = {
@@ -35,7 +36,7 @@ const Playground = () => {
   const editorRef = useRef<monaco.editor.IStandaloneCodeEditor>(null);
   const [lang, setLang] = useState<string>(LanguageIdEnum.PG);
 
-  const [judgeRes, setJudgeRes] = useState<string>("Coming soon...");
+  const [judgeRes, setJudgeRes] = useState<string>("Run a query to see result");
   const [aiTips, setAiTips] = useState<string>(`Ask AI`);
 
   monaco.editor.defineTheme("sql-dark", vsPlusTheme.darkThemeData);
@@ -54,7 +55,7 @@ const Playground = () => {
     if (model && model.getLanguageId() !== lang) {
       monaco.editor.setModelLanguage(model, lang);
 
-      editorRef?.current?.setValue("-- Your SQL Query here")
+      editorRef?.current?.setValue("-- Your SQL Query here");
 
       setTimeout(() => {
         console.log(
@@ -71,6 +72,7 @@ const Playground = () => {
       `${import.meta.env.VITE_API_URL}/ai/pg`,
       {
         code: editorRef?.current?.getValue(),
+        lang,
       }
     );
 
@@ -79,16 +81,32 @@ const Playground = () => {
   }, []);
 
   const handleJudge = useCallback(async () => {
-    console.log(editorRef?.current?.getValue());
-    const res = await axiosWithToken.post(
-      `${import.meta.env.VITE_API_URL}/judge/pg`,
-      {
-        code: editorRef?.current?.getValue(),
-      }
-    );
+    try {
+      toast.loading("Executing your queries...");
+      console.log(editorRef?.current?.getValue());
 
-    console.log(res.data);
-    setJudgeRes(res.data.judgeRes);
+      const res = await axiosWithToken.post(
+        `${import.meta.env.VITE_API_URL}/judge/playground`,
+        {
+          code: editorRef?.current?.getValue(),
+          lang,
+        }
+      );
+
+      console.log(res.data);
+      setJudgeRes(res.data.judgeRes);
+
+      // wait 1s to render
+      setTimeout(() => {
+        toast.dismiss();
+        toast.success(res.data.msg);
+      }, 200);
+
+      
+    } catch (error) {
+      toast.error("Judge failed");
+      console.error(error);
+    }
   }, []);
 
   return (
@@ -134,14 +152,23 @@ const Playground = () => {
 
         <div className="mt-5 px-5 py-2 bg-gray-900 rounded-xl  min-h-20">
           <p className="font-semibold ">Judge Result:</p>
-          <p>{judgeRes}</p>
+          <div className="w-full flex flex-col">
+            {judgeRes.split("\n\n").map((str, idx) => {
+              return (
+                <pre className="" key={idx}>
+                  {str}
+                  <br />
+                </pre>
+              );
+            })}
+          </div>
         </div>
 
         <Separator />
 
         <div className="mt-5 px-5 py-2 bg-gray-900 rounded-xl  min-h-20">
           <p className="font-semibold ">Ask AI:</p>
-          <p>{aiTips}</p>
+          <pre>{aiTips}</pre>
         </div>
       </div>
     </div>

@@ -9,3 +9,9 @@ export interface IQuestion {
   yoe: string;
   role: string;
 }
+
+export interface IBucket {
+  [ip_route: string]: {
+    tokens: number;
+  };
+}
