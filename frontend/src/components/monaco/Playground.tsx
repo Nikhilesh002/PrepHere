@@ -101,8 +101,6 @@ const Playground = () => {
         toast.dismiss();
         toast.success(res.data.msg);
       }, 200);
-
-      
     } catch (error) {
       toast.error("Judge failed");
       console.error(error);
@@ -152,7 +150,7 @@ const Playground = () => {
 
         <div className="mt-5 px-5 py-2 bg-gray-900 rounded-xl  min-h-20">
           <p className="font-semibold ">Judge Result:</p>
-          <div className="w-full flex flex-col">
+          <div className="w-full flex flex-col overflow-x-auto overflow-y-auto bg-black p-2 max-h-56">
             {judgeRes.split("\n\n").map((str, idx) => {
               return (
                 <pre className="" key={idx}>

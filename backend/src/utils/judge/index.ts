@@ -1,4 +1,4 @@
-import { pgExecutor } from "./pg";
+import { pgExecutor } from "./pgsql/pgsql";
 
 export const executor = async (code: string, lang: string) => {
   if (lang === "pgsql") {

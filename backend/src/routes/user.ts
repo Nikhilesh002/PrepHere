@@ -9,3 +9,6 @@ userRouter.post("/signin", userSignIn);
 userRouter.get("/signout", userSignOut);
 
 export default userRouter;
+
+
+// /cronjob/authpin

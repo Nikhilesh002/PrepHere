@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { executor } from "../utils/judge";
 
-export const judge = async (req: Request, res: Response): Promise<any> => {
+export const playground = async (req: Request, res: Response): Promise<any> => {
   try {
     const { code, lang } = req.body;
 
@@ -14,12 +14,12 @@ export const judge = async (req: Request, res: Response): Promise<any> => {
       });
     }
 
-    // if (code.length > 1000) {
-    //   return res.status(400).json({
-    //     success: false,
-    //     judgeRes: "Code must be shorter than 1000 characters",
-    //   });
-    // }
+    if (code.length > 10000) {
+      return res.status(400).json({
+        success: false,
+        judgeRes: "Code must be shorter than 10000 characters",
+      });
+    }
 
     if (lang !== "pgsql") {
       return res.status(400).json({
